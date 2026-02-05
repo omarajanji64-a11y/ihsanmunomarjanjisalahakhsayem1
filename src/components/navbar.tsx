@@ -24,8 +24,8 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-primary transition-colors">
-            I
+          <div className="px-4 h-10 bg-secondary rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:bg-primary transition-colors">
+            Home
           </div>
           <span className="font-headline font-bold text-xl tracking-tight text-secondary">
             IHSAN <span className="text-primary">MUN</span>
