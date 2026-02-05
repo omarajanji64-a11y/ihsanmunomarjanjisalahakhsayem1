@@ -1,7 +1,6 @@
 
 "use client";
 
-import Link from "next/image";
 import LinkNext from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -14,7 +13,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Committees", href: "/committees" },
   { name: "Resources", href: "/resources" },
-  { name: "Secretariat", href: "/secretariat" },
+  { name: "Admins", href: "/secretariat" },
   { name: "Contact", href: "/contact" },
 ];
 
