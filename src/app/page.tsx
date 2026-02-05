@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10 text-center">
           <ScrollReveal>
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary bg-primary/10 rounded-full uppercase">
-              Ihsan Schools MUN 2025
+              Ihsan Schools MUN 2026
             </span>
           </ScrollReveal>
           
@@ -191,7 +191,7 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12">
-              Registration for the 2025 Ihsan Schools MUN is now open. 
+              Registration for the 2026 Ihsan Schools MUN is now open. 
               Whether you are a seasoned delegate or new to the world of MUN, 
               there is a place for you in our story.
             </p>

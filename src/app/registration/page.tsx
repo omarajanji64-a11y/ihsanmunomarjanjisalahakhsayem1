@@ -33,7 +33,7 @@ export default function RegistrationPage() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-muted-foreground">
-                Join the Ihsan Schools MUN 2025. Choose your path below.
+                Join the Ihsan Schools MUN 2026. Choose your path below.
               </p>
             </ScrollReveal>
           </div>
@@ -110,8 +110,8 @@ export default function RegistrationPage() {
                   <CheckCircle2 size={48} />
                 </div>
                 <h2 className="text-4xl font-bold mb-4">Registration Received!</h2>
-                <p className="text-xl text-muted-foreground max-w-lg mx-auto mb-10">
-                  Thank you for applying to be a {role} at IHSAN MUN 2025. 
+                <p className="text-xl text-muted-foreground max-lg mx-auto mb-10">
+                  Thank you for applying to be a {role} at IHSAN MUN 2026. 
                   A confirmation email has been sent to your inbox.
                 </p>
                 <Button asChild variant="outline" className="rounded-full px-10 py-6 text-lg">
