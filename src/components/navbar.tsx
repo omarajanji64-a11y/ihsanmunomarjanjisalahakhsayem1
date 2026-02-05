@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Twitter } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -24,11 +24,31 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="font-headline font-bold text-xl tracking-tight text-secondary">
-            IHSAN <span className="text-primary">MUN</span>
-          </span>
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-2 group">
+            <span className="font-headline font-bold text-xl tracking-tight text-secondary">
+              IHSAN <span className="text-primary">MUN</span>
+            </span>
+          </Link>
+          <div className="hidden sm:flex items-center gap-3 border-l border-border pl-4 ml-2">
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-secondary/60 hover:text-primary transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
+            <a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-secondary/60 hover:text-primary transition-colors"
+            >
+              <Twitter size={18} />
+            </a>
+          </div>
+        </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -74,6 +94,10 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          <div className="flex gap-4 py-2 border-t border-border mt-2">
+             <a href="#" className="text-secondary hover:text-primary"><Instagram size={24} /></a>
+             <a href="#" className="text-secondary hover:text-primary"><Twitter size={24} /></a>
+          </div>
           <Button asChild className="bg-primary w-full py-6 text-lg rounded-xl">
             <Link href="/registration" onClick={() => setIsMenuOpen(false)}>
               Register Now
