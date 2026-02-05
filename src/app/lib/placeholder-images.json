@@ -1,0 +1,47 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "United Nations General Assembly Hall",
+      "imageUrl": "https://picsum.photos/seed/ihsan-mun-1/1920/1080",
+      "imageHint": "united nations"
+    },
+    {
+      "id": "committee-unsc",
+      "description": "United Nations Security Council",
+      "imageUrl": "https://picsum.photos/seed/unsc/800/600",
+      "imageHint": "security council"
+    },
+    {
+      "id": "committee-unhrc",
+      "description": "Human Rights Council",
+      "imageUrl": "https://picsum.photos/seed/unhrc/800/600",
+      "imageHint": "human rights"
+    },
+    {
+      "id": "committee-ecosoc",
+      "description": "Economic and Social Council",
+      "imageUrl": "https://picsum.photos/seed/ecosoc/800/600",
+      "imageHint": "global economy"
+    },
+    {
+      "id": "team-secgen",
+      "description": "Secretary General Portrait",
+      "imageUrl": "https://picsum.photos/seed/secgen/400/500",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "team-deputy",
+      "description": "Deputy Secretary General",
+      "imageUrl": "https://picsum.photos/seed/deputy/400/500",
+      "imageHint": "business portrait"
+    },
+    {
+      "id": "about-timeline",
+      "description": "Ihsan Schools Campus",
+      "imageUrl": "https://picsum.photos/seed/campus/1200/600",
+      "imageHint": "modern school"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+
+"use client";
+
+import Image from "next/image";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { ScrollReveal } from "@/components/scroll-reveal";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Target, Eye, ShieldCheck, History, Globe } from "lucide-react";
+
+export default function AboutPage() {
+  const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline")!;
+
+  return (
+    <div className="min-h-screen bg-white pt-20">
+      <Navbar />
+      
+      {/* Hero */}
+      <section className="py-24 bg-muted/10">
+        <div className="container mx-auto px-6 text-center">
+          <ScrollReveal>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-primary">Purpose</span></h1>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Driven by the legacy of Ihsan Schools, our MUN club is built on the pillars 
+              of excellence, empathy, and global citizenship.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Storytelling Narrative */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <ScrollReveal>
+                <div className="flex items-center gap-4 text-primary font-bold tracking-widest uppercase text-sm">
+                  <span className="w-12 h-[2px] bg-primary" />
+                  The Mission
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <h2 className="text-4xl font-bold">To Cultivate <span className="text-secondary">Enlightened</span> Leaders.</h2>
+              </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Model United Nations at Ihsan Schools isn't just a simulation—it's a training ground. 
+                  We aim to bridge the gap between academic theory and real-world implementation, 
+                  encouraging students to see beyond their own borders and understand the interconnectedness 
+                  of our modern world.
+                </p>
+              </ScrollReveal>
+              
+              <ScrollReveal delay={400} className="space-y-6">
+                <div className="flex gap-4 p-6 bg-muted/30 rounded-2xl">
+                  <Target className="text-primary shrink-0" size={32} />
+                  <div>
+                    <h4 className="font-bold text-lg">Goal-Oriented Debate</h4>
+                    <p className="text-sm text-muted-foreground">Focusing on practical resolutions that could actually change the world.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 p-6 bg-muted/30 rounded-2xl">
+                  <Eye className="text-secondary shrink-0" size={32} />
+                  <div>
+                    <h4 className="font-bold text-lg">Visionary Thinking</h4>
+                    <p className="text-sm text-muted-foreground">Looking at the long-term impact of diplomatic decisions on society.</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl rotate-1">
+              <Image
+                src={timelineImage.imageUrl}
+                alt="Ihsan Schools Campus"
+                fill
+                className="object-cover"
+              />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="py-24 bg-secondary text-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <ScrollReveal className="text-center space-y-4">
+              <ShieldCheck className="mx-auto text-primary" size={48} />
+              <h3 className="text-2xl font-bold">Integrity</h3>
+              <p className="text-white/70">Upholding the highest standards of honesty and ethics in every negotiation.</p>
+            </ScrollReveal>
+            <ScrollReveal delay={200} className="text-center space-y-4">
+              <History className="mx-auto text-primary" size={48} />
+              <h3 className="text-2xl font-bold">Legacy</h3>
+              <p className="text-white/70">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
+            </ScrollReveal>
+            <ScrollReveal delay={400} className="text-center space-y-4">
+              <Globe className="mx-auto text-primary" size={48} />
+              <h3 className="text-2xl font-bold">Inclusion</h3>
+              <p className="text-white/70">Embracing diverse perspectives to reach truly global solutions.</p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
