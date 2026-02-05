@@ -43,7 +43,7 @@ export default function SecretariatPage() {
       <section className="py-24 bg-secondary text-white text-center">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h1 className="text-5xl font-bold mb-8 text-white">The <span className="text-primary">Admins</span></h1>
+            <h1 className="text-5xl font-bold mb-8 text-white">The <span className="text-primary">Secretariat</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
