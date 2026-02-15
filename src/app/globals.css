@@ -17,7 +17,7 @@
     --primary: 272 43% 29%; /* #4C2A6A */
     --primary-foreground: 260 40% 98%;
     
-    --secondary: 270 20% 96%; /* #F4F1F7 */
+    --secondary: 270 20% 96%; /* #F4F1F8 - Silken Lavender */
     --secondary-foreground: 272 46% 11%;
     
     --muted: 268 15% 15%;
@@ -70,7 +70,7 @@
 }
 
 .section-light {
-  @apply bg-[#F4F1F7] text-[#1E102B];
+  @apply bg-secondary text-background;
 }
 
 .btn-premium {

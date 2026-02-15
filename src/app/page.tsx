@@ -14,41 +14,41 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg")!;
 
   return (
-    <div className="min-h-screen bg-[#1E102B]">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-visible">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-[0.2]"
+            className="object-cover opacity-[0.25]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E102B] via-transparent to-[#1E102B]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <ScrollReveal className="fade-only">
-            <h2 className="text-[10px] md:text-xs font-medium tracking-[0.5em] text-white/70 mb-8 uppercase">
+            <h2 className="text-xs font-medium tracking-[0.6em] text-white/80 mb-10 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-none tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
-              <span className="flex items-baseline gap-3">
-                MUN <span className="text-[0.4em] opacity-50 italic font-light tracking-normal">'26</span>
+              <span className="flex items-baseline gap-4">
+                MUN <span className="text-[0.45em] opacity-40 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3]/80 mb-16 leading-relaxed font-normal">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-20 leading-relaxed font-normal opacity-90">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
