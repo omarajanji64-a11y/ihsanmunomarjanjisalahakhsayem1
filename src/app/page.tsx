@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -25,34 +24,37 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-[0.2]"
+            className="object-cover opacity-[0.15]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
-          <ScrollReveal>
-            <h2 className="text-xs md:text-sm font-bold tracking-[0.6em] text-primary mb-6 uppercase opacity-90">
-              The Premier Diplomatic Assembly
+          <ScrollReveal className="fade-only">
+            <h2 className="text-xs md:text-sm font-medium tracking-[0.4em] text-white/90 mb-6 uppercase">
+              The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-9xl font-bold mb-8 leading-tight tracking-[0.15em] text-[#F4F1F9] uppercase">
-              IHSAN <br /> MUN <span className="font-light opacity-80 text-[0.7em] tracking-normal italic">'26</span>
+            <h1 className="font-serif text-7xl md:text-[10rem] font-bold mb-4 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+              <span>IHSAN</span>
+              <span className="flex items-baseline gap-2">
+                MUN <span className="text-[0.65em] opacity-80 italic font-light">'26</span>
+              </span>
             </h1>
           </ScrollReveal>
           
-          <ScrollReveal delay={400}>
-            <p className="max-w-2xl mx-auto text-base md:text-lg text-muted-foreground/70 mb-16 leading-relaxed font-medium">
+          <ScrollReveal delay={400} className="fade-only">
+            <p className="max-w-[650px] mx-auto text-lg md:text-xl text-[#EDEAF3]/80 mb-16 leading-relaxed font-normal">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={500}>
+          <ScrollReveal delay={500} className="fade-only">
             <Countdown />
           </ScrollReveal>
         </div>
@@ -107,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Narrative Section 2: Committees Preview */}
-      <section className="py-32 bg-secondary/20 border-y border-white/5">
+      <section className="py-32 bg-secondary/10 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 space-y-6">
             <ScrollReveal>

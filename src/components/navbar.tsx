@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -19,26 +19,30 @@ const navLinks = [
 export function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-20 flex items-center",
+      scrolled 
+        ? "bg-background/95 backdrop-blur-xl border-b border-white/5 shadow-2xl" 
+        : "bg-transparent"
+    )}>
+      <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <LinkNext href="/" className="flex items-center gap-2 group">
-            <span className="font-headline font-bold text-xl tracking-tight text-foreground">
+            <span className="font-headline font-bold text-2xl tracking-tighter text-white">
               IHSAN <span className="text-primary">MUN</span>
             </span>
           </LinkNext>
-          <div className="hidden sm:flex items-center gap-3 border-l border-border pl-4 ml-2">
-            <a 
-              href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Instagram size={18} />
-            </a>
-          </div>
         </div>
 
         {/* Desktop Links */}
@@ -48,17 +52,17 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-all duration-300 hover:text-white",
                 pathname === link.href 
-                  ? "text-primary font-bold" 
-                  : "text-muted-foreground"
+                  ? "text-white font-bold" 
+                  : "text-white/60"
               )}
             >
               {link.name}
             </LinkNext>
           ))}
           
-          <Button asChild className="bg-primary hover:bg-primary/90 rounded-full px-6">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-sm font-bold shadow-lg transform transition hover:scale-105 active:scale-95">
             <LinkNext href="/registration">Register Now</LinkNext>
           </Button>
         </div>
@@ -66,7 +70,7 @@ export function Navbar() {
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <button
-            className="text-foreground"
+            className="text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -76,7 +80,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+        <div className="absolute top-20 left-0 right-0 bg-background border-b border-white/10 p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
           {navLinks.map((link) => (
             <LinkNext
               key={link.href}
@@ -84,23 +88,13 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className={cn(
                 "text-lg font-semibold py-2",
-                pathname === link.href ? "text-primary" : "text-foreground"
+                pathname === link.href ? "text-primary" : "text-white"
               )}
             >
               {link.name}
             </LinkNext>
           ))}
-          <div className="flex gap-4 py-2 border-t border-border mt-2">
-             <a 
-              href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary"
-             >
-               <Instagram size={24} />
-             </a>
-          </div>
-          <Button asChild className="bg-primary w-full py-6 text-lg rounded-xl">
+          <Button asChild className="bg-primary w-full py-7 text-lg rounded-xl mt-2">
             <LinkNext href="/registration" onClick={() => setIsMenuOpen(false)}>
               Register Now
             </LinkNext>

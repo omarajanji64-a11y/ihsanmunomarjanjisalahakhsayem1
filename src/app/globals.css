@@ -4,36 +4,36 @@
 
 @layer base {
   :root {
-    /* Permanent Dark Theme - Deep Purple Aesthetic */
-    --background: 266 46% 8%;
+    /* Permanent Dark Theme - Refined Diplomatic Purple */
+    --background: 266 46% 6%;
     --foreground: 264 25% 96%;
     
-    --card: 266 46% 12%;
+    --card: 266 46% 10%;
     --card-foreground: 264 25% 96%;
     
-    --popover: 266 46% 12%;
+    --popover: 266 46% 10%;
     --popover-foreground: 264 25% 96%;
     
-    /* Primary (Main Brand Purple): #5A2D82 */
-    --primary: 271 49% 50%;
+    /* Deepened Primary Purple for a more refined tone */
+    --primary: 272 51% 44%;
     --primary-foreground: 255 27% 96%;
     
-    /* Deep Section Background: #2E1A47 */
-    --secondary: 266 46% 19%;
+    /* Deep Section Background */
+    --secondary: 266 46% 15%;
     --secondary-foreground: 255 27% 96%;
     
-    --muted: 267 19% 15%;
-    --muted-foreground: 267 10% 70%;
+    --muted: 267 19% 12%;
+    --muted-foreground: 267 10% 75%;
     
-    --accent: 267 18% 25%;
+    --accent: 267 18% 20%;
     --accent-foreground: 255 27% 96%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 272 20% 20%;
-    --input: 272 20% 20%;
-    --ring: 271 49% 50%;
+    --border: 272 20% 18%;
+    --input: 272 20% 18%;
+    --ring: 272 51% 44%;
     --radius: 1rem;
 
     --cta: 11 41% 25%;
@@ -63,8 +63,8 @@
 
 .scroll-reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .scroll-reveal.active {
@@ -78,9 +78,16 @@
 }
 
 .glass-nav {
-  background: rgba(26, 15, 38, 0.85);
-  backdrop-filter: blur(16px);
+  background: rgba(14, 8, 20, 0.8);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
 }
 
 @keyframes float {
@@ -91,15 +98,4 @@
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
-}
-
-@keyframes line-scroll {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
-}
-
-.animate-line-scroll {
-  animation: line-scroll 2.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
