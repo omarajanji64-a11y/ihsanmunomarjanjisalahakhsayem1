@@ -4,7 +4,7 @@ import LinkNext from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -23,7 +23,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -33,28 +33,26 @@ export function Navbar() {
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-20 flex items-center",
       scrolled 
-        ? "bg-background/95 backdrop-blur-xl border-b border-white/5 shadow-2xl" 
+        ? "bg-[#1E102B]/95 backdrop-blur-md border-b border-white/5 shadow-xl" 
         : "bg-transparent"
     )}>
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <LinkNext href="/" className="flex items-center gap-2 group">
-            <span className="font-headline font-bold text-2xl tracking-tighter text-white">
-              IHSAN <span className="text-primary">MUN</span>
-            </span>
-          </LinkNext>
-        </div>
+        <LinkNext href="/" className="flex items-center gap-2 group">
+          <span className="font-serif font-bold text-2xl tracking-tighter text-white">
+            IHSAN <span className="text-white/80">MUN</span>
+          </span>
+        </LinkNext>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <LinkNext
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-white",
+                "text-xs font-medium uppercase tracking-widest transition-all duration-300 hover:text-white relative py-1",
                 pathname === link.href 
-                  ? "text-white font-bold" 
+                  ? "text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white" 
                   : "text-white/60"
               )}
             >
@@ -62,7 +60,7 @@ export function Navbar() {
             </LinkNext>
           ))}
           
-          <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-sm font-bold shadow-lg transform transition hover:scale-105 active:scale-95">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 font-bold text-xs uppercase tracking-widest btn-premium">
             <LinkNext href="/registration">Register Now</LinkNext>
           </Button>
         </div>
@@ -73,28 +71,28 @@ export function Navbar() {
             className="text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-background border-b border-white/10 p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+        <div className="absolute top-20 left-0 right-0 bg-[#1E102B] border-b border-white/10 p-8 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
           {navLinks.map((link) => (
             <LinkNext
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
               className={cn(
-                "text-lg font-semibold py-2",
+                "text-lg font-serif font-bold tracking-tight",
                 pathname === link.href ? "text-primary" : "text-white"
               )}
             >
               {link.name}
             </LinkNext>
           ))}
-          <Button asChild className="bg-primary w-full py-7 text-lg rounded-xl mt-2">
+          <Button asChild className="bg-primary w-full py-7 text-sm font-bold uppercase tracking-widest rounded-none mt-2">
             <LinkNext href="/registration" onClick={() => setIsMenuOpen(false)}>
               Register Now
             </LinkNext>

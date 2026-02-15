@@ -6,7 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Users, Star } from "lucide-react";
+import { ArrowRight, Globe, Users, Award } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Countdown } from "@/components/countdown";
 
@@ -14,41 +14,41 @@ export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg")!;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#1E102B]">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-visible">
-        <div className="absolute inset-0 z-0 overflow-hidden">
+      {/* Hero Section - Cinematic Treatment */}
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-[0.15]"
+            className="object-cover opacity-[0.2]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1E102B] via-transparent to-[#1E102B]" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+        <div className="container mx-auto px-6 relative z-10 text-center">
           <ScrollReveal className="fade-only">
-            <h2 className="text-xs md:text-sm font-medium tracking-[0.4em] text-white/90 mb-6 uppercase">
+            <h2 className="text-[10px] md:text-xs font-medium tracking-[0.5em] text-white/70 mb-8 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-7xl md:text-[10rem] font-bold mb-4 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-none tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
-              <span className="flex items-baseline gap-2">
-                MUN <span className="text-[0.65em] opacity-80 italic font-light">'26</span>
+              <span className="flex items-baseline gap-3">
+                MUN <span className="text-[0.4em] opacity-50 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg md:text-xl text-[#EDEAF3]/80 mb-16 leading-relaxed font-normal">
+            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3]/80 mb-16 leading-relaxed font-normal">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -60,11 +60,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Narrative Section 1: Introduction */}
-      <section className="py-32 bg-background border-t border-white/5">
+      {/* Section 1: Introduction (Light Background) */}
+      <section className="py-32 section-light">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
+            <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-black/5">
               <Image
                 src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
                 alt="Committee Session"
@@ -74,32 +74,27 @@ export default function Home() {
               />
             </ScrollReveal>
             
-            <div className="space-y-10">
+            <div className="space-y-8">
               <ScrollReveal>
-                <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-                  Where <span className="text-primary italic">Leadership</span> Meets Global Perspective.
+                <div className="w-12 h-[2px] bg-primary mb-6" />
+                <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
+                  Where Leadership Meets <span className="text-primary italic">Global Perspective.</span>
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-[600px]">
                   Ihsan Schools Model United Nations is a transformative journey. 
                   We bring together young minds to tackle complex global challenges through 
                   diplomacy, critical thinking, and collaborative resolution building.
                 </p>
               </ScrollReveal>
-              <ScrollReveal delay={300} className="grid grid-cols-2 gap-12 pt-4">
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
-                    <Globe className="text-primary" size={24} />
-                  </div>
-                  <h4 className="font-bold text-lg">Global Issues</h4>
-                  <p className="text-sm text-muted-foreground">Research and debate real-world UN agenda items with precision.</p>
+              <ScrollReveal delay={300} className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-4">
+                <div className="space-y-3">
+                  <h4 className="font-serif font-bold text-xl">Global Research</h4>
+                  <p className="text-sm text-muted-foreground">Debate real-world UN agenda items with academic precision.</p>
                 </div>
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center">
-                    <Users className="text-accent" size={24} />
-                  </div>
-                  <h4 className="font-bold text-lg">Diverse Community</h4>
+                <div className="space-y-3">
+                  <h4 className="font-serif font-bold text-xl">Diplomatic Network</h4>
                   <p className="text-sm text-muted-foreground">Network with bright students from across the international region.</p>
                 </div>
               </ScrollReveal>
@@ -108,57 +103,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Narrative Section 2: Committees Preview */}
-      <section className="py-32 bg-secondary/10 border-y border-white/5">
+      {/* Section 2: Committees (Dark Background) */}
+      <section className="py-32 section-dark">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20 space-y-6">
+          <div className="text-center mb-24 space-y-6">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">A Stage for Every <span className="text-primary italic">Interest</span></h2>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Explore our diverse range of committees, from high-stakes security crises to sustainable global development.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-primary italic">Every Interest</span></h2>
+              <div className="w-16 h-[1px] bg-white/20 mx-auto mt-8" />
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { 
                 title: "Security Council", 
                 desc: "Crisis management and high-level international security mandates.", 
-                icon: <Star className="text-primary" />,
                 img: "committee-unsc"
               },
               { 
                 title: "Human Rights Council", 
                 desc: "Upholding universal freedoms and legislative justice for all.", 
-                icon: <Users className="text-accent" />,
                 img: "committee-unhrc"
               },
               { 
                 title: "ECOSOC", 
                 desc: "Strategic economic stability and transformative social welfare.", 
-                icon: <Globe className="text-primary" />,
                 img: "committee-ecosoc"
               },
             ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 200}>
-                <div className="bg-card rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-primary/5 transition-all duration-500 group border border-white/5">
+              <ScrollReveal key={i} delay={i * 150}>
+                <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500">
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={PlaceHolderImages.find(img => img.id === item.img)!.imageUrl}
                       alt={item.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-10">
-                    <div className="mb-6 p-3 bg-background rounded-2xl w-fit">{item.icon}</div>
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-8">{item.desc}</p>
-                    <Link href="/committees" className="text-primary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all uppercase tracking-widest text-xs">
-                      View Topics <ArrowRight size={14} />
+                  <div className="p-10 space-y-4">
+                    <h3 className="text-xl font-serif font-bold">{item.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                    <Link href="/committees" className="text-primary text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-4">
+                      View Agenda <ArrowRight size={12} />
                     </Link>
                   </div>
                 </div>
@@ -168,26 +155,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Narrative Section 3: Call to Action */}
-      <section className="py-40 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-2/3 h-full opacity-10">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10 text-center space-y-12">
+      {/* Section 3: Call to Action (Light Background) */}
+      <section className="py-40 section-light text-center">
+        <div className="container mx-auto px-6 max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
               Ready to <span className="text-primary">Shape the World?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-16 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-16 leading-relaxed">
               Registration for the 2026 Ihsan Schools MUN is now open. 
-              Secure your place in the global dialogue.
+              Join a community of students dedicated to international cooperation and leadership.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-16 py-10 text-2xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 py-8 text-sm font-bold uppercase tracking-widest btn-premium">
               <Link href="/registration">Register as a Delegate</Link>
             </Button>
           </ScrollReveal>
