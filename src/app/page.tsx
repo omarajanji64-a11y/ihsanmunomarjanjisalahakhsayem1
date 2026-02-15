@@ -61,54 +61,53 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Branded IHSAN MUN Entry Animation - Diplomatic Seal Design */}
+              {/* Branded IHSAN MUN Entry - UN Logo Design */}
               <div 
                 className="mt-12 flex flex-col items-center group cursor-pointer" 
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
-                <div className="relative w-48 h-48 flex items-center justify-center scale-90 md:scale-100">
-                  {/* Outer Seal Rings */}
-                  <div className="absolute inset-0 border border-white/5 rounded-full" />
-                  <div className="absolute inset-2 border border-dashed border-white/10 rounded-full animate-[spin_60s_linear_infinite]" />
-                  <div className="absolute inset-6 border border-primary/20 rounded-full" />
-                  
-                  {/* Global Network Dots */}
-                  <div className="absolute inset-0 animate-[spin_40s_linear_infinite]">
-                    {[...Array(8)].map((_, i) => (
-                      <div 
-                        key={i}
-                        className="absolute w-1 h-1 bg-primary/40 rounded-full"
-                        style={{
-                          top: '50%',
-                          left: '50%',
-                          transform: `rotate(${i * 45}deg) translateY(-84px)`
-                        }}
-                      />
+                <div className="relative w-56 h-56 flex items-center justify-center scale-90 md:scale-100 transition-transform duration-700 hover:scale-110">
+                  {/* UN Style Olive Branches & Globe Grid */}
+                  <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full text-primary opacity-30 group-hover:opacity-50 transition-opacity duration-700">
+                    {/* Globe Grid Lines */}
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                    <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                    <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" strokeWidth="0.5" />
+                    <line x1="50" y1="15" x2="50" y2="85" stroke="currentColor" strokeWidth="0.5" />
+                    <line x1="15" y1="50" x2="85" y2="50" stroke="currentColor" strokeWidth="0.5" />
+                    <path d="M25 25 L75 75 M25 75 L75 25" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
+                    
+                    {/* Olive Branches */}
+                    <path 
+                      d="M30 80 C20 70 15 55 15 40 C15 25 25 15 35 10" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2.5" 
+                      strokeLinecap="round" 
+                    />
+                    <path 
+                      d="M70 80 C80 70 85 55 85 40 C85 25 75 15 65 10" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2.5" 
+                      strokeLinecap="round" 
+                    />
+                    
+                    {/* Leaves along branches */}
+                    {[...Array(5)].map((_, i) => (
+                      <g key={i} opacity="0.8">
+                        <circle cx={18 + i*3} cy={30 + i*10} r="1.5" fill="currentColor" />
+                        <circle cx={82 - i*3} cy={30 + i*10} r="1.5" fill="currentColor" />
+                      </g>
                     ))}
-                  </div>
+                  </svg>
 
-                  {/* Minimalist Olive Branches (SVG) */}
-                  <div className="absolute inset-0 flex items-center justify-between px-2 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
-                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" className="rotate-[-15deg]">
-                      <path d="M10 70C10 70 30 50 30 30M10 70C10 70 5 40 20 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <circle cx="32" cy="25" r="2" fill="currentColor" />
-                      <circle cx="28" cy="40" r="2" fill="currentColor" />
-                      <circle cx="20" cy="55" r="2" fill="currentColor" />
-                    </svg>
-                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" className="rotate-[15deg] scale-x-[-1]">
-                      <path d="M10 70C10 70 30 50 30 30M10 70C10 70 5 40 20 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <circle cx="32" cy="25" r="2" fill="currentColor" />
-                      <circle cx="28" cy="40" r="2" fill="currentColor" />
-                      <circle cx="20" cy="55" r="2" fill="currentColor" />
-                    </svg>
-                  </div>
+                  {/* Rotating Orbit Ring */}
+                  <div className="absolute inset-4 border border-dashed border-white/5 rounded-full animate-[spin_30s_linear_infinite]" />
 
-                  {/* Inner Geometric Pulse */}
-                  <div className="absolute inset-14 border border-white/5 rounded-full animate-pulse" />
-
-                  {/* Central Branded Logo Content */}
-                  <div className="flex flex-col items-center gap-1 z-10 transition-transform duration-700 group-hover:scale-110">
-                    <Globe size={28} className="text-primary mb-2 animate-[spin_10s_linear_infinite]" />
+                  {/* Central Branded Content */}
+                  <div className="flex flex-col items-center gap-1 z-10">
+                    <Globe size={32} className="text-primary mb-2 animate-pulse" />
                     <span className="block text-sm font-serif font-bold tracking-[0.4em] text-white">
                       IHSAN
                     </span>
