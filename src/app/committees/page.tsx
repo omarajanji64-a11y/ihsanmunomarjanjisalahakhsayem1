@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
+import { Download, Shield, Book } from "lucide-react";
 
 const committees = [
   {
@@ -32,6 +33,19 @@ const committees = [
     topics: ["Post-Pandemic Economic Recovery", "Sustainable Development Goals 2030"],
     img: "committee-ecosoc",
     description: "Coordinating the economic and social work of the UN. Ideal for those interested in policy and global growth."
+  }
+];
+
+const committeeResources = [
+  {
+    title: "Rules of Procedure",
+    desc: "The definitive guide to parliamentary procedure for our conference.",
+    icon: <Shield className="text-primary" />
+  },
+  {
+    title: "Study Guides",
+    desc: "Detailed background research for each committee topic.",
+    icon: <Book className="text-primary" />
   }
 ];
 
@@ -93,6 +107,38 @@ export default function CommitteesPage() {
                       </ul>
                     </div>
                   </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Preparation Resources Section */}
+      <section className="py-24 bg-muted/10 border-t border-border">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <ScrollReveal>
+              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-secondary">Essentials</span></h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
+            </ScrollReveal>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {committeeResources.map((res, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="p-8 bg-white border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
+                  <div className="flex gap-6 items-center">
+                    <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {res.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1">{res.title}</h3>
+                      <p className="text-sm text-muted-foreground">{res.desc}</p>
+                    </div>
+                  </div>
+                  <button className="p-4 rounded-full bg-secondary text-white hover:bg-primary transition-colors shrink-0">
+                    <Download size={20} />
+                  </button>
                 </div>
               </ScrollReveal>
             ))}

@@ -4,23 +4,13 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { FileText, Download, Book, PenTool, Shield } from "lucide-react";
+import { FileText, Download, PenTool } from "lucide-react";
 
 const resources = [
-  {
-    title: "Rules of Procedure",
-    desc: "The definitive guide to parliamentary procedure for our conference.",
-    icon: <Shield className="text-primary" />
-  },
   {
     title: "Position Paper Guide",
     desc: "How to draft a winning position paper for your committee.",
     icon: <PenTool className="text-secondary" />
-  },
-  {
-    title: "Study Guides",
-    desc: "Detailed background research for each committee topic.",
-    icon: <Book className="text-primary" />
   },
   {
     title: "Delegate Handbook",
