@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    /* Refined Diplomatic Palette */
-    --background: 272 46% 11%; /* #1E102B */
-    --foreground: 260 40% 96%; /* #F3EFFA */
+    /* Refined Diplomatic Palette - High Level Summit Aesthetic */
+    --background: 272 46% 11%; /* #1E102B - Deep Midnight */
+    --foreground: 260 40% 96%; /* #F3EFFA - Off-white text */
     
     --card: 272 46% 14%;
     --card-foreground: 260 40% 96%;
@@ -14,11 +14,11 @@
     --popover: 272 46% 11%;
     --popover-foreground: 260 40% 96%;
     
-    --primary: 272 43% 29%; /* #4C2A6A */
+    --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    --secondary: 272 15% 93%; /* #F2EFF6 - More pigmented Silken Lavender */
-    --secondary-foreground: 272 46% 11%;
+    --secondary: 272 35% 18%; /* #2D1A3D - Rich Purple instead of Off-white */
+    --secondary-foreground: 260 40% 98%;
     
     --muted: 268 15% 15%;
     --muted-foreground: 268 15% 66%; /* #A89BB5 */
@@ -66,7 +66,7 @@
 }
 
 .section-dark {
-  @apply bg-[#1E102B] text-[#F3EFFA];
+  @apply bg-background text-foreground;
 }
 
 .section-light {

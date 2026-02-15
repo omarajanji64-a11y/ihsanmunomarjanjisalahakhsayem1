@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <ScrollReveal className="fade-only">
-            <h2 className="text-xs font-medium tracking-[0.6em] text-white/80 mb-10 uppercase">
+            <h2 className="text-xs font-medium tracking-[0.5em] text-white/90 mb-10 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
@@ -42,7 +42,7 @@ export default function Home() {
             <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
-                MUN <span className="text-[0.45em] opacity-40 italic font-light tracking-normal">'26</span>
+                MUN <span className="text-[0.5em] opacity-40 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
@@ -60,11 +60,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 1: Introduction (Light Background) */}
+      {/* Section 1: Introduction (Purple Background) */}
       <section className="py-32 section-light">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
-            <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-black/5">
+            <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-white/10">
               <Image
                 src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
                 alt="Committee Session"
@@ -82,7 +82,7 @@ export default function Home() {
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-[600px]">
+                <p className="text-lg text-white/80 leading-relaxed max-w-[600px]">
                   Ihsan Schools Model United Nations is a transformative journey. 
                   We bring together young minds to tackle complex global challenges through 
                   diplomacy, critical thinking, and collaborative resolution building.
@@ -91,11 +91,11 @@ export default function Home() {
               <ScrollReveal delay={300} className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-4">
                 <div className="space-y-3">
                   <h4 className="font-serif font-bold text-xl">Global Research</h4>
-                  <p className="text-sm text-muted-foreground">Debate real-world UN agenda items with academic precision.</p>
+                  <p className="text-sm text-white/60">Debate real-world UN agenda items with academic precision.</p>
                 </div>
                 <div className="space-y-3">
                   <h4 className="font-serif font-bold text-xl">Diplomatic Network</h4>
-                  <p className="text-sm text-muted-foreground">Network with bright students from across the international region.</p>
+                  <p className="text-sm text-white/60">Network with bright students from across the international region.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Call to Action (Light Background) */}
+      {/* Section 3: Call to Action (Purple Background) */}
       <section className="py-40 section-light text-center">
         <div className="container mx-auto px-6 max-w-4xl">
           <ScrollReveal>
@@ -164,7 +164,7 @@ export default function Home() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-lg text-muted-foreground mb-16 leading-relaxed">
+            <p className="text-lg text-white/80 mb-16 leading-relaxed">
               Registration for the 2026 Ihsan Schools MUN is now open. 
               Join a community of students dedicated to international cooperation and leadership.
             </p>
