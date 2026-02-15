@@ -9,19 +9,32 @@ import { Target, Eye, ShieldCheck, History, Globe } from "lucide-react";
 
 export default function AboutPage() {
   const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline")!;
+  const heroBg = PlaceHolderImages.find(img => img.id === "hero-bg")!;
 
   return (
     <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
       {/* Hero */}
-      <section className="py-24 bg-secondary/20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={heroBg.imageUrl}
+            alt="About Background"
+            fill
+            className="object-cover opacity-[0.2]"
+            priority
+            data-ai-hint={heroBg.imageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-primary">Purpose</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
               Driven by the legacy of Ihsan Schools, our MUN club is built on the pillars 
               of excellence, empathy, and global citizenship.
             </p>
@@ -83,7 +96,7 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-24 bg-secondary text-white">
+      <section className="py-24 bg-secondary text-white border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <ScrollReveal className="text-center space-y-4">
