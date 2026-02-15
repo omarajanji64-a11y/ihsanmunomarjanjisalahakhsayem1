@@ -61,23 +61,26 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Branded IHSAN MUN Entry Animation */}
+              {/* Branded IHSAN MUN Entry Animation - Celestial Compass Design */}
               <div 
                 className="mt-28 flex flex-col items-center group cursor-pointer" 
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
                 <div className="relative w-40 h-40 flex items-center justify-center scale-90 md:scale-100">
-                  {/* Orbiting Rings */}
-                  <div className="absolute inset-0 border border-white/10 rounded-full animate-[spin_20s_linear_infinite]" />
-                  <div className="absolute inset-4 border border-white/5 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                  {/* Rotating Diamond Frame */}
+                  <div className="absolute inset-4 border border-white/10 rotate-45 animate-[spin_30s_linear_infinite]" />
+                  <div className="absolute inset-8 border border-primary/20 rotate-45 animate-[spin_20s_linear_infinite_reverse]" />
                   
-                  {/* Orbiting Dots */}
-                  <div className="absolute inset-0 animate-[spin_4s_linear_infinite]">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-primary rounded-full blur-[1px]" />
+                  {/* Cardinal Points Nodes */}
+                  <div className="absolute inset-0 animate-[spin_60s_linear_infinite]">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_hsl(var(--primary))]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_hsl(var(--primary))]" />
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full" />
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full" />
                   </div>
-                  <div className="absolute inset-0 animate-[spin_8s_linear_infinite_reverse]">
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/40 rounded-full blur-[1px]" />
-                  </div>
+
+                  {/* Inner Geometric Pulse */}
+                  <div className="absolute inset-12 border-t border-b border-white/5 rounded-full animate-pulse" />
 
                   {/* Central Text Brand */}
                   <div className="flex flex-col items-center gap-1 z-10 transition-transform duration-700 group-hover:scale-110">
