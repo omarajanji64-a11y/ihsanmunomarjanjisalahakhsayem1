@@ -59,30 +59,37 @@ export function Countdown() {
       {/* Animated Hourglass */}
       <div className="relative">
         <svg
-          width="40"
-          height="40"
+          width="52"
+          height="52"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-primary/60 animate-[spin_4s_linear_infinite]"
+          className="text-primary/70 animate-[spin_6s_ease-in-out_infinite]"
         >
-          <path d="M5 2h14" />
-          <path d="M5 22h14" />
+          {/* Base and Top Frame */}
+          <path d="M5 2h14M5 22h14" />
+          
+          {/* Glass Bulb Outlines */}
           <path d="M6 2v1c0 3.3 2.7 6 6 6s6-2.7 6-6V2" />
           <path d="M6 22v-1c0-3.3 2.7-6 6-6s6 2.7 6 6v1" />
           
-          {/* Sand animation effect */}
-          <circle cx="12" cy="12" r="1" fill="currentColor" className="animate-pulse">
-            <animate
-              attributeName="cy"
-              values="9;15"
-              dur="1.5s"
-              repeatCount="indefinite"
-            />
-          </circle>
+          {/* Flowing Sand Line */}
+          <line x1="12" y1="9" x2="12" y2="15" strokeDasharray="1 2">
+            <animate attributeName="stroke-dashoffset" values="3;0" dur="1s" repeatCount="indefinite" />
+          </line>
+          
+          {/* Top Sand Level - Draining */}
+          <path d="M9 4.5c0 1.5 1.5 2.5 3 2.5s3-1 3-2.5" fill="currentColor" className="opacity-40">
+             <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite" />
+          </path>
+          
+          {/* Bottom Sand Pile - Accumulating */}
+          <path d="M9 19.5c0-1.5 1.5-2.5 3-2.5s3 1 3 2.5" fill="currentColor" className="opacity-10">
+             <animate attributeName="opacity" values="0.1;0.6;0.1" dur="3s" repeatCount="indefinite" />
+          </path>
         </svg>
       </div>
     </div>
