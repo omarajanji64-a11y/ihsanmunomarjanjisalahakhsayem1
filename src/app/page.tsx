@@ -61,7 +61,7 @@ export default function Home() {
               </div>
               
               {/* Animated Realistic Architectural Branding - Enhanced Neoclassical Summit Logo */}
-              <div className="mt-12 md:mt-20 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
+              <div className="mt-6 md:mt-10 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
                   {/* Scanning Light Effect */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
