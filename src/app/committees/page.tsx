@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -51,7 +50,7 @@ const committeeResources = [
 
 export default function CommitteesPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
       <section className="py-24 border-b border-border">
@@ -93,13 +92,13 @@ export default function CommitteesPage() {
                     </p>
                     
                     <div className="space-y-4">
-                      <h4 className="font-bold text-secondary flex items-center gap-2">
+                      <h4 className="font-bold text-primary flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-primary" />
                         Agenda Topics
                       </h4>
                       <ul className="space-y-3">
                         {committee.topics.map((topic, idx) => (
-                          <li key={idx} className="flex gap-3 text-sm p-4 bg-muted/40 rounded-xl border border-border/50">
+                          <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
                             <span className="text-primary font-bold">Topic {idx + 1}:</span>
                             <span>{topic}</span>
                           </li>
@@ -115,20 +114,20 @@ export default function CommitteesPage() {
       </section>
 
       {/* Preparation Resources Section */}
-      <section className="py-24 bg-muted/10 border-t border-border">
+      <section className="py-24 bg-secondary/10 border-t border-border">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-secondary">Essentials</span></h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
+              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-primary">Essentials</span></h2>
+              <p className="text-muted-foreground max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {committeeResources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
-                <div className="h-full p-8 bg-white border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
+                <div className="h-full p-8 bg-card border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
                   <div className="flex gap-6 items-center">
-                    <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       {res.icon}
                     </div>
                     <div>
@@ -136,7 +135,7 @@ export default function CommitteesPage() {
                       <p className="text-sm text-muted-foreground">{res.desc}</p>
                     </div>
                   </div>
-                  <button className="p-4 rounded-full bg-secondary text-white hover:bg-primary transition-colors shrink-0">
+                  <button className="p-4 rounded-full bg-primary text-white hover:opacity-90 transition-colors shrink-0">
                     <Download size={20} />
                   </button>
                 </div>

@@ -4,9 +4,8 @@ import LinkNext from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Instagram, Moon, Sun } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { useState } from "react";
-import { useTheme } from "@/components/theme-provider";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -20,14 +19,13 @@ const navLinks = [
 export function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <LinkNext href="/" className="flex items-center gap-2 group">
-            <span className="font-headline font-bold text-xl tracking-tight text-secondary dark:text-foreground">
+            <span className="font-headline font-bold text-xl tracking-tight text-foreground">
               IHSAN <span className="text-primary">MUN</span>
             </span>
           </LinkNext>
@@ -36,7 +34,7 @@ export function Navbar() {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-secondary/60 hover:text-primary transition-colors dark:text-muted-foreground"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Instagram size={18} />
             </a>
@@ -53,21 +51,13 @@ export function Navbar() {
                 "text-sm font-medium transition-colors hover:text-primary",
                 pathname === link.href 
                   ? "text-primary font-bold" 
-                  : "text-secondary dark:text-muted-foreground"
+                  : "text-muted-foreground"
               )}
             >
               {link.name}
             </LinkNext>
           ))}
           
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-muted transition-colors text-secondary dark:text-foreground"
-            aria-label="Toggle theme"
-          >
-            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-
           <Button asChild className="bg-primary hover:bg-primary/90 rounded-full px-6">
             <LinkNext href="/registration">Register Now</LinkNext>
           </Button>
@@ -76,13 +66,7 @@ export function Navbar() {
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-muted transition-colors text-secondary dark:text-foreground"
-          >
-            {theme === "light" ? <Moon size={24} /> : <Sun size={24} />}
-          </button>
-          <button
-            className="text-secondary dark:text-foreground"
+            className="text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -100,14 +84,14 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className={cn(
                 "text-lg font-semibold py-2",
-                pathname === link.href ? "text-primary" : "text-secondary dark:text-foreground"
+                pathname === link.href ? "text-primary" : "text-foreground"
               )}
             >
               {link.name}
             </LinkNext>
           ))}
           <div className="flex gap-4 py-2 border-t border-border mt-2">
-             <a href="#" className="text-secondary dark:text-foreground hover:text-primary"><Instagram size={24} /></a>
+             <a href="#" className="text-foreground hover:text-primary"><Instagram size={24} /></a>
           </div>
           <Button asChild className="bg-primary w-full py-6 text-lg rounded-xl">
             <LinkNext href="/registration" onClick={() => setIsMenuOpen(false)}>

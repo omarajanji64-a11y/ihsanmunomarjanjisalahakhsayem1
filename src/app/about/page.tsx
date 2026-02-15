@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -12,11 +11,11 @@ export default function AboutPage() {
   const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline")!;
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
       {/* Hero */}
-      <section className="py-24 bg-muted/10">
+      <section className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6 text-center">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-primary">Purpose</span></h1>
@@ -42,7 +41,7 @@ export default function AboutPage() {
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <h2 className="text-4xl font-bold">To Cultivate <span className="text-secondary">Enlightened</span> Leaders.</h2>
+                <h2 className="text-4xl font-bold">To Cultivate <span className="text-primary">Enlightened</span> Leaders.</h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -54,15 +53,15 @@ export default function AboutPage() {
               </ScrollReveal>
               
               <ScrollReveal delay={400} className="space-y-6">
-                <div className="flex gap-4 p-6 bg-muted/30 rounded-2xl">
+                <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
                   <Target className="text-primary shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg">Goal-Oriented Debate</h4>
                     <p className="text-sm text-muted-foreground">Focusing on practical resolutions that could actually change the world.</p>
                   </div>
                 </div>
-                <div className="flex gap-4 p-6 bg-muted/30 rounded-2xl">
-                  <Eye className="text-secondary shrink-0" size={32} />
+                <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
+                  <Eye className="text-primary shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg">Visionary Thinking</h4>
                     <p className="text-sm text-muted-foreground">Looking at the long-term impact of diplomatic decisions on society.</p>

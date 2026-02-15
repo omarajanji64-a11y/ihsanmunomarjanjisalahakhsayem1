@@ -4,71 +4,40 @@
 
 @layer base {
   :root {
-    /* Light Mode */
-    /* Soft Background Sections: #F3EFF7 */
-    --background: 264 25% 96%;
-    --foreground: 272 33% 11%;
+    /* Permanent Dark Theme - Deep Purple Aesthetic */
+    --background: 266 46% 8%;
+    --foreground: 264 25% 96%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 272 33% 11%;
+    --card: 266 46% 12%;
+    --card-foreground: 264 25% 96%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 272 33% 11%;
+    --popover: 266 46% 12%;
+    --popover-foreground: 264 25% 96%;
     
     /* Primary (Main Brand Purple): #5A2D82 */
-    --primary: 271 49% 34%;
+    --primary: 271 49% 50%;
     --primary-foreground: 255 27% 96%;
     
     /* Deep Section Background: #2E1A47 */
     --secondary: 266 46% 19%;
     --secondary-foreground: 255 27% 96%;
     
-    --muted: 267 19% 90%;
-    --muted-foreground: 267 19% 56%;
+    --muted: 267 19% 15%;
+    --muted-foreground: 267 10% 70%;
     
-    --accent: 267 18% 46%;
+    --accent: 267 18% 25%;
     --accent-foreground: 255 27% 96%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 272 20% 85%;
-    --input: 272 20% 85%;
-    --ring: 271 49% 34%;
+    --border: 272 20% 20%;
+    --input: 272 20% 20%;
+    --ring: 271 49% 50%;
     --radius: 0.75rem;
 
-    --cta: 11 41% 20%;
+    --cta: 11 41% 25%;
     --cta-foreground: 0 0% 98%;
-  }
-
-  .dark {
-    /* Dark Mode - Deep Purple Aesthetic */
-    --background: 266 46% 10%;
-    --foreground: 264 25% 96%;
-    
-    --card: 266 46% 14%;
-    --card-foreground: 264 25% 96%;
-    
-    --popover: 266 46% 14%;
-    --popover-foreground: 264 25% 96%;
-    
-    --primary: 271 49% 50%; /* Slightly brighter for dark bg */
-    --primary-foreground: 255 27% 96%;
-    
-    --secondary: 266 46% 19%;
-    --secondary-foreground: 255 27% 96%;
-    
-    --muted: 267 19% 20%;
-    --muted-foreground: 267 19% 70%;
-    
-    --accent: 267 18% 30%;
-    --accent-foreground: 255 27% 96%;
-    
-    --border: 272 20% 25%;
-    --input: 272 20% 25%;
-    --ring: 271 49% 50%;
-    
-    --cta: 11 41% 30%;
   }
 }
 
@@ -78,10 +47,9 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline font-bold text-secondary dark:text-foreground tracking-tight;
+    @apply font-headline font-bold text-foreground tracking-tight;
   }
 }
 
@@ -90,7 +58,7 @@
   color: hsl(var(--cta-foreground));
 }
 .btn-cta:hover {
-  background-color: hsl(11, 41%, 25%);
+  background-color: hsl(11, 41%, 30%);
 }
 
 .scroll-reveal {
@@ -105,21 +73,15 @@
 }
 
 .cinematic-text {
-  background: linear-gradient(to bottom, hsl(var(--secondary)), hsl(var(--primary)));
-  .dark & {
-    background: linear-gradient(to bottom, #fff, hsl(var(--primary)));
-  }
+  background: linear-gradient(to bottom, #fff, hsl(var(--primary)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-nav {
-  background: rgba(243, 239, 247, 0.8);
-  .dark & {
-    background: rgba(26, 15, 38, 0.8);
-  }
+  background: rgba(26, 15, 38, 0.8);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(46, 26, 71, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @keyframes float {
