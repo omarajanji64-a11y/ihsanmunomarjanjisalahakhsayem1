@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -31,7 +32,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center py-20">
+        <div className="container mx-auto px-6 relative z-10 text-center pb-32 -mt-12 md:-mt-24">
           <ScrollReveal className="fade-only">
             <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-10 uppercase">
               The Future of Global Diplomacy
@@ -56,7 +57,9 @@ export default function Home() {
 
           <ScrollReveal delay={500} className="fade-only">
             <div className="mt-8">
-              <Countdown />
+              <div className="max-w-4xl mx-auto">
+                <Countdown />
+              </div>
             </div>
           </ScrollReveal>
         </div>
