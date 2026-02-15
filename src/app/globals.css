@@ -17,9 +17,9 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    /* Refined Diplomatic Silk - Sophisticated secondary background */
-    --secondary: 272 20% 92%; /* #EBE7EF - Muted Silk Lavender */
-    --secondary-foreground: 272 46% 15%; /* Deep Purple for contrast */
+    /* Refined Diplomatic Purple Section - Sophisticated dark variant */
+    --secondary: 272 43% 18%; /* Rich, deep purple for sections */
+    --secondary-foreground: 260 40% 98%;
     
     --muted: 268 15% 15%;
     --muted-foreground: 268 15% 66%; /* #A89BB5 */
@@ -34,16 +34,6 @@
     --input: 272 20% 18%;
     --ring: 272 43% 29%;
     --radius: 1rem;
-  }
-
-  .light {
-    --background: 272 15% 93%;
-    --foreground: 272 46% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 272 46% 11%;
-    --border: 272 10% 90%;
-    --muted: 270 10% 92%;
-    --muted-foreground: 272 10% 40%;
   }
 }
 
@@ -70,13 +60,14 @@
   @apply bg-background text-foreground relative;
 }
 
+/* Redesigned to be a deep diplomatic purple instead of white/lilac */
 .section-light {
   @apply bg-secondary text-secondary-foreground relative;
 }
 
 .section-light::before {
   content: "";
-  @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+  @apply absolute inset-0 opacity-[0.05] pointer-events-none;
   background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary)) 0%, transparent 70%);
 }
 
@@ -97,5 +88,5 @@
 
 .fade-only {
   transform: none;
-  transition: opacity 0.8s ease-out;
+  transition: opacity 0.6s ease-out;
 }

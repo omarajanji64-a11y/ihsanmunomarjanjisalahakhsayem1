@@ -33,22 +33,22 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <ScrollReveal className="fade-only">
-            <h2 className="text-xs font-medium tracking-[0.5em] text-white/90 mb-10 uppercase">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-white/90 mb-10 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
-                MUN <span className="text-[0.5em] opacity-40 italic font-light tracking-normal">'26</span>
+                MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-20 leading-relaxed font-normal opacity-90">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-20 leading-[1.6] font-normal opacity-90">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 1: Introduction (Light Background) */}
+      {/* Section 1: Introduction (Diplomatic Purple Background) */}
       <section className="py-40 section-light border-y border-white/5">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Call to Action (Light Background) */}
+      {/* Section 3: Call to Action (Diplomatic Purple Background) */}
       <section className="py-48 section-light text-center border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
