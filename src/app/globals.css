@@ -18,7 +18,7 @@
     --primary-foreground: 260 40% 98%;
     
     /* Refined Diplomatic Silk - Sophisticated secondary background */
-    --secondary: 272 25% 95%; /* #F4F1F8 - Soft Lilac-White */
+    --secondary: 272 20% 92%; /* #EBE7EF - Muted Silk Lavender */
     --secondary-foreground: 272 46% 15%; /* Deep Purple for contrast */
     
     --muted: 268 15% 15%;
@@ -76,7 +76,7 @@
 
 .section-light::before {
   content: "";
-  @apply absolute inset-0 opacity-[0.02] pointer-events-none;
+  @apply absolute inset-0 opacity-[0.03] pointer-events-none;
   background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary)) 0%, transparent 70%);
 }
 
