@@ -22,6 +22,11 @@ export default function RegistrationPage() {
   };
 
   const handleRoleSelection = (id: string) => {
+    if (id === "team") {
+      window.location.href = "https://forms.gle/nvU2roK1YHKx7xGu6";
+      return;
+    }
+    
     setRole(id);
     if (id === "delegate") {
       setStep(1.5); // Move to delegate type selection
