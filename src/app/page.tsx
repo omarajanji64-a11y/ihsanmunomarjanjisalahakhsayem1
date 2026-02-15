@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-44 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-36 md:pt-48 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center pb-32">
+        <div className="container mx-auto px-6 relative z-10 text-center pb-28">
           <ScrollReveal className="fade-only mt-0">
             <h2 className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-4 md:mb-6 uppercase">
               The Future of Global Diplomacy
@@ -40,7 +40,7 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-10 md:mb-16 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
@@ -49,13 +49,13 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <div className="max-w-4xl mx-auto w-full mb-12">
+            <div className="max-w-4xl mx-auto w-full mb-16 md:mb-20">
               <Countdown />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center pt-8 md:pt-12">
               <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
                 Step into the shoes of global ambassadors. Debate world-shaping issues, 
                 form strategic alliances, and lead the conversation at Ihsan Schools MUN.
@@ -79,7 +79,7 @@ export default function Home() {
                         className="fill-white"
                         stroke="none"
                       />
-                      {/* Stacked Text - Darker Color for Visibility - Precisely Centered */}
+                      {/* Stacked Text - High Contrast Dark Color */}
                       <text 
                         x="77.5" 
                         y="13" 
