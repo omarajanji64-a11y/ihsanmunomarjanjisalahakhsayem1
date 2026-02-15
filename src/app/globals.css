@@ -103,20 +103,22 @@
   100% { left: 100%; opacity: 0; }
 }
 
+/* Faster scanner for more activity */
 .animate-diplomatic-scanner {
-  animation: diplomatic-scanner 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: diplomatic-scanner 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes waving-flag {
-  0% { transform: skewY(0deg); }
-  25% { transform: skewY(3deg) translateY(-0.5px); }
-  50% { transform: skewY(0deg) translateY(0px); }
-  75% { transform: skewY(-3deg) translateY(0.5px); }
-  100% { transform: skewY(0deg); }
+  0% { transform: skewY(0deg) rotate(0deg); }
+  25% { transform: skewY(6deg) rotate(1deg) translateY(-1px); }
+  50% { transform: skewY(0deg) rotate(0deg) translateY(0px); }
+  75% { transform: skewY(-6deg) rotate(-1deg) translateY(1px); }
+  100% { transform: skewY(0deg) rotate(0deg); }
 }
 
+/* Intensified and faster wave animation */
 .animate-waving-flag {
-  animation: waving-flag 4s ease-in-out infinite;
+  animation: waving-flag 2.5s ease-in-out infinite;
 }
 
 @keyframes entry-traveler {
