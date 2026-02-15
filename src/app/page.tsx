@@ -78,11 +78,11 @@ export default function Home() {
                         className="fill-white"
                         stroke="none"
                       />
-                      {/* Stacked Text - Purple (Primary Color) - Precisely Centered */}
+                      {/* Stacked Text - Darker Color for Visibility - Precisely Centered */}
                       <text 
                         x="77.5" 
                         y="13" 
-                        className="fill-primary font-bold" 
+                        className="fill-[#1E102B] font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
@@ -91,7 +91,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="19" 
-                        className="fill-primary font-bold" 
+                        className="fill-[#1E102B] font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
