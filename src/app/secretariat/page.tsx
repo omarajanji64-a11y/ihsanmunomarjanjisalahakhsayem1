@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -35,7 +36,7 @@ const team = [
 ];
 
 export default function SecretariatPage() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+  const heroImage = PlaceHolderImages.find(img => img.id === "secretariat-bg") || PlaceHolderImages.find(img => img.id === "hero-bg")!;
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -48,8 +49,9 @@ export default function SecretariatPage() {
             src={heroImage.imageUrl}
             alt="Secretariat Background"
             fill
-            className="object-cover opacity-[0.15]"
+            className="object-cover opacity-[0.2]"
             priority
+            data-ai-hint={heroImage.imageHint}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         </div>
