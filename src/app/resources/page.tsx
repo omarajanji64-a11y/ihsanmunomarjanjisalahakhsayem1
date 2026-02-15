@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Navbar } from "@/components/navbar";
@@ -10,24 +9,24 @@ const resources = [
   {
     title: "Position Paper Guide",
     desc: "How to draft a winning position paper for your committee.",
-    icon: <PenTool className="text-secondary" />
+    icon: <PenTool className="text-primary" />
   },
   {
     title: "Delegate Handbook",
     desc: "Everything you need to know about the logistics and schedule.",
-    icon: <FileText className="text-secondary" />
+    icon: <FileText className="text-primary" />
   }
 ];
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
-      <section className="py-24 bg-muted/20">
+      <section className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6 text-center">
           <ScrollReveal>
-            <h1 className="text-5xl font-bold mb-8">Preparation <span className="text-primary">Scene</span></h1>
+            <h1 className="text-5xl font-bold mb-8">Preparation <span className="text-primary">Center</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -43,9 +42,9 @@ export default function ResourcesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {resources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
-                <div className="h-full p-8 border border-border rounded-3xl flex items-center justify-between group hover:border-primary hover:bg-primary/5 transition-all">
+                <div className="h-full p-8 border border-border rounded-3xl flex items-center justify-between group hover:border-primary hover:bg-primary/5 transition-all bg-card">
                   <div className="flex gap-6 items-center">
-                    <div className="w-16 h-16 bg-white border border-border rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                    <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                       {res.icon}
                     </div>
                     <div>
@@ -53,7 +52,7 @@ export default function ResourcesPage() {
                       <p className="text-sm text-muted-foreground">{res.desc}</p>
                     </div>
                   </div>
-                  <button className="p-4 rounded-full bg-secondary text-white hover:bg-primary transition-colors">
+                  <button className="p-4 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors">
                     <Download size={20} />
                   </button>
                 </div>

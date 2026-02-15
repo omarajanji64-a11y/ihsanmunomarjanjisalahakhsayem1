@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -37,7 +36,7 @@ const team = [
 
 export default function SecretariatPage() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
       <section className="py-24 bg-secondary text-white text-center">
@@ -59,7 +58,7 @@ export default function SecretariatPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="bg-white border border-border rounded-3xl overflow-hidden group hover:shadow-2xl transition-all h-full flex flex-col">
+                <div className="bg-card border border-border rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/5 transition-all h-full flex flex-col">
                   <div className="relative h-[350px] overflow-hidden">
                     <Image
                       src={PlaceHolderImages.find(img => img.id === member.img)!.imageUrl}
@@ -67,19 +66,19 @@ export default function SecretariatPage() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                       <div className="flex gap-4">
-                        <a href="#" className="w-10 h-10 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                        <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                           <Linkedin size={18} />
                         </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-white text-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                        <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                           <Mail size={18} />
                         </a>
                       </div>
                     </div>
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold mb-1 text-secondary">{member.name}</h3>
+                    <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
                     <p className="text-primary font-bold text-sm mb-4">{member.role}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
                   </div>
