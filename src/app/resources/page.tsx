@@ -40,10 +40,10 @@ export default function ResourcesPage() {
 
       <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {resources.map((res, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="p-8 border border-border rounded-3xl flex items-center justify-between group hover:border-primary hover:bg-primary/5 transition-all">
+              <ScrollReveal key={i} delay={i * 100} className="h-full">
+                <div className="h-full p-8 border border-border rounded-3xl flex items-center justify-between group hover:border-primary hover:bg-primary/5 transition-all">
                   <div className="flex gap-6 items-center">
                     <div className="w-16 h-16 bg-white border border-border rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                       {res.icon}

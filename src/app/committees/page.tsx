@@ -123,10 +123,10 @@ export default function CommitteesPage() {
               <p className="text-muted-foreground max-w-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {committeeResources.map((res, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="p-8 bg-white border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
+              <ScrollReveal key={i} delay={i * 100} className="h-full">
+                <div className="h-full p-8 bg-white border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
                   <div className="flex gap-6 items-center">
                     <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       {res.icon}
