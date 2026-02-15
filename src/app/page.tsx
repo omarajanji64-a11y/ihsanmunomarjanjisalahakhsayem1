@@ -61,32 +61,28 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Refined UN Emblem Branding */}
+              {/* Refined Architectural Branding */}
               <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-30 animate-in fade-in zoom-in duration-1000">
                 <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-36 md:h-36 fill-none stroke-white" strokeWidth="0.75">
-                  {/* Concentric Circles for Polar Map */}
-                  <circle cx="50" cy="50" r="30" opacity="0.4" />
-                  <circle cx="50" cy="50" r="22" opacity="0.4" />
-                  <circle cx="50" cy="50" r="14" opacity="0.4" />
-                  <circle cx="50" cy="50" r="6" opacity="0.4" />
+                  {/* Main Dome */}
+                  <path d="M30 60 Q 50 20 70 60" />
+                  <path d="M30 60 L70 60" />
                   
-                  {/* Meridian/Parallel Lines */}
-                  <line x1="50" y1="20" x2="50" y2="80" opacity="0.3" />
-                  <line x1="20" y1="50" x2="80" y2="50" opacity="0.3" />
-                  <path d="M28.8 28.8 L71.2 71.2" opacity="0.2" />
-                  <path d="M71.2 28.8 L28.8 71.2" opacity="0.2" />
+                  {/* Dome details */}
+                  <line x1="50" y1="20" x2="50" y2="60" opacity="0.4" />
+                  <path d="M40 45 Q 50 35 60 45" opacity="0.4" />
 
-                  {/* Olive Branches (Diplomatic Symbol) */}
-                  <path d="M30 70 Q 15 60 15 40 M30 70 Q 20 80 48 85" strokeLinecap="round" />
-                  <path d="M70 70 Q 85 60 85 40 M70 70 Q 80 80 52 85" strokeLinecap="round" />
+                  {/* Main Building Body */}
+                  <rect x="30" y="60" width="40" height="20" />
+                  <path d="M45 80 L45 72 Q 50 68 55 72 L55 80" /> {/* Central door */}
                   
-                  {/* Leaves Detail */}
-                  <circle cx="15" cy="40" r="1" fill="currentColor" stroke="none" />
-                  <circle cx="17" cy="50" r="1" fill="currentColor" stroke="none" />
-                  <circle cx="21" cy="60" r="1" fill="currentColor" stroke="none" />
-                  <circle cx="85" cy="40" r="1" fill="currentColor" stroke="none" />
-                  <circle cx="83" cy="50" r="1" fill="currentColor" stroke="none" />
-                  <circle cx="79" cy="60" r="1" fill="currentColor" stroke="none" />
+                  {/* Side Structures (Minarets/Towers) */}
+                  <path d="M22 80 L22 45 Q 22 40 25 45 L25 80" />
+                  <path d="M75 80 L75 45 Q 78 40 78 45 L78 80" />
+                  
+                  {/* Base/Steps */}
+                  <path d="M15 80 L85 80" />
+                  <path d="M10 85 L90 85" />
                 </svg>
                 <div className="flex flex-col items-center gap-2">
                   <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
