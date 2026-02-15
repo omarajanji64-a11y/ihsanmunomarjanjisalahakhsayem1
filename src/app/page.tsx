@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Globe } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Countdown } from "@/components/countdown";
 
@@ -106,8 +106,9 @@ export default function Home() {
                   {/* Inner Geometric Pulse */}
                   <div className="absolute inset-14 border border-white/5 rounded-full animate-pulse" />
 
-                  {/* Central Text Brand */}
+                  {/* Central Branded Logo Content */}
                   <div className="flex flex-col items-center gap-1 z-10 transition-transform duration-700 group-hover:scale-110">
+                    <Globe size={28} className="text-primary mb-2 animate-[spin_10s_linear_infinite]" />
                     <span className="block text-sm font-serif font-bold tracking-[0.4em] text-white">
                       IHSAN
                     </span>
