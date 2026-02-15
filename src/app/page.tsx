@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -85,7 +84,7 @@ export default function Home() {
                         y="17" 
                         className="fill-primary font-bold" 
                         textAnchor="middle" 
-                        style={{ fontSize: '7.5px', letterSpacing: '0.1px', fontWeight: '900' }}
+                        style={{ fontSize: '6px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
                         IHSAN MUN
                       </text>
