@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -107,17 +106,6 @@ export default function Home() {
                     {/* Pediment Detail */}
                     <path d="M45 40 L60 30 L75 40" strokeWidth="1" />
                     <circle cx="60" cy="36" r="1.5" className="fill-white/30" />
-
-                    {/* Flagpole and Animated Flag */}
-                    <line x1="60" y1="30" x2="60" y2="15" strokeWidth="0.5" />
-                    <path d="M60 15 L72 18 L60 21" className="fill-white/40">
-                      <animate 
-                        attributeName="d" 
-                        values="M60 15 L72 18 L60 21; M60 15 L75 19 L60 21; M60 15 L72 18 L60 21" 
-                        dur="3s" 
-                        repeatCount="indefinite" 
-                      />
-                    </path>
                   </svg>
                 </div>
 
