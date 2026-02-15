@@ -44,7 +44,7 @@ export default function RegistrationPage() {
                 {[
                   { id: "delegate", name: "Delegate", icon: <User />, desc: "Represent a nation in committee." },
                   { id: "chair", name: "Chair / DA", icon: <ShieldCheck />, desc: "Moderate committee sessions." },
-                  { id: "staff", name: "Press / Staff", icon: <Users />, desc: "Support the conference logistics." }
+                  { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." }
                 ].map((item) => (
                   <Card 
                     key={item.id}
