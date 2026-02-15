@@ -61,24 +61,31 @@ export default function Home() {
               </div>
               
               {/* Animated Realistic Architectural Branding - Enhanced Neoclassical Summit Logo */}
-              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
+              <div className="mt-12 md:mt-20 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
                   {/* Scanning Light Effect */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
                     <div className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 animate-diplomatic-scanner" />
                   </div>
 
-                  <svg viewBox="0 0 120 80" className="w-32 h-24 md:w-48 md:h-32 fill-none stroke-white" strokeWidth="0.4">
-                    {/* Waving Flag with Text */}
+                  <svg viewBox="0 0 120 80" className="w-28 h-20 md:w-40 md:h-28 fill-none stroke-white" strokeWidth="0.4">
+                    {/* Realistic Waving Flag with Text */}
                     <line x1="60" y1="26" x2="60" y2="6" strokeWidth="0.8" className="stroke-white/60" />
                     <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }}>
-                      <path 
-                        d="M60 6 L95 6 L95 22 L60 22 Z" 
-                        className="fill-primary"
-                      />
+                      {/* Flag Body with realistic curves */}
                       <path 
                         d="M60 6 Q77.5 2 95 6 L95 22 Q77.5 18 60 22 Z" 
-                        className="fill-primary/80"
+                        className="fill-primary"
+                      />
+                      {/* Shadow for realism */}
+                      <path 
+                        d="M60 6 Q77.5 2 95 6 L95 10 Q77.5 6 60 10 Z" 
+                        className="fill-black/10"
+                      />
+                      {/* Highlight for realism */}
+                      <path 
+                        d="M60 18 Q77.5 14 95 18 L95 22 Q77.5 18 60 22 Z" 
+                        className="fill-white/5"
                       />
                       <text 
                         x="77.5" 
@@ -151,7 +158,7 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <div className="flex flex-col items-center gap-2">
+                <div className="flex flex-col items-center gap-2 text-center px-4">
                   <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
                     Official Summit Platform
                   </span>
