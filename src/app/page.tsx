@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-48 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-44 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -40,7 +40,7 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-10 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-10 md:mb-16 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
