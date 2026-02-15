@@ -39,10 +39,7 @@ export default function Home() {
 
           <ScrollReveal delay={200}>
             <h1 className="text-7xl md:text-[10rem] font-bold mb-6 leading-[0.85] tracking-tighter">
-              <span className="cinematic-text block">IHSAN MUN</span>
-              <span className="text-3xl md:text-5xl font-light tracking-[0.5em] text-muted-foreground uppercase mt-4 block">
-                Twenty Twenty Six
-              </span>
+              <span className="cinematic-text block">IHSAN MUN 2026</span>
             </h1>
           </ScrollReveal>
           
