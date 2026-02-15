@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-60 md:pt-80 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-52 md:pt-72 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
