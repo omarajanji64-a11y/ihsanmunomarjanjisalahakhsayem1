@@ -61,22 +61,41 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* UN Logo Branding below Clock */}
-              <div className="mt-16 md:mt-24 flex flex-col items-center gap-6 opacity-30 animate-in fade-in zoom-in duration-1000">
-                <svg viewBox="0 0 24 24" className="w-20 h-20 md:w-28 md:h-28 fill-none stroke-white" strokeWidth="0.5">
-                  <circle cx="12" cy="12" r="8" />
-                  <path d="M4 12h16" />
-                  <path d="M12 4v16" />
-                  <ellipse cx="12" cy="12" rx="8" ry="3" />
-                  <ellipse cx="12" cy="12" rx="3" ry="8" />
-                  <path d="M7 19c-1.5-2-2-4.5-2-7s.5-5 2-7" />
-                  <path d="M17 5c1.5 2 2 4.5 2 7s-.5 5-2 7" />
-                  <path d="M3 10c0 4 2 8 9 10s9-6 9-10" strokeLinecap="round" />
-                  <path d="M5 8c0 2 1 4 7 5s7-3 7-5" strokeLinecap="round" opacity="0.5" />
+              {/* Refined UN Emblem Branding */}
+              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-30 animate-in fade-in zoom-in duration-1000">
+                <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-36 md:h-36 fill-none stroke-white" strokeWidth="0.75">
+                  {/* Concentric Circles for Polar Map */}
+                  <circle cx="50" cy="50" r="30" opacity="0.4" />
+                  <circle cx="50" cy="50" r="22" opacity="0.4" />
+                  <circle cx="50" cy="50" r="14" opacity="0.4" />
+                  <circle cx="50" cy="50" r="6" opacity="0.4" />
+                  
+                  {/* Meridian/Parallel Lines */}
+                  <line x1="50" y1="20" x2="50" y2="80" opacity="0.3" />
+                  <line x1="20" y1="50" x2="80" y2="50" opacity="0.3" />
+                  <path d="M28.8 28.8 L71.2 71.2" opacity="0.2" />
+                  <path d="M71.2 28.8 L28.8 71.2" opacity="0.2" />
+
+                  {/* Olive Branches (Diplomatic Symbol) */}
+                  <path d="M30 70 Q 15 60 15 40 M30 70 Q 20 80 48 85" strokeLinecap="round" />
+                  <path d="M70 70 Q 85 60 85 40 M70 70 Q 80 80 52 85" strokeLinecap="round" />
+                  
+                  {/* Leaves Detail */}
+                  <circle cx="15" cy="40" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="17" cy="50" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="21" cy="60" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="85" cy="40" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="83" cy="50" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="79" cy="60" r="1" fill="currentColor" stroke="none" />
                 </svg>
-                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.6em] font-medium text-white/60">
-                  Global Diplomatic Forum
-                </span>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
+                    Official Summit Platform
+                  </span>
+                  <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-light text-white/40">
+                    Ihsan Schools Global Network
+                  </span>
+                </div>
               </div>
             </div>
           </ScrollReveal>
