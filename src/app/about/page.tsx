@@ -96,23 +96,23 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-24 bg-secondary text-white border-y border-white/5">
+      <section className="py-24 bg-secondary text-secondary-foreground border-y border-border">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <ScrollReveal className="text-center space-y-4">
               <ShieldCheck className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Integrity</h3>
-              <p className="text-white/70">Upholding the highest standards of honesty and ethics in every negotiation.</p>
+              <p className="text-muted-foreground">Upholding the highest standards of honesty and ethics in every negotiation.</p>
             </ScrollReveal>
             <ScrollReveal delay={200} className="text-center space-y-4">
               <History className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Legacy</h3>
-              <p className="text-white/70">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
+              <p className="text-muted-foreground">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
             </ScrollReveal>
             <ScrollReveal delay={400} className="text-center space-y-4">
               <Globe className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Inclusion</h3>
-              <p className="text-white/70">Embracing diverse perspectives to reach truly global solutions.</p>
+              <p className="text-muted-foreground">Embracing diverse perspectives to reach truly global solutions.</p>
             </ScrollReveal>
           </div>
         </div>
