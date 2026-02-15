@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-48 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-16 md:pt-24 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only mt-4 md:mt-12">
+          <ScrollReveal className="fade-only mt-0">
             <h2 className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
               The Future of Global Diplomacy
             </h2>
@@ -48,20 +48,20 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90 px-4">
+            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="mt-4 md:mt-8 flex flex-col items-center">
+            <div className="mt-0 flex flex-col items-center">
               <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
               </div>
               
               {/* Animated Realistic Architectural Branding - Enhanced Neoclassical Summit Logo */}
-              <div className="mt-6 md:mt-10 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
+              <div className="mt-24 md:mt-40 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
                   {/* Scanning Light Effect */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
@@ -71,7 +71,7 @@ export default function Home() {
                   <svg viewBox="0 0 120 80" className="w-28 h-20 md:w-40 md:h-28 fill-none stroke-white" strokeWidth="0.4">
                     {/* Realistic Waving Flag with Text */}
                     <line x1="60" y1="26" x2="60" y2="6" strokeWidth="0.8" className="stroke-white/60" />
-                    <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }} stroke="none">
+                    <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }}>
                       {/* Flag Body - Solid White */}
                       <path 
                         d="M60 6 C70 4.5, 80 9, 95 6.5 L95 22.5 C80 25, 70 20.5, 60 22 Z" 
@@ -80,10 +80,10 @@ export default function Home() {
                       {/* Text - Purple (Primary Color) */}
                       <text 
                         x="77.5" 
-                        y="16.5" 
+                        y="17" 
                         className="fill-primary font-bold" 
                         textAnchor="middle" 
-                        style={{ fontSize: '4.8px', letterSpacing: '0.1px' }}
+                        style={{ fontSize: '7.5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
                         IHSAN MUN
                       </text>
