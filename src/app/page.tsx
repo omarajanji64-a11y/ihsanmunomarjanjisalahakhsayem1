@@ -60,52 +60,72 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Animated Realistic Architectural Branding - White House Style */}
-              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-40 animate-in fade-in zoom-in duration-1000 group">
+              {/* Animated Realistic Architectural Branding - Enhanced Neoclassical Summit Logo */}
+              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
                   {/* Scanning Light Effect */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
-                    <div className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-diplomatic-scanner" />
+                    <div className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 animate-diplomatic-scanner" />
                   </div>
 
-                  <svg viewBox="0 0 120 80" className="w-32 h-24 md:w-48 md:h-32 fill-none stroke-white" strokeWidth="0.5">
-                    {/* Base Steps and Plinth */}
-                    <path d="M10 75 L110 75" strokeWidth="0.75" />
-                    <path d="M15 72 L105 72" strokeWidth="0.5" />
-                    <path d="M20 69 L100 69" strokeWidth="0.25" />
-
-                    {/* Left Wing */}
-                    <path d="M20 69 L45 69 L45 45 L20 45 Z" className="fill-white/5" />
-                    <rect x="25" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.2s' }} />
-                    <rect x="32" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.5s' }} />
-                    <rect x="39" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.8s' }} />
-                    <rect x="25" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.1s' }} />
-                    <rect x="32" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.4s' }} />
-                    <rect x="39" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.7s' }} />
-
-                    {/* Right Wing */}
-                    <path d="M75 69 L100 69 L100 45 L75 45 Z" className="fill-white/5" />
-                    <rect x="80" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.3s' }} />
-                    <rect x="87" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.6s' }} />
-                    <rect x="94" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.9s' }} />
-                    <rect x="80" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.2s' }} />
-                    <rect x="87" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.5s' }} />
-                    <rect x="94" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.8s' }} />
-
-                    {/* Central Portico Structure */}
-                    <path d="M45 69 L75 69 L75 40 L60 30 L45 40 Z" className="fill-white/10" />
+                  <svg viewBox="0 0 120 80" className="w-32 h-24 md:w-48 md:h-32 fill-none stroke-white" strokeWidth="0.4">
+                    {/* Detailed Base and Stairs */}
+                    <path d="M5 78 L115 78" strokeWidth="0.6" className="opacity-30" />
+                    <path d="M10 75 L110 75" strokeWidth="0.5" />
+                    <path d="M15 72 L105 72" strokeWidth="0.4" />
                     
-                    {/* Columns with depth */}
-                    <line x1="48" y1="42" x2="48" y2="69" strokeWidth="0.75" />
-                    <line x1="53" y1="42" x2="53" y2="69" strokeWidth="0.75" />
-                    <line x1="58" y1="42" x2="58" y2="69" strokeWidth="0.75" />
-                    <line x1="63" y1="42" x2="63" y2="69" strokeWidth="0.75" />
-                    <line x1="68" y1="42" x2="68" y2="69" strokeWidth="0.75" />
-                    <line x1="72" y1="42" x2="72" y2="69" strokeWidth="0.75" />
+                    {/* Central Grand Staircase */}
+                    <path d="M50 72 L70 72 L70 69 L50 69 Z" className="fill-white/10" />
+                    <path d="M52 69 L68 69 L68 66 L52 66 Z" className="fill-white/15" />
 
-                    {/* Pediment Detail */}
-                    <path d="M45 40 L60 30 L75 40" strokeWidth="1" />
-                    <circle cx="60" cy="36" r="1.5" className="fill-white/30" />
+                    {/* Left Wing Architecture */}
+                    <path d="M15 72 L45 72 L45 42 L15 42 Z" className="fill-white/5" />
+                    {/* Left Wing Windows - Detailed */}
+                    {[
+                      {x: 20, y: 48}, {x: 28, y: 48}, {x: 36, y: 48},
+                      {x: 20, y: 58}, {x: 28, y: 58}, {x: 36, y: 58}
+                    ].map((w, i) => (
+                      <g key={`lw-${i}`} className="animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}>
+                        <rect x={w.x} y={w.y} width="4" height="6" className="fill-white/20" />
+                        <line x1={w.x + 2} y1={w.y} x2={w.x + 2} y2={w.y + 6} strokeWidth="0.1" className="stroke-white/40" />
+                        <line x1={w.x} y1={w.y + 3} x2={w.x + 4} y2={w.y + 3} strokeWidth="0.1" className="stroke-white/40" />
+                      </g>
+                    ))}
+
+                    {/* Right Wing Architecture */}
+                    <path d="M75 72 L105 72 L105 42 L75 42 Z" className="fill-white/5" />
+                    {/* Right Wing Windows - Detailed */}
+                    {[
+                      {x: 80, y: 48}, {x: 88, y: 48}, {x: 96, y: 48},
+                      {x: 80, y: 58}, {x: 88, y: 58}, {x: 96, y: 58}
+                    ].map((w, i) => (
+                      <g key={`rw-${i}`} className="animate-pulse" style={{ animationDelay: `${i * 0.2 + 0.5}s` }}>
+                        <rect x={w.x} y={w.y} width="4" height="6" className="fill-white/20" />
+                        <line x1={w.x + 2} y1={w.y} x2={w.x + 2} y2={w.y + 6} strokeWidth="0.1" className="stroke-white/40" />
+                        <line x1={w.x} y1={w.y + 3} x2={w.x + 4} y2={w.y + 3} strokeWidth="0.1" className="stroke-white/40" />
+                      </g>
+                    ))}
+
+                    {/* Main Portico (The Facade) */}
+                    <path d="M42 72 L78 72 L78 38 L60 26 L42 38 Z" className="fill-white/10" />
+                    
+                    {/* Neoclassical Columns with Bases and Capitals */}
+                    {[45, 51, 57, 63, 69, 75].map((x, i) => (
+                      <g key={`col-${i}`}>
+                        <line x1={x} y1={40} x2={x} y2={72} strokeWidth="0.8" className="stroke-white/80" />
+                        <rect x={x - 1.2} y={38.5} width="2.4" height="1.5" className="fill-white/40" /> {/* Capital */}
+                        <rect x={x - 1.2} y={70.5} width="2.4" height="1.5" className="fill-white/40" /> {/* Base */}
+                      </g>
+                    ))}
+
+                    {/* Pediment Detail (The Triangular Top) */}
+                    <path d="M42 38 L60 26 L78 38" strokeWidth="1.2" className="stroke-white" />
+                    <circle cx="60" cy="33" r="2.5" className="fill-white/20 animate-pulse" />
+                    <circle cx="60" cy="33" r="1.2" className="fill-white/40" />
+
+                    {/* Architectural Trim */}
+                    <path d="M15 42 L105 42" strokeWidth="0.3" className="opacity-40" />
+                    <path d="M15 44 L105 44" strokeWidth="0.15" className="opacity-20" />
                   </svg>
                 </div>
 
