@@ -74,25 +74,25 @@ export default function Home() {
                     <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }}>
                       {/* Flag Body with realistic curves */}
                       <path 
-                        d="M60 6 Q77.5 2 95 6 L95 22 Q77.5 18 60 22 Z" 
+                        d="M60 6 C70 4.5, 80 9, 95 6.5 L95 22.5 C80 25, 70 20.5, 60 22 Z" 
                         className="fill-primary"
                       />
                       {/* Shadow for realism */}
                       <path 
-                        d="M60 6 Q77.5 2 95 6 L95 10 Q77.5 6 60 10 Z" 
-                        className="fill-black/10"
+                        d="M60 6 C70 4.5, 80 9, 95 6.5 L95 12 C80 14.5, 70 10, 60 11.5 Z" 
+                        className="fill-black/15"
                       />
                       {/* Highlight for realism */}
                       <path 
-                        d="M60 18 Q77.5 14 95 18 L95 22 Q77.5 18 60 22 Z" 
-                        className="fill-white/5"
+                        d="M60 18 C70 16.5, 80 21, 95 18.5 L95 22.5 C80 25, 70 20.5, 60 22 Z" 
+                        className="fill-white/10"
                       />
                       <text 
                         x="77.5" 
-                        y="15.5" 
+                        y="16" 
                         className="fill-white font-bold" 
                         textAnchor="middle" 
-                        style={{ fontSize: '3.8px', letterSpacing: '0.1px' }}
+                        style={{ fontSize: '3.2px', letterSpacing: '0.4px', filter: 'drop-shadow(0px 0.5px 0.5px rgba(0,0,0,0.5))' }}
                       >
                         IHSAN MUN
                       </text>
