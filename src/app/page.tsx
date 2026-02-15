@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -56,9 +55,14 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="mt-8">
-              <div className="max-w-4xl mx-auto">
+            <div className="mt-8 flex flex-col items-center">
+              <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
+              </div>
+              
+              {/* Animated Diplomatic Visual Element */}
+              <div className="mt-16 w-32 h-[1px] bg-white/5 relative overflow-hidden rounded-full">
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-primary to-transparent animate-diplomatic-scanner" />
               </div>
             </div>
           </ScrollReveal>

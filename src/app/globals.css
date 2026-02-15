@@ -17,8 +17,8 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    /* Deepened Diplomatic Secondary for Premium Depth - Now even richer */
-    --secondary: 272 45% 13%; /* #221230 - Ultra Deep Purple */
+    /* Deepened Diplomatic Secondary for Premium Depth */
+    --secondary: 272 43% 15%; /* Deeper Purple for even richer transitions */
     --secondary-foreground: 260 40% 98%;
     
     --muted: 268 15% 15%;
@@ -95,4 +95,14 @@
 .fade-only {
   transform: none;
   transition: opacity 0.6s ease-out;
+}
+
+@keyframes diplomatic-scanner {
+  0% { left: -100%; opacity: 0; }
+  50% { left: 0%; opacity: 0.5; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.animate-diplomatic-scanner {
+  animation: diplomatic-scanner 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
