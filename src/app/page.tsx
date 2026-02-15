@@ -60,9 +60,11 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Animated Diplomatic Visual Element */}
-              <div className="mt-16 w-32 h-[1px] bg-white/5 relative overflow-hidden rounded-full">
+              {/* Enhanced Animated Diplomatic Visual Element */}
+              <div className="mt-20 w-full max-w-md h-[2px] bg-white/5 relative overflow-hidden rounded-full mx-auto">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-primary to-transparent animate-diplomatic-scanner" />
+                {/* Secondary subtle glow pulse */}
+                <div className="absolute inset-0 w-full h-full bg-primary/20 blur-xl animate-pulse" />
               </div>
             </div>
           </ScrollReveal>
