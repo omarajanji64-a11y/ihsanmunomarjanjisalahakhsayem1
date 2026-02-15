@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle2, User, Users, ShieldCheck, Clock, CalendarCheck } from "lucide-react";
+import { CheckCircle2, User, Users, ShieldCheck, Clock, CalendarCheck, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function RegistrationPage() {
@@ -40,7 +40,7 @@ export default function RegistrationPage() {
       <Navbar />
       
       <section className="py-24">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <ScrollReveal>
               <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-primary">Journey</span></h1>
@@ -54,11 +54,12 @@ export default function RegistrationPage() {
 
           <ScrollReveal>
             {step === 1 && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   { id: "delegate", name: "Delegate", icon: <User />, desc: "Represent a nation in committee." },
                   { id: "chair", name: "Chair / DA", icon: <ShieldCheck />, desc: "Moderate committee sessions." },
-                  { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." }
+                  { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." },
+                  { id: "team", name: "Team", icon: <Briefcase />, desc: "Apply for the organizing team." }
                 ].map((item) => (
                   <Card 
                     key={item.id}
@@ -78,7 +79,7 @@ export default function RegistrationPage() {
             )}
 
             {step === 1.5 && (
-              <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <Button variant="ghost" className="mb-4 text-primary hover:text-primary/80" onClick={() => setStep(1)}>← Back to role selection</Button>
                 <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold">Select Delegate Type</h2>
@@ -109,7 +110,7 @@ export default function RegistrationPage() {
             )}
 
             {step === 2 && (
-              <div className="bg-card border border-border p-10 rounded-[2rem] shadow-xl animate-in zoom-in-95 duration-500">
+              <div className="max-w-3xl mx-auto bg-card border border-border p-10 rounded-[2rem] shadow-xl animate-in zoom-in-95 duration-500">
                 <Button variant="ghost" className="mb-8 text-primary hover:text-primary/80" onClick={() => role === "delegate" ? setStep(1.5) : setStep(1)}>← Back</Button>
                 <h2 className="text-3xl font-bold mb-8">
                   {delegateType ? delegateType : (role ? role.charAt(0).toUpperCase() + role.slice(1) : "Role")} Registration
@@ -119,28 +120,28 @@ export default function RegistrationPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-foreground">Full Name</Label>
-                      <Input id="name" placeholder="John Doe" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground" />
+                      <Input id="name" placeholder="John Doe" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground focus:ring-primary" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-foreground">Email Address</Label>
-                      <Input id="email" type="email" placeholder="john@example.com" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground" />
+                      <Input id="email" type="email" placeholder="john@example.com" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground focus:ring-primary" />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="school" className="text-foreground">School / Institution</Label>
-                      <Input id="school" placeholder="Ihsan Schools" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground" />
+                      <Input id="school" placeholder="Ihsan Schools" required className="py-6 rounded-xl bg-secondary/30 border-border text-foreground focus:ring-primary" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-foreground">Phone Number</Label>
-                      <Input id="phone" placeholder="+90 5XX XXX XXXX" className="py-6 rounded-xl bg-secondary/30 border-border text-foreground" />
+                      <Input id="phone" placeholder="+90 5XX XXX XXXX" className="py-6 rounded-xl bg-secondary/30 border-border text-foreground focus:ring-primary" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="experience" className="text-foreground">Previous MUN Experience (if any)</Label>
-                    <Textarea id="experience" placeholder="List committees and roles..." className="min-h-[120px] rounded-xl bg-secondary/30 border-border text-foreground" />
+                    <Textarea id="experience" placeholder="List committees and roles..." className="min-h-[120px] rounded-xl bg-secondary/30 border-border text-foreground focus:ring-primary" />
                   </div>
 
                   <Button type="submit" className="w-full bg-primary hover:bg-primary/90 py-8 text-lg rounded-xl transition-all">Complete Registration</Button>
@@ -149,12 +150,12 @@ export default function RegistrationPage() {
             )}
 
             {step === 3 && (
-              <div className="text-center py-20 animate-in fade-in zoom-in-90 duration-700">
+              <div className="max-w-3xl mx-auto text-center py-20 animate-in fade-in zoom-in-90 duration-700">
                 <div className="w-24 h-24 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner shadow-primary/20">
                   <CheckCircle2 size={48} />
                 </div>
                 <h2 className="text-4xl font-bold mb-4">Registration Received!</h2>
-                <p className="text-xl text-muted-foreground max-lg mx-auto mb-10">
+                <p className="text-xl text-muted-foreground mb-10">
                   Thank you for applying to be a {delegateType || role} at IHSAN MUN 2026. 
                   A confirmation email has been sent to your inbox.
                 </p>
