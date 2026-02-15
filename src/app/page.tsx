@@ -19,34 +19,34 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-visible">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-[0.25]"
+            className="object-cover opacity-[0.2]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
           <ScrollReveal>
-            <h2 className="text-sm md:text-base font-bold tracking-[0.4em] text-primary mb-4 uppercase">
-              The Future of Global Diplomacy
+            <h2 className="text-xs md:text-sm font-bold tracking-[0.6em] text-primary mb-6 uppercase opacity-90">
+              The Premier Diplomatic Assembly
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-9xl font-bold mb-6 leading-tight tracking-[0.1em] text-[#F4F1F9] uppercase">
-              IHSAN <br /> MUN <span className="font-light opacity-90 text-[0.8em]">'26</span>
+            <h1 className="font-serif text-6xl md:text-9xl font-bold mb-8 leading-tight tracking-[0.15em] text-[#F4F1F9] uppercase">
+              IHSAN <br /> MUN <span className="font-light opacity-80 text-[0.7em] tracking-normal italic">'26</span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
-            <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground/80 mb-12 leading-relaxed">
+            <p className="max-w-2xl mx-auto text-base md:text-lg text-muted-foreground/70 mb-16 leading-relaxed font-medium">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Narrative Section 1: Introduction */}
-      <section className="py-32 bg-background">
+      <section className="py-32 bg-background border-t border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
