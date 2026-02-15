@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[90vh] flex flex-col items-center pt-40 md:pt-48 overflow-visible">
+      <section className="relative min-h-[90vh] flex flex-col items-center pt-24 md:pt-32 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -33,14 +33,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-12 md:mb-16 uppercase">
+          <ScrollReveal className="fade-only mt-12 md:mt-16">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-10 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
@@ -49,7 +49,7 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-16 md:mb-24 leading-[1.6] font-normal opacity-90">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-16 leading-[1.6] font-normal opacity-90">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -57,13 +57,13 @@ export default function Home() {
 
           <ScrollReveal delay={500} className="fade-only">
             <div className="mt-8 flex flex-col items-center">
-              <div className="max-w-4xl mx-auto w-full md:mt-12">
+              <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
               </div>
               
               {/* Branded IHSAN MUN Entry Animation - Celestial Compass Design */}
               <div 
-                className="mt-28 flex flex-col items-center group cursor-pointer" 
+                className="mt-16 flex flex-col items-center group cursor-pointer" 
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
                 <div className="relative w-40 h-40 flex items-center justify-center scale-90 md:scale-100">
