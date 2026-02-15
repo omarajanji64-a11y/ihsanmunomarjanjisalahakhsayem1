@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-visible">
+      <section className="relative min-h-[90vh] flex flex-col items-center pt-28 md:pt-36 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center pb-32 -mt-12 md:-mt-24">
+        <div className="container mx-auto px-6 relative z-10 text-center pb-32">
           <ScrollReveal className="fade-only">
             <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-10 uppercase">
               The Future of Global Diplomacy
