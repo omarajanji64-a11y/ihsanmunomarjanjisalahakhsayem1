@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -61,22 +60,24 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Diplomatic Pulse Indicator */}
-              <div className="mt-24 flex flex-col items-center gap-6">
-                <div className="relative w-16 h-16 flex items-center justify-center">
-                  {/* Outer spinning ring */}
-                  <div className="absolute inset-0 border border-white/10 rounded-full animate-[spin_10s_linear_infinite]" />
-                  {/* Middle ring */}
-                  <div className="absolute inset-2 border border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-                  {/* Inner pulsing core */}
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_15px_rgba(var(--primary),0.5)]" />
-                  
-                  {/* Scroll line */}
-                  <div className="absolute top-full mt-4 w-[1px] h-12 bg-gradient-to-b from-primary via-primary/20 to-transparent" />
+              {/* Diplomatic Entry Indicator */}
+              <div 
+                className="mt-28 flex flex-col items-center gap-6 group cursor-pointer" 
+                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+              >
+                <div className="relative w-12 h-12 flex items-center justify-center">
+                  {/* Decorative Arch */}
+                  <div className="absolute inset-0 border-t border-x border-white/10 rounded-t-full" />
+                  {/* Traveling Pulse */}
+                  <div className="w-[1px] h-full bg-gradient-to-b from-primary/50 to-transparent relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-4 bg-white/60 blur-[1px] animate-entry-traveler" />
+                  </div>
                 </div>
-                <span className="text-[9px] uppercase tracking-[0.5em] text-white/30 font-bold mt-8">
-                  Scroll to Explore
-                </span>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-[9px] uppercase tracking-[0.5em] text-white/30 font-bold group-hover:text-primary transition-colors">
+                    Enter the Hall
+                  </span>
+                </div>
               </div>
             </div>
           </ScrollReveal>

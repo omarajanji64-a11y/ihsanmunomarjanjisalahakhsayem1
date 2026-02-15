@@ -106,3 +106,14 @@
 .animate-diplomatic-scanner {
   animation: diplomatic-scanner 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
+@keyframes entry-traveler {
+  0% { transform: translateY(-100%); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+.animate-entry-traveler {
+  animation: entry-traveler 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
