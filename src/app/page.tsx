@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <ScrollReveal className="fade-only">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-white/90 mb-10 uppercase">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-10 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
@@ -55,13 +55,15 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <Countdown />
+            <div className="mt-8">
+              <Countdown />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Section 1: Introduction (Diplomatic Purple Background) */}
-      <section className="py-40 section-light border-y border-white/5">
+      {/* Section 1: Introduction (Softened Deep Purple Transition) */}
+      <section className="py-40 section-light">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
             <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
@@ -157,8 +159,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Call to Action (Diplomatic Purple Background) */}
-      <section className="py-48 section-light text-center border-t border-white/5">
+      {/* Section 3: Call to Action (Softened Deep Purple Transition) */}
+      <section className="py-48 section-light text-center">
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">

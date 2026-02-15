@@ -17,8 +17,8 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    /* Refined Diplomatic Purple Section - Sophisticated dark variant */
-    --secondary: 272 43% 14%; /* Deepened from 18% for a more refined look */
+    /* Deepened Diplomatic Secondary for Premium Depth */
+    --secondary: 272 43% 15%; /* #261536 - Deeper refined tone */
     --secondary-foreground: 260 40% 98%;
     
     --muted: 268 15% 15%;
@@ -60,15 +60,24 @@
   @apply bg-background text-foreground relative;
 }
 
-/* Redesigned to be a deep diplomatic purple instead of white/lilac */
+/* Professional Softened Alternate Section */
 .section-light {
-  @apply bg-secondary text-secondary-foreground relative;
+  @apply text-secondary-foreground relative;
+  /* Chromatic Bridge: Subtle gradient blend to soften transitions */
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--background)) 0%,
+    hsl(var(--secondary)) 12%,
+    hsl(var(--secondary)) 88%,
+    hsl(var(--background)) 100%
+  );
 }
 
+/* Subtle architectural depth effect */
 .section-light::before {
   content: "";
-  @apply absolute inset-0 opacity-[0.05] pointer-events-none;
-  background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary)) 0%, transparent 70%);
+  @apply absolute inset-0 pointer-events-none;
+  background-image: radial-gradient(circle at 50% 50%, hsla(var(--primary), 0.08) 0%, transparent 70%);
 }
 
 .btn-premium {
