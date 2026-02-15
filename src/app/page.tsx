@@ -48,17 +48,17 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
-              Step into the shoes of global ambassadors. Debate world-shaping issues, 
-              form strategic alliances, and lead the conversation at Ihsan Schools MUN.
-            </p>
+            <div className="max-w-4xl mx-auto w-full mb-12">
+              <Countdown />
+            </div>
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="mt-0 flex flex-col items-center">
-              <div className="max-w-4xl mx-auto w-full">
-                <Countdown />
-              </div>
+            <div className="flex flex-col items-center">
+              <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
+                Step into the shoes of global ambassadors. Debate world-shaping issues, 
+                form strategic alliances, and lead the conversation at Ihsan Schools MUN.
+              </p>
               
               {/* Animated Realistic Architectural Branding - Enhanced Neoclassical Summit Logo */}
               <div className="mt-32 md:mt-52 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
@@ -76,10 +76,11 @@ export default function Home() {
                       <path 
                         d="M60 6 C70 4.5, 80 9, 95 6.5 L95 22.5 C80 25, 70 20.5, 60 22 Z" 
                         className="fill-white"
+                        stroke="none"
                       />
                       {/* Text - Purple (Primary Color) */}
                       <text 
-                        x="77.5" 
+                        x="76" 
                         y="17" 
                         className="fill-primary font-bold" 
                         textAnchor="middle" 
