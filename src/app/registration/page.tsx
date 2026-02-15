@@ -26,6 +26,10 @@ export default function RegistrationPage() {
       window.location.href = "https://forms.gle/nvU2roK1YHKx7xGu6";
       return;
     }
+    if (id === "staff") {
+      window.location.href = "https://forms.gle/QNeT9wvBfTYda81P7";
+      return;
+    }
     
     setRole(id);
     if (id === "delegate") {
