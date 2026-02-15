@@ -39,7 +39,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <LinkNext href="/" className="flex items-center gap-2 group">
           <span className="font-serif font-bold text-2xl tracking-tighter text-white">
-            IHSAN <span className="text-white/80">MUN</span>
+            IHSAN <span className="text-white/60">MUN</span>
           </span>
         </LinkNext>
 
