@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
+    /* Light Mode */
     /* Soft Background Sections: #F3EFF7 */
-    --background: 264 25% 95%;
-    /* Main Text on Light: #1F1428 */
+    --background: 264 25% 96%;
     --foreground: 272 33% 11%;
     
     --card: 0 0% 100%;
@@ -23,11 +23,9 @@
     --secondary: 266 46% 19%;
     --secondary-foreground: 255 27% 96%;
     
-    /* Muted Text: #8E7AA6 */
     --muted: 267 19% 90%;
     --muted-foreground: 267 19% 56%;
     
-    /* Secondary Accent: #735F8A */
     --accent: 267 18% 46%;
     --accent-foreground: 255 27% 96%;
     
@@ -39,22 +37,51 @@
     --ring: 271 49% 34%;
     --radius: 0.75rem;
 
-    /* CTA Color: #47251E */
     --cta: 11 41% 20%;
     --cta-foreground: 0 0% 98%;
+  }
+
+  .dark {
+    /* Dark Mode - Deep Purple Aesthetic */
+    --background: 266 46% 10%;
+    --foreground: 264 25% 96%;
+    
+    --card: 266 46% 14%;
+    --card-foreground: 264 25% 96%;
+    
+    --popover: 266 46% 14%;
+    --popover-foreground: 264 25% 96%;
+    
+    --primary: 271 49% 50%; /* Slightly brighter for dark bg */
+    --primary-foreground: 255 27% 96%;
+    
+    --secondary: 266 46% 19%;
+    --secondary-foreground: 255 27% 96%;
+    
+    --muted: 267 19% 20%;
+    --muted-foreground: 267 19% 70%;
+    
+    --accent: 267 18% 30%;
+    --accent-foreground: 255 27% 96%;
+    
+    --border: 272 20% 25%;
+    --input: 272 20% 25%;
+    --ring: 271 49% 50%;
+    
+    --cta: 11 41% 30%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline font-bold text-secondary tracking-tight;
+    @apply font-headline font-bold text-secondary dark:text-foreground tracking-tight;
   }
 }
 
@@ -79,12 +106,18 @@
 
 .cinematic-text {
   background: linear-gradient(to bottom, hsl(var(--secondary)), hsl(var(--primary)));
+  .dark & {
+    background: linear-gradient(to bottom, #fff, hsl(var(--primary)));
+  }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-nav {
   background: rgba(243, 239, 247, 0.8);
+  .dark & {
+    background: rgba(26, 15, 38, 0.8);
+  }
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(46, 26, 71, 0.1);
 }
