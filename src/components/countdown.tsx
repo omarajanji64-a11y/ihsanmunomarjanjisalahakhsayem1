@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -38,21 +39,21 @@ export function Countdown() {
   const units = [
     { label: "Days", value: timeLeft.days },
     { label: "Hours", value: timeLeft.hours },
-    { label: "Minutes", value: timeLeft.minutes },
-    { label: "Seconds", value: timeLeft.seconds },
+    { label: "Min", value: timeLeft.minutes },
+    { label: "Sec", value: timeLeft.seconds },
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+    <div className="grid grid-cols-4 gap-2 md:gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 w-full max-w-2xl mx-auto">
       {units.map((unit, idx) => (
         <div 
           key={idx} 
-          className="glass-card flex flex-col items-center px-8 py-6 min-w-[120px] md:min-w-[140px] border border-white/10"
+          className="glass-card flex flex-col items-center px-2 py-4 md:px-8 md:py-6 border border-white/10"
         >
-          <div className="text-4xl md:text-5xl font-bold text-white mb-1 tabular-nums tracking-tighter">
+          <div className="text-2xl md:text-5xl font-bold text-white mb-1 tabular-nums tracking-tighter">
             {String(unit.value).padStart(2, '0')}
           </div>
-          <div className="text-[10px] uppercase tracking-[0.4em] text-white/60 font-medium">
+          <div className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/60 font-medium">
             {unit.label}
           </div>
         </div>
