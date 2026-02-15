@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-40 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-48 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -33,14 +33,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only mt-8 md:mt-12">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
+          <ScrollReveal className="fade-only mt-4 md:mt-12">
+            <h2 className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
@@ -49,48 +49,78 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90 px-4">
+            <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90 px-4">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="mt-4 flex flex-col items-center">
+            <div className="mt-4 md:mt-8 flex flex-col items-center">
               <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
               </div>
               
-              {/* Refined Architectural Branding - White House Style */}
-              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-30 animate-in fade-in zoom-in duration-1000">
-                <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-36 md:h-36 fill-none stroke-white" strokeWidth="0.75">
-                  {/* Base Steps */}
-                  <path d="M10 75 L90 75" />
-                  <path d="M15 72 L85 72" />
+              {/* Animated Realistic Architectural Branding - White House Style */}
+              <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-40 animate-in fade-in zoom-in duration-1000 group">
+                <div className="relative">
+                  {/* Scanning Light Effect */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
+                    <div className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-diplomatic-scanner" />
+                  </div>
 
-                  {/* Central Portico */}
-                  <path d="M40 72 L60 72 L60 40 L50 30 L40 40 Z" />
-                  
-                  {/* Columns */}
-                  <line x1="44" y1="42" x2="44" y2="72" strokeWidth="0.5" />
-                  <line x1="48" y1="42" x2="48" y2="72" strokeWidth="0.5" />
-                  <line x1="52" y1="42" x2="52" y2="72" strokeWidth="0.5" />
-                  <line x1="56" y1="42" x2="56" y2="72" strokeWidth="0.5" />
+                  <svg viewBox="0 0 120 80" className="w-32 h-24 md:w-48 md:h-32 fill-none stroke-white" strokeWidth="0.5">
+                    {/* Base Steps and Plinth */}
+                    <path d="M10 75 L110 75" strokeWidth="0.75" />
+                    <path d="M15 72 L105 72" strokeWidth="0.5" />
+                    <path d="M20 69 L100 69" strokeWidth="0.25" />
 
-                  {/* Left Wing */}
-                  <path d="M20 72 L40 72 L40 45 L20 45 Z" />
-                  <rect x="25" y="52" width="4" height="6" opacity="0.5" />
-                  <rect x="32" y="52" width="4" height="6" opacity="0.5" />
+                    {/* Left Wing */}
+                    <path d="M20 69 L45 69 L45 45 L20 45 Z" className="fill-white/5" />
+                    <rect x="25" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.2s' }} />
+                    <rect x="32" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.5s' }} />
+                    <rect x="39" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.8s' }} />
+                    <rect x="25" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.1s' }} />
+                    <rect x="32" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.4s' }} />
+                    <rect x="39" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.7s' }} />
 
-                  {/* Right Wing */}
-                  <path d="M60 72 L80 72 L80 45 L60 45 Z" />
-                  <rect x="64" y="52" width="4" height="6" opacity="0.5" />
-                  <rect x="71" y="52" width="4" height="6" opacity="0.5" />
+                    {/* Right Wing */}
+                    <path d="M75 69 L100 69 L100 45 L75 45 Z" className="fill-white/5" />
+                    <rect x="80" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.3s' }} />
+                    <rect x="87" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.6s' }} />
+                    <rect x="94" y="50" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '0.9s' }} />
+                    <rect x="80" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.2s' }} />
+                    <rect x="87" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.5s' }} />
+                    <rect x="94" y="60" width="3" height="4" className="fill-white/20 animate-pulse" style={{ animationDelay: '1.8s' }} />
 
-                  {/* Flagpole and Flag */}
-                  <line x1="50" y1="30" x2="50" y2="20" />
-                  <path d="M50 20 L58 23 L50 26" fill="white" fillOpacity="0.2" />
-                </svg>
+                    {/* Central Portico Structure */}
+                    <path d="M45 69 L75 69 L75 40 L60 30 L45 40 Z" className="fill-white/10" />
+                    
+                    {/* Columns with depth */}
+                    <line x1="48" y1="42" x2="48" y2="69" strokeWidth="0.75" />
+                    <line x1="53" y1="42" x2="53" y2="69" strokeWidth="0.75" />
+                    <line x1="58" y1="42" x2="58" y2="69" strokeWidth="0.75" />
+                    <line x1="63" y1="42" x2="63" y2="69" strokeWidth="0.75" />
+                    <line x1="68" y1="42" x2="68" y2="69" strokeWidth="0.75" />
+                    <line x1="72" y1="42" x2="72" y2="69" strokeWidth="0.75" />
+
+                    {/* Pediment Detail */}
+                    <path d="M45 40 L60 30 L75 40" strokeWidth="1" />
+                    <circle cx="60" cy="36" r="1.5" className="fill-white/30" />
+
+                    {/* Flagpole and Animated Flag */}
+                    <line x1="60" y1="30" x2="60" y2="15" strokeWidth="0.5" />
+                    <path d="M60 15 L72 18 L60 21" className="fill-white/40">
+                      <animate 
+                        attributeName="d" 
+                        values="M60 15 L72 18 L60 21; M60 15 L75 19 L60 21; M60 15 L72 18 L60 21" 
+                        dur="3s" 
+                        repeatCount="indefinite" 
+                      />
+                    </path>
+                  </svg>
+                </div>
+
                 <div className="flex flex-col items-center gap-2">
                   <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
                     Official Summit Platform
