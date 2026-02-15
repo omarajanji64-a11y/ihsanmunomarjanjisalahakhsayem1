@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[90vh] flex flex-col items-center pt-24 md:pt-32 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-28 md:pt-36 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -33,8 +33,8 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only mt-12 md:mt-16">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
+          <ScrollReveal className="fade-only mt-4 md:mt-8">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-6 md:mb-10 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
@@ -49,38 +49,62 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-16 leading-[1.6] font-normal opacity-90">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={500} className="fade-only">
-            <div className="mt-8 flex flex-col items-center">
+            <div className="mt-4 flex flex-col items-center">
               <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
               </div>
               
-              {/* Branded IHSAN MUN Entry Animation - Celestial Compass Design */}
+              {/* Branded IHSAN MUN Entry Animation - Diplomatic Seal Design */}
               <div 
-                className="mt-16 flex flex-col items-center group cursor-pointer" 
+                className="mt-12 flex flex-col items-center group cursor-pointer" 
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
-                <div className="relative w-40 h-40 flex items-center justify-center scale-90 md:scale-100">
-                  {/* Rotating Diamond Frame */}
-                  <div className="absolute inset-4 border border-white/10 rotate-45 animate-[spin_30s_linear_infinite]" />
-                  <div className="absolute inset-8 border border-primary/20 rotate-45 animate-[spin_20s_linear_infinite_reverse]" />
+                <div className="relative w-48 h-48 flex items-center justify-center scale-90 md:scale-100">
+                  {/* Outer Seal Rings */}
+                  <div className="absolute inset-0 border border-white/5 rounded-full" />
+                  <div className="absolute inset-2 border border-dashed border-white/10 rounded-full animate-[spin_60s_linear_infinite]" />
+                  <div className="absolute inset-6 border border-primary/20 rounded-full" />
                   
-                  {/* Cardinal Points Nodes */}
-                  <div className="absolute inset-0 animate-[spin_60s_linear_infinite]">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_hsl(var(--primary))]" />
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_hsl(var(--primary))]" />
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full" />
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full" />
+                  {/* Global Network Dots */}
+                  <div className="absolute inset-0 animate-[spin_40s_linear_infinite]">
+                    {[...Array(8)].map((_, i) => (
+                      <div 
+                        key={i}
+                        className="absolute w-1 h-1 bg-primary/40 rounded-full"
+                        style={{
+                          top: '50%',
+                          left: '50%',
+                          transform: `rotate(${i * 45}deg) translateY(-84px)`
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Minimalist Olive Branches (SVG) */}
+                  <div className="absolute inset-0 flex items-center justify-between px-2 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" className="rotate-[-15deg]">
+                      <path d="M10 70C10 70 30 50 30 30M10 70C10 70 5 40 20 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                      <circle cx="32" cy="25" r="2" fill="currentColor" />
+                      <circle cx="28" cy="40" r="2" fill="currentColor" />
+                      <circle cx="20" cy="55" r="2" fill="currentColor" />
+                    </svg>
+                    <svg width="40" height="80" viewBox="0 0 40 80" fill="none" className="rotate-[15deg] scale-x-[-1]">
+                      <path d="M10 70C10 70 30 50 30 30M10 70C10 70 5 40 20 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                      <circle cx="32" cy="25" r="2" fill="currentColor" />
+                      <circle cx="28" cy="40" r="2" fill="currentColor" />
+                      <circle cx="20" cy="55" r="2" fill="currentColor" />
+                    </svg>
                   </div>
 
                   {/* Inner Geometric Pulse */}
-                  <div className="absolute inset-12 border-t border-b border-white/5 rounded-full animate-pulse" />
+                  <div className="absolute inset-14 border border-white/5 rounded-full animate-pulse" />
 
                   {/* Central Text Brand */}
                   <div className="flex flex-col items-center gap-1 z-10 transition-transform duration-700 group-hover:scale-110">
