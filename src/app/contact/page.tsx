@@ -11,7 +11,7 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="py-24 bg-secondary/10">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="space-y-16 text-center">
@@ -36,8 +36,11 @@ export default function ContactPage() {
                 </div>
 
                 {/* Email Card */}
-                <div className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all">
-                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                <a 
+                  href="mailto:mun@ihsanschools.org"
+                  className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all group"
+                >
+                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Mail size={32} />
                   </div>
                   <div>
@@ -45,19 +48,24 @@ export default function ContactPage() {
                     <p className="text-muted-foreground">mun@ihsanschools.org</p>
                     <p className="text-xs text-primary font-bold mt-2 uppercase tracking-wider">Fast Response</p>
                   </div>
-                </div>
+                </a>
 
                 {/* Instagram Card */}
-                <div className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all">
-                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                <a 
+                  href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all group"
+                >
+                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Instagram size={32} />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">Follow Us</h4>
-                    <p className="text-muted-foreground">@ihsanschoolsmun</p>
+                    <p className="text-muted-foreground">@ihsanmodelun</p>
                     <p className="text-xs text-primary font-bold mt-2 uppercase tracking-wider">Daily Updates</p>
                   </div>
-                </div>
+                </a>
               </ScrollReveal>
             </div>
           </div>

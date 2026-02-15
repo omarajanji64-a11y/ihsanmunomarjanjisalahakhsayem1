@@ -19,10 +19,15 @@ export function Footer() {
               debate, and critical thinking at Ihsan Schools.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-all">
+              <a 
+                href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-all"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-all">
+              <a href="mailto:mun@ihsanschools.org" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-all">
                 <Mail size={18} />
               </a>
             </div>

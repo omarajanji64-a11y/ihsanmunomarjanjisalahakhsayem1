@@ -31,7 +31,7 @@ export function Navbar() {
           </LinkNext>
           <div className="hidden sm:flex items-center gap-3 border-l border-border pl-4 ml-2">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -91,7 +91,14 @@ export function Navbar() {
             </LinkNext>
           ))}
           <div className="flex gap-4 py-2 border-t border-border mt-2">
-             <a href="#" className="text-foreground hover:text-primary"><Instagram size={24} /></a>
+             <a 
+              href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary"
+             >
+               <Instagram size={24} />
+             </a>
           </div>
           <Button asChild className="bg-primary w-full py-6 text-lg rounded-xl">
             <LinkNext href="/registration" onClick={() => setIsMenuOpen(false)}>
