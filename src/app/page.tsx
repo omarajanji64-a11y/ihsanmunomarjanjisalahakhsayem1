@@ -40,7 +40,7 @@ export default function Home() {
 
           <ScrollReveal delay={200} className="fade-only">
             <h1 className="font-serif text-6xl md:text-9xl font-bold mb-6 leading-tight tracking-[0.1em] text-[#F4F1F9] uppercase">
-              IHSAN MUN <span className="font-light opacity-90 text-[0.8em]">'26</span>
+              IHSAN <br /> MUN <span className="font-light opacity-90 text-[0.8em]">'26</span>
             </h1>
           </ScrollReveal>
           
