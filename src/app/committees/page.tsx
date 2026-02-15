@@ -49,17 +49,32 @@ const committeeResources = [
 ];
 
 export default function CommitteesPage() {
+  const headerBg = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+
   return (
     <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
-      <section className="py-24 border-b border-border">
-        <div className="container mx-auto px-6 text-center">
+      {/* Header with Background Image */}
+      <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={headerBg.imageUrl}
+            alt="Committees Background"
+            fill
+            className="object-cover opacity-[0.2]"
+            priority
+            data-ai-hint={headerBg.imageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl font-bold mb-6">Committees</h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">Committees</h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
               Our committees are designed to challenge delegates of all experience levels. 
               Find your place in the global forum.
             </p>
