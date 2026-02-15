@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -18,8 +19,8 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
