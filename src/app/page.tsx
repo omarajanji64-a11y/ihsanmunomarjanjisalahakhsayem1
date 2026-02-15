@@ -89,10 +89,10 @@ export default function Home() {
                       />
                       <text 
                         x="77.5" 
-                        y="16" 
+                        y="16.5" 
                         className="fill-white font-bold" 
                         textAnchor="middle" 
-                        style={{ fontSize: '3.2px', letterSpacing: '0.4px', filter: 'drop-shadow(0px 0.5px 0.5px rgba(0,0,0,0.5))' }}
+                        style={{ fontSize: '4.2px', letterSpacing: '0.2px', filter: 'drop-shadow(0px 0.5px 0.5px rgba(0,0,0,0.5))' }}
                       >
                         IHSAN MUN
                       </text>
