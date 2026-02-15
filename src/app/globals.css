@@ -34,7 +34,7 @@
     --border: 272 20% 20%;
     --input: 272 20% 20%;
     --ring: 271 49% 50%;
-    --radius: 0.75rem;
+    --radius: 1rem;
 
     --cta: 11 41% 25%;
     --cta-foreground: 0 0% 98%;
@@ -43,7 +43,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-300;
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
@@ -73,14 +73,15 @@
 }
 
 .cinematic-text {
-  background: linear-gradient(to bottom, #fff, hsl(var(--primary)));
+  background: linear-gradient(to bottom, #fff 20%, hsl(var(--primary)) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px hsla(var(--primary), 0.3));
 }
 
 .glass-nav {
-  background: rgba(26, 15, 38, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(26, 15, 38, 0.85);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 

@@ -23,29 +23,31 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-[0.15]"
+            className="object-cover opacity-[0.25]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <ScrollReveal>
-            <h2 className="text-lg md:text-xl font-bold tracking-[0.2em] text-primary mb-6 uppercase">
+            <h2 className="text-sm md:text-base font-bold tracking-[0.4em] text-primary mb-4 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <h1 className="text-6xl md:text-9xl font-bold mb-8 leading-tight tracking-tighter text-secondary">
-              <span className="cinematic-text">IHSAN MUN</span> <br />
-              <span className="text-4xl md:text-6xl font-medium tracking-widest opacity-90">2026</span>
+            <h1 className="text-7xl md:text-[10rem] font-bold mb-6 leading-[0.85] tracking-tighter">
+              <span className="cinematic-text block">IHSAN MUN</span>
+              <span className="text-3xl md:text-5xl font-light tracking-[0.5em] text-muted-foreground uppercase mt-4 block">
+                Twenty Twenty Six
+              </span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={400}>
-            <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
+            <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground/80 mb-12 leading-relaxed">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -53,12 +55,12 @@ export default function Home() {
           
           <ScrollReveal delay={600}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button asChild size="lg" className="bg-[#47251E] hover:bg-[#5a2f26] text-white rounded-full px-12 py-8 text-xl group shadow-lg transition-all">
+              <Button asChild size="lg" className="bg-[#47251E] hover:bg-[#5a2f26] text-white rounded-full px-12 py-8 text-xl group shadow-2xl transition-all">
                 <Link href="/registration">
                   Join the Dialogue <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-secondary/20 text-secondary hover:bg-secondary/5 rounded-full px-12 py-8 text-xl">
+              <Button asChild variant="outline" size="lg" className="border-primary/20 text-primary hover:bg-primary/5 rounded-full px-12 py-8 text-xl">
                 <Link href="/about">Our Vision</Link>
               </Button>
             </div>
@@ -66,7 +68,7 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-secondary/20 rounded-full flex justify-center p-1">
+          <div className="w-6 h-10 border-2 border-primary/20 rounded-full flex justify-center p-1">
             <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" />
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function Home() {
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border border-secondary/5">
+            <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
               <Image
                 src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
                 alt="Committee Session"
@@ -88,7 +90,7 @@ export default function Home() {
             
             <div className="space-y-10">
               <ScrollReveal>
-                <h2 className="text-4xl md:text-6xl font-bold leading-tight text-secondary">
+                <h2 className="text-4xl md:text-6xl font-bold leading-tight">
                   Where <span className="text-primary italic">Leadership</span> Meets Global Perspective.
                 </h2>
               </ScrollReveal>
@@ -121,11 +123,11 @@ export default function Home() {
       </section>
 
       {/* Narrative Section 2: Committees Preview */}
-      <section className="py-32 bg-secondary/5 border-y border-secondary/5">
+      <section className="py-32 bg-secondary/20 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 space-y-6">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary tracking-tight">A Stage for Every <span className="text-primary italic">Interest</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">A Stage for Every <span className="text-primary italic">Interest</span></h2>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -156,7 +158,7 @@ export default function Home() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 200}>
-                <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group border border-secondary/5">
+                <div className="bg-card rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-primary/5 transition-all duration-500 group border border-white/5">
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={PlaceHolderImages.find(img => img.id === item.img)!.imageUrl}
@@ -167,7 +169,7 @@ export default function Home() {
                   </div>
                   <div className="p-10">
                     <div className="mb-6 p-3 bg-background rounded-2xl w-fit">{item.icon}</div>
-                    <h3 className="text-2xl font-bold mb-4 text-secondary">{item.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-8">{item.desc}</p>
                     <Link href="/committees" className="text-primary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all uppercase tracking-widest text-xs">
                       View Topics <ArrowRight size={14} />
@@ -199,7 +201,7 @@ export default function Home() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <Button asChild size="lg" className="bg-primary hover:bg-[#633a49] text-white rounded-full px-16 py-10 text-2xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">
+            <Button asChild size="lg" className="bg-primary hover:bg-[#6b3a99] text-white rounded-full px-16 py-10 text-2xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">
               <Link href="/registration">Register as a Delegate</Link>
             </Button>
           </ScrollReveal>
