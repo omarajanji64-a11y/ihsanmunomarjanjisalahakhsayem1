@@ -35,17 +35,31 @@ const team = [
 ];
 
 export default function SecretariatPage() {
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+
   return (
     <div className="min-h-screen bg-background pt-20">
       <Navbar />
       
-      <section className="py-24 bg-secondary text-white text-center">
-        <div className="container mx-auto px-6">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={heroImage.imageUrl}
+            alt="Secretariat Background"
+            fill
+            className="object-cover opacity-[0.15]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl font-bold mb-8 text-white">The <span className="text-primary">Secretariat</span></h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-primary">Secretariat</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
               Meet the dedicated team from Ihsan Schools working behind the scenes 
               to bring you a world-class conference.
             </p>
