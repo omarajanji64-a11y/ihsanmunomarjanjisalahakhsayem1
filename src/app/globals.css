@@ -17,8 +17,8 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    /* Deepened Diplomatic Secondary for Premium Depth */
-    --secondary: 272 43% 15%; /* #261536 - Deeper refined tone */
+    /* Deepened Diplomatic Secondary for Premium Depth - Now even richer */
+    --secondary: 272 45% 13%; /* #221230 - Ultra Deep Purple */
     --secondary-foreground: 260 40% 98%;
     
     --muted: 268 15% 15%;
@@ -26,9 +26,6 @@
     
     --accent: 272 43% 35%;
     --accent-foreground: 260 40% 98%;
-    
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
     
     --border: 272 20% 18%;
     --input: 272 20% 18%;
@@ -67,8 +64,8 @@
   background: linear-gradient(
     to bottom,
     hsl(var(--background)) 0%,
-    hsl(var(--secondary)) 12%,
-    hsl(var(--secondary)) 88%,
+    hsl(var(--secondary)) 15%,
+    hsl(var(--secondary)) 85%,
     hsl(var(--background)) 100%
   );
 }
@@ -77,7 +74,7 @@
 .section-light::before {
   content: "";
   @apply absolute inset-0 pointer-events-none;
-  background-image: radial-gradient(circle at 50% 50%, hsla(var(--primary), 0.08) 0%, transparent 70%);
+  background-image: radial-gradient(circle at 50% 50%, hsla(var(--primary), 0.1) 0%, transparent 70%);
 }
 
 .btn-premium {
