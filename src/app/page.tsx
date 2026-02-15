@@ -37,9 +37,9 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <ScrollReveal delay={200}>
-            <h1 className="text-7xl md:text-[10rem] font-bold mb-6 leading-[0.85] tracking-tighter">
-              <span className="cinematic-text block">IHSAN MUN 2026</span>
+          <ScrollReveal delay={200} className="fade-only">
+            <h1 className="font-serif text-6xl md:text-9xl font-bold mb-6 leading-tight tracking-[0.1em] text-[#F4F1F9] uppercase">
+              IHSAN MUN <span className="font-normal text-[0.75em] opacity-80">2026</span>
             </h1>
           </ScrollReveal>
           
