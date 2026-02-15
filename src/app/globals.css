@@ -1,34 +1,37 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 51 8% 97%;
+    --foreground: 301 23% 21%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 301 23% 21%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 301 23% 21%;
     
-    /* Ihsan Orange #F26522 */
-    --primary: 18 89% 54%;
-    --primary-foreground: 0 0% 100%;
+    /* #47251E - Primary */
+    --primary: 10 41% 20%;
+    --primary-foreground: 51 8% 95%;
     
-    /* Ihsan Purple #862B90 */
-    --secondary: 294 54% 37%;
-    --secondary-foreground: 0 0% 100%;
+    /* #362335 - Secondary */
+    --secondary: 301 23% 21%;
+    --secondary-foreground: 51 8% 95%;
     
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    /* #A0958A - Muted */
+    --muted: 30 10% 90%;
+    --muted-foreground: 30 10% 40%;
+    
+    /* #BAB8AF - Accent */
+    --accent: 51 8% 71%;
+    --accent-foreground: 301 23% 21%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 18 89% 54%;
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 10 41% 20%;
     --radius: 0.75rem;
   }
 }
@@ -57,15 +60,15 @@
 }
 
 .cinematic-text {
-  background: linear-gradient(to bottom, #862B90, #F26522);
+  background: linear-gradient(to bottom, #362335, #47251E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(186, 184, 175, 0.8);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(134, 43, 144, 0.1);
+  border-bottom: 1px solid rgba(54, 35, 53, 0.1);
 }
 
 @keyframes float {
