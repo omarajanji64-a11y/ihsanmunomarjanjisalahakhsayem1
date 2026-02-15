@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-48 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-40 md:pt-64 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -78,10 +78,10 @@ export default function Home() {
                         className="fill-white"
                         stroke="none"
                       />
-                      {/* Text - Purple (Primary Color) */}
+                      {/* Text - Purple (Primary Color) - Precisely Centered */}
                       <text 
-                        x="76" 
-                        y="17" 
+                        x="77.5" 
+                        y="16" 
                         className="fill-primary font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '6px', letterSpacing: '0.1px', fontWeight: '900' }}
