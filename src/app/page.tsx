@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-48 md:pt-72 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-60 md:pt-80 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -164,7 +164,7 @@ export default function Home() {
                     Official Summit Platform
                   </span>
                   <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-light text-white/40">
-                    Ihsan Schools Global Network
+                    Ihsan Schools
                   </span>
                 </div>
               </div>
