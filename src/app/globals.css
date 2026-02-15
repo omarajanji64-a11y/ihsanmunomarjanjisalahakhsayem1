@@ -4,48 +4,67 @@
 
 @layer base {
   :root {
-    --background: 51 8% 97%;
-    --foreground: 301 23% 21%;
+    /* Soft Section Background: #EEE9EC */
+    --background: 315 9% 92%;
+    /* Main Text on Light: #2A1E23 */
+    --foreground: 334 10% 14%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 301 23% 21%;
+    --card-foreground: 334 10% 14%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 301 23% 21%;
+    --popover-foreground: 334 10% 14%;
     
-    /* #47251E - Primary */
-    --primary: 10 41% 20%;
-    --primary-foreground: 51 8% 95%;
+    /* Primary (main brand color): #4E2F3A */
+    --primary: 338 25% 25%;
+    --primary-foreground: 320 12% 95%;
     
-    /* #362335 - Secondary */
-    --secondary: 301 23% 21%;
-    --secondary-foreground: 51 8% 95%;
+    /* Dark Background Sections: #362335 */
+    --secondary: 301 21% 17%;
+    --secondary-foreground: 320 12% 95%;
     
-    /* #A0958A - Muted */
-    --muted: 30 10% 90%;
-    --muted-foreground: 30 10% 40%;
+    /* Muted Text: #8C7A82 */
+    --muted: 333 5% 90%;
+    --muted-foreground: 333 5% 45%;
     
-    /* #BAB8AF - Accent */
-    --accent: 51 8% 71%;
-    --accent-foreground: 301 23% 21%;
+    /* Secondary Accent: #735F75 */
+    --accent: 295 10% 42%;
+    --accent-foreground: 320 12% 95%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 10% 85%;
-    --input: 30 10% 85%;
-    --ring: 10 41% 20%;
+    
+    --border: 315 9% 85%;
+    --input: 315 9% 85%;
+    --ring: 338 25% 25%;
     --radius: 0.75rem;
+
+    /* CTA Color: #47251E */
+    --cta: 11 41% 20%;
+    --cta-foreground: 0 0% 98%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
   body {
-    @apply bg-background text-foreground font-body overflow-x-hidden;
+    @apply bg-background text-foreground font-body antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-secondary;
+    @apply font-headline font-bold text-secondary tracking-tight;
   }
+}
+
+/* Custom CTA utility to match the brown specific request */
+.btn-cta {
+  background-color: hsl(var(--cta));
+  color: hsl(var(--cta-foreground));
+}
+.btn-cta:hover {
+  background-color: hsl(11, 41%, 25%); /* Slightly brighter version */
 }
 
 .scroll-reveal {
@@ -60,14 +79,14 @@
 }
 
 .cinematic-text {
-  background: linear-gradient(to bottom, #362335, #47251E);
+  background: linear-gradient(to bottom, hsl(var(--secondary)), hsl(var(--primary)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-nav {
-  background: rgba(186, 184, 175, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(238, 233, 236, 0.8);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(54, 35, 53, 0.1);
 }
 
