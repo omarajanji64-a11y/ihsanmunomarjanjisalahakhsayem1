@@ -69,6 +69,28 @@ export default function Home() {
                   </div>
 
                   <svg viewBox="0 0 120 80" className="w-32 h-24 md:w-48 md:h-32 fill-none stroke-white" strokeWidth="0.4">
+                    {/* Waving Flag with Text */}
+                    <line x1="60" y1="26" x2="60" y2="6" strokeWidth="0.8" className="stroke-white/60" />
+                    <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }}>
+                      <path 
+                        d="M60 6 L95 6 L95 22 L60 22 Z" 
+                        className="fill-primary"
+                      />
+                      <path 
+                        d="M60 6 Q77.5 2 95 6 L95 22 Q77.5 18 60 22 Z" 
+                        className="fill-primary/80"
+                      />
+                      <text 
+                        x="77.5" 
+                        y="15.5" 
+                        className="fill-white font-bold" 
+                        textAnchor="middle" 
+                        style={{ fontSize: '3.8px', letterSpacing: '0.1px' }}
+                      >
+                        IHSAN MUN
+                      </text>
+                    </g>
+
                     {/* Detailed Base and Stairs */}
                     <path d="M5 78 L115 78" strokeWidth="0.6" className="opacity-30" />
                     <path d="M10 75 L110 75" strokeWidth="0.5" />
