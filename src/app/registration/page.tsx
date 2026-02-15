@@ -30,6 +30,10 @@ export default function RegistrationPage() {
       window.location.href = "https://forms.gle/QNeT9wvBfTYda81P7";
       return;
     }
+    if (id === "chair") {
+      window.location.href = "https://forms.gle/UPjTiJB5UXAuD8mK6";
+      return;
+    }
     
     setRole(id);
     if (id === "delegate") {
