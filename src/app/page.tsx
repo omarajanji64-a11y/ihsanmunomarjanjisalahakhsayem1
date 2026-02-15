@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -60,23 +61,43 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Diplomatic Entry Indicator */}
+              {/* Branded IHSAN MUN Entry Animation */}
               <div 
-                className="mt-28 flex flex-col items-center gap-6 group cursor-pointer" 
+                className="mt-28 flex flex-col items-center group cursor-pointer" 
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
-                <div className="relative w-12 h-12 flex items-center justify-center">
-                  {/* Decorative Arch */}
-                  <div className="absolute inset-0 border-t border-x border-white/10 rounded-t-full" />
-                  {/* Traveling Pulse */}
-                  <div className="w-[1px] h-full bg-gradient-to-b from-primary/50 to-transparent relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-4 bg-white/60 blur-[1px] animate-entry-traveler" />
+                <div className="relative w-40 h-40 flex items-center justify-center scale-90 md:scale-100">
+                  {/* Orbiting Rings */}
+                  <div className="absolute inset-0 border border-white/10 rounded-full animate-[spin_20s_linear_infinite]" />
+                  <div className="absolute inset-4 border border-white/5 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                  
+                  {/* Orbiting Dots */}
+                  <div className="absolute inset-0 animate-[spin_4s_linear_infinite]">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-primary rounded-full blur-[1px]" />
+                  </div>
+                  <div className="absolute inset-0 animate-[spin_8s_linear_infinite_reverse]">
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white/40 rounded-full blur-[1px]" />
+                  </div>
+
+                  {/* Central Text Brand */}
+                  <div className="flex flex-col items-center gap-1 z-10 transition-transform duration-700 group-hover:scale-110">
+                    <span className="block text-sm font-serif font-bold tracking-[0.4em] text-white">
+                      IHSAN
+                    </span>
+                    <div className="w-12 h-[1px] bg-white/20 group-hover:w-16 group-hover:bg-primary transition-all duration-700" />
+                    <span className="text-[10px] font-bold tracking-[0.6em] text-white/40">
+                      MUN
+                    </span>
                   </div>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-[9px] uppercase tracking-[0.5em] text-white/30 font-bold group-hover:text-primary transition-colors">
+                
+                <div className="mt-8 flex flex-col items-center gap-3">
+                  <span className="text-[9px] uppercase tracking-[0.8em] text-white/30 font-bold group-hover:text-primary transition-colors">
                     Enter the Hall
                   </span>
+                  <div className="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent relative overflow-hidden">
+                     <div className="absolute top-0 left-0 w-full h-4 bg-white/60 blur-[1px] animate-entry-traveler" />
+                  </div>
                 </div>
               </div>
             </div>
