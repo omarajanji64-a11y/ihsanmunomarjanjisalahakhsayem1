@@ -6,7 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Users, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Countdown } from "@/components/countdown";
 
@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1E102B] via-transparent to-[#1E102B]" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto px-6 relative z-10 text-center py-20">
           <ScrollReveal className="fade-only">
             <h2 className="text-[10px] md:text-xs font-medium tracking-[0.5em] text-white/70 mb-8 uppercase">
               The Future of Global Diplomacy
@@ -170,7 +170,7 @@ export default function Home() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 py-8 text-sm font-bold uppercase tracking-widest btn-premium">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-12 py-8 text-sm font-bold uppercase tracking-widest btn-premium">
               <Link href="/registration">Register as a Delegate</Link>
             </Button>
           </ScrollReveal>
