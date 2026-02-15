@@ -113,7 +113,7 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {[
               { 
                 title: "Security Council", 
@@ -131,9 +131,9 @@ export default function Home() {
                 img: "committee-ecosoc"
               },
             ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 150}>
-                <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500">
-                  <div className="relative h-64 overflow-hidden">
+              <ScrollReveal key={i} delay={i * 150} className="h-full">
+                <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500 h-full flex flex-col">
+                  <div className="relative h-64 overflow-hidden shrink-0">
                     <Image
                       src={PlaceHolderImages.find(img => img.id === item.img)!.imageUrl}
                       alt={item.title}
@@ -141,10 +141,12 @@ export default function Home() {
                       className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-10 space-y-4">
-                    <h3 className="text-xl font-serif font-bold">{item.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
-                    <Link href="/committees" className="text-primary text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-4">
+                  <div className="p-10 space-y-4 flex-1 flex flex-col">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-serif font-bold">{item.title}</h3>
+                      <p className="text-white/60 text-sm leading-relaxed mt-4">{item.desc}</p>
+                    </div>
+                    <Link href="/committees" className="text-primary text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-6">
                       View Agenda <ArrowRight size={12} />
                     </Link>
                   </div>
