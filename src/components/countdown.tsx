@@ -55,67 +55,6 @@ export function Countdown() {
           </div>
         ))}
       </div>
-
-      {/* Symbolic Animated Hourglass */}
-      <div className="relative group cursor-wait">
-        <svg
-          width="64"
-          height="64"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-primary"
-        >
-          {/* Outer Ethereal Ring */}
-          <circle 
-            cx="12" 
-            cy="12" 
-            r="10" 
-            stroke="currentColor" 
-            strokeWidth="0.5" 
-            strokeDasharray="4 4" 
-            className="opacity-30 animate-[spin_10s_linear_infinite]" 
-          />
-          
-          {/* Symbolic Hourglass - Two Triangles */}
-          <g className="animate-[spin_8s_ease-in-out_infinite]">
-            {/* Top Triangle - Knowledge */}
-            <path 
-              d="M7 6L17 6L12 12L7 6Z" 
-              fill="currentColor" 
-              className="opacity-40"
-            >
-              <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite" />
-            </path>
-            
-            {/* Bottom Triangle - Resolution */}
-            <path 
-              d="M12 12L17 18L7 18L12 12Z" 
-              fill="currentColor" 
-              className="opacity-10"
-            >
-              <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite" />
-            </path>
-            
-            {/* The Central Point - Diplomacy */}
-            <circle cx="12" cy="12" r="0.8" fill="currentColor" className="animate-pulse" />
-          </g>
-
-          {/* Flowing Line */}
-          <line 
-            x1="12" 
-            y1="8" 
-            x2="12" 
-            y2="16" 
-            stroke="currentColor" 
-            strokeWidth="0.5" 
-            strokeDasharray="1 3"
-            className="opacity-50"
-          >
-            <animate attributeName="stroke-dashoffset" values="4;0" dur="2s" repeatCount="indefinite" />
-          </line>
-        </svg>
-      </div>
     </div>
   );
 }
