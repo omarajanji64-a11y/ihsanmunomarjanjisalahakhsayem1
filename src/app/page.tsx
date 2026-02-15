@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -9,6 +8,7 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Users, Star } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Countdown } from "@/components/countdown";
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg")!;
@@ -49,6 +49,10 @@ export default function Home() {
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={500}>
+            <Countdown />
           </ScrollReveal>
           
           <ScrollReveal delay={600}>
