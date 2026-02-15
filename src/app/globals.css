@@ -4,39 +4,39 @@
 
 @layer base {
   :root {
-    /* Soft Section Background: #EEE9EC */
-    --background: 315 9% 92%;
-    /* Main Text on Light: #2A1E23 */
-    --foreground: 334 10% 14%;
+    /* Soft Background Sections: #F3EFF7 */
+    --background: 264 25% 95%;
+    /* Main Text on Light: #1F1428 */
+    --foreground: 272 33% 11%;
     
     --card: 0 0% 100%;
-    --card-foreground: 334 10% 14%;
+    --card-foreground: 272 33% 11%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 334 10% 14%;
+    --popover-foreground: 272 33% 11%;
     
-    /* Primary (main brand color): #4E2F3A */
-    --primary: 338 25% 25%;
-    --primary-foreground: 320 12% 95%;
+    /* Primary (Main Brand Purple): #5A2D82 */
+    --primary: 271 49% 34%;
+    --primary-foreground: 255 27% 96%;
     
-    /* Dark Background Sections: #362335 */
-    --secondary: 301 21% 17%;
-    --secondary-foreground: 320 12% 95%;
+    /* Deep Section Background: #2E1A47 */
+    --secondary: 266 46% 19%;
+    --secondary-foreground: 255 27% 96%;
     
-    /* Muted Text: #8C7A82 */
-    --muted: 333 5% 90%;
-    --muted-foreground: 333 5% 45%;
+    /* Muted Text: #8E7AA6 */
+    --muted: 267 19% 90%;
+    --muted-foreground: 267 19% 56%;
     
-    /* Secondary Accent: #735F75 */
-    --accent: 295 10% 42%;
-    --accent-foreground: 320 12% 95%;
+    /* Secondary Accent: #735F8A */
+    --accent: 267 18% 46%;
+    --accent-foreground: 255 27% 96%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 315 9% 85%;
-    --input: 315 9% 85%;
-    --ring: 338 25% 25%;
+    --border: 272 20% 85%;
+    --input: 272 20% 85%;
+    --ring: 271 49% 34%;
     --radius: 0.75rem;
 
     /* CTA Color: #47251E */
@@ -58,13 +58,12 @@
   }
 }
 
-/* Custom CTA utility to match the brown specific request */
 .btn-cta {
   background-color: hsl(var(--cta));
   color: hsl(var(--cta-foreground));
 }
 .btn-cta:hover {
-  background-color: hsl(11, 41%, 25%); /* Slightly brighter version */
+  background-color: hsl(11, 41%, 25%);
 }
 
 .scroll-reveal {
@@ -85,9 +84,9 @@
 }
 
 .glass-nav {
-  background: rgba(238, 233, 236, 0.8);
+  background: rgba(243, 239, 247, 0.8);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(54, 35, 53, 0.1);
+  border-bottom: 1px solid rgba(46, 26, 71, 0.1);
 }
 
 @keyframes float {
