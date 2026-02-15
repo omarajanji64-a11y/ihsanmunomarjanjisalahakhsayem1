@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Section 1: Introduction (Light Background) */}
-      <section className="py-32 section-light">
+      <section className="py-40 section-light border-y border-white/5">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
             <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Committees (Dark Background) */}
-      <section className="py-32 section-dark">
+      <section className="py-40 section-dark">
         <div className="container mx-auto px-6">
           <div className="text-center mb-24 space-y-6">
             <ScrollReveal>
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Call to Action (Light Background) */}
-      <section className="py-40 section-light text-center">
+      <section className="py-48 section-light text-center border-t border-white/5">
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
