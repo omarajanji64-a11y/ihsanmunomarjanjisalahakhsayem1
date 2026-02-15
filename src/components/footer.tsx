@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif font-bold text-white mb-8 text-sm uppercase tracking-widest">HQ</h4>
+            <h4 className="font-serif font-bold text-white mb-8 text-sm uppercase tracking-widest">Contact</h4>
             <ul className="space-y-6 text-xs tracking-wide">
               <li className="flex gap-4 text-[#A89BB5]">
                 <MapPin size={16} className="text-primary shrink-0" />
