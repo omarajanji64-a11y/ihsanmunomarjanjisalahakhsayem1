@@ -43,7 +43,7 @@ export default function AboutPage() {
       </section>
 
       {/* Storytelling Narrative */}
-      <section className="py-24">
+      <section className="py-24 section-dark">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -69,14 +69,14 @@ export default function AboutPage() {
                 <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
                   <Target className="text-primary shrink-0" size={32} />
                   <div>
-                    <h4 className="font-bold text-lg">Goal-Oriented Debate</h4>
+                    <h4 className="font-bold text-lg text-foreground">Goal-Oriented Debate</h4>
                     <p className="text-sm text-muted-foreground">Focusing on practical resolutions that could actually change the world.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
                   <Eye className="text-primary shrink-0" size={32} />
                   <div>
-                    <h4 className="font-bold text-lg">Visionary Thinking</h4>
+                    <h4 className="font-bold text-lg text-foreground">Visionary Thinking</h4>
                     <p className="text-sm text-muted-foreground">Looking at the long-term impact of diplomatic decisions on society.</p>
                   </div>
                 </div>
@@ -95,9 +95,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-24 bg-secondary text-secondary-foreground border-y border-border">
-        <div className="container mx-auto px-6">
+      {/* Philosophy - Softened Transition */}
+      <section className="py-32 section-light">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <ScrollReveal className="text-center space-y-4">
               <ShieldCheck className="mx-auto text-primary" size={48} />

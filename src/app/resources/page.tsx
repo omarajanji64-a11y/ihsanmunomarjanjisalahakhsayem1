@@ -54,8 +54,9 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="container mx-auto px-6">
+      {/* Resources Grid - Standardized Transition */}
+      <section className="py-32 section-light">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {resources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
@@ -65,7 +66,7 @@ export default function ResourcesPage() {
                       {res.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">{res.title}</h3>
+                      <h3 className="text-xl font-bold mb-2 text-foreground">{res.title}</h3>
                       <p className="text-sm text-muted-foreground">{res.desc}</p>
                     </div>
                   </div>

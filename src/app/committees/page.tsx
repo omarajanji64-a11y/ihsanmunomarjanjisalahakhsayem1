@@ -82,7 +82,7 @@ export default function CommitteesPage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-24 section-dark">
         <div className="container mx-auto px-6">
           <div className="space-y-24">
             {committees.map((committee, i) => (
@@ -115,7 +115,7 @@ export default function CommitteesPage() {
                         {committee.topics.map((topic, idx) => (
                           <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
                             <span className="text-primary font-bold">Topic {idx + 1}:</span>
-                            <span>{topic}</span>
+                            <span className="text-foreground">{topic}</span>
                           </li>
                         ))}
                       </ul>
@@ -128,9 +128,9 @@ export default function CommitteesPage() {
         </div>
       </section>
 
-      {/* Preparation Resources Section */}
-      <section className="py-24 bg-secondary/10 border-t border-border">
-        <div className="container mx-auto px-6">
+      {/* Preparation Resources Section - Softened Transition */}
+      <section className="py-32 section-light">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <ScrollReveal>
               <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-primary">Essentials</span></h2>
@@ -146,7 +146,7 @@ export default function CommitteesPage() {
                       {res.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-1">{res.title}</h3>
+                      <h3 className="text-xl font-bold mb-1 text-foreground">{res.title}</h3>
                       <p className="text-sm text-muted-foreground">{res.desc}</p>
                     </div>
                   </div>
