@@ -17,7 +17,7 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    /* Refined Light Purple - Diplomatic Lilac */
+    /* Refined Diplomatic Lilac - Sophisticated secondary background */
     --secondary: 272 25% 95%; /* #F4F1F8 */
     --secondary-foreground: 272 46% 15%; /* Deep Purple for contrast */
     
@@ -67,11 +67,19 @@
 }
 
 .section-dark {
-  @apply bg-background text-foreground;
+  @apply bg-background text-foreground relative;
 }
 
 .section-light {
   @apply bg-secondary text-secondary-foreground relative overflow-hidden;
+  /* Soft transition gradients at top and bottom to blend with dark sections */
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--background)) 0%,
+    hsl(var(--secondary)) 150px,
+    hsl(var(--secondary)) calc(100% - 150px),
+    hsl(var(--background)) 100%
+  );
 }
 
 .section-light::before {
