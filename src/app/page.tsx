@@ -61,28 +61,35 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Refined Architectural Branding */}
+              {/* Refined Architectural Branding - White House Style */}
               <div className="mt-16 md:mt-24 flex flex-col items-center gap-8 opacity-30 animate-in fade-in zoom-in duration-1000">
                 <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-36 md:h-36 fill-none stroke-white" strokeWidth="0.75">
-                  {/* Main Dome */}
-                  <path d="M30 60 Q 50 20 70 60" />
-                  <path d="M30 60 L70 60" />
-                  
-                  {/* Dome details */}
-                  <line x1="50" y1="20" x2="50" y2="60" opacity="0.4" />
-                  <path d="M40 45 Q 50 35 60 45" opacity="0.4" />
+                  {/* Base Steps */}
+                  <path d="M10 75 L90 75" />
+                  <path d="M15 72 L85 72" />
 
-                  {/* Main Building Body */}
-                  <rect x="30" y="60" width="40" height="20" />
-                  <path d="M45 80 L45 72 Q 50 68 55 72 L55 80" /> {/* Central door */}
+                  {/* Central Portico */}
+                  <path d="M40 72 L60 72 L60 40 L50 30 L40 40 Z" />
                   
-                  {/* Side Structures (Minarets/Towers) */}
-                  <path d="M22 80 L22 45 Q 22 40 25 45 L25 80" />
-                  <path d="M75 80 L75 45 Q 78 40 78 45 L78 80" />
-                  
-                  {/* Base/Steps */}
-                  <path d="M15 80 L85 80" />
-                  <path d="M10 85 L90 85" />
+                  {/* Columns */}
+                  <line x1="44" y1="42" x2="44" y2="72" strokeWidth="0.5" />
+                  <line x1="48" y1="42" x2="48" y2="72" strokeWidth="0.5" />
+                  <line x1="52" y1="42" x2="52" y2="72" strokeWidth="0.5" />
+                  <line x1="56" y1="42" x2="56" y2="72" strokeWidth="0.5" />
+
+                  {/* Left Wing */}
+                  <path d="M20 72 L40 72 L40 45 L20 45 Z" />
+                  <rect x="25" y="52" width="4" height="6" opacity="0.5" />
+                  <rect x="32" y="52" width="4" height="6" opacity="0.5" />
+
+                  {/* Right Wing */}
+                  <path d="M60 72 L80 72 L80 45 L60 45 Z" />
+                  <rect x="64" y="52" width="4" height="6" opacity="0.5" />
+                  <rect x="71" y="52" width="4" height="6" opacity="0.5" />
+
+                  {/* Flagpole and Flag */}
+                  <line x1="50" y1="30" x2="50" y2="20" />
+                  <path d="M50 20 L58 23 L50 26" fill="white" fillOpacity="0.2" />
                 </svg>
                 <div className="flex flex-col items-center gap-2">
                   <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
