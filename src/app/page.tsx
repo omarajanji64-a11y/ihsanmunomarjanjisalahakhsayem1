@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -7,7 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Users, BookOpen, Star } from "lucide-react";
+import { ArrowRight, Globe, Users, Star } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
