@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-28 md:pt-40 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-32 md:pt-40 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -33,14 +33,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only mt-4 md:mt-12">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-6 md:mb-12 uppercase">
+          <ScrollReveal className="fade-only mt-8 md:mt-12">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-8 md:mb-12 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
@@ -49,7 +49,7 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90 px-4">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -59,6 +59,24 @@ export default function Home() {
             <div className="mt-4 flex flex-col items-center">
               <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
+              </div>
+              
+              {/* UN Logo Branding below Clock */}
+              <div className="mt-16 md:mt-24 flex flex-col items-center gap-6 opacity-30 animate-in fade-in zoom-in duration-1000">
+                <svg viewBox="0 0 24 24" className="w-20 h-20 md:w-28 md:h-28 fill-none stroke-white" strokeWidth="0.5">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M4 12h16" />
+                  <path d="M12 4v16" />
+                  <ellipse cx="12" cy="12" rx="8" ry="3" />
+                  <ellipse cx="12" cy="12" rx="3" ry="8" />
+                  <path d="M7 19c-1.5-2-2-4.5-2-7s.5-5 2-7" />
+                  <path d="M17 5c1.5 2 2 4.5 2 7s-.5 5-2 7" />
+                  <path d="M3 10c0 4 2 8 9 10s9-6 9-10" strokeLinecap="round" />
+                  <path d="M5 8c0 2 1 4 7 5s7-3 7-5" strokeLinecap="round" opacity="0.5" />
+                </svg>
+                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.6em] font-medium text-white/60">
+                  Global Diplomatic Forum
+                </span>
               </div>
             </div>
           </ScrollReveal>
