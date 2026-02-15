@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-28 md:pt-36 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-28 md:pt-40 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -33,14 +33,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-32">
-          <ScrollReveal className="fade-only mt-4 md:mt-8">
-            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-6 md:mb-10 uppercase">
+          <ScrollReveal className="fade-only mt-4 md:mt-12">
+            <h2 className="text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-6 md:mb-12 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200} className="fade-only">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-10 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-6 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
                 MUN <span className="text-[0.7em] opacity-40 italic font-light tracking-normal">'26</span>
@@ -49,7 +49,7 @@ export default function Home() {
           </ScrollReveal>
           
           <ScrollReveal delay={400} className="fade-only">
-            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90">
+            <p className="max-w-[650px] mx-auto text-lg text-[#EDEAF3] mb-12 md:mb-20 leading-[1.6] font-normal opacity-90">
               Step into the shoes of global ambassadors. Debate world-shaping issues, 
               form strategic alliances, and lead the conversation at Ihsan Schools MUN.
             </p>
@@ -59,64 +59,6 @@ export default function Home() {
             <div className="mt-4 flex flex-col items-center">
               <div className="max-w-4xl mx-auto w-full">
                 <Countdown />
-              </div>
-              
-              {/* Branded IHSAN MUN Entry - UN Logo Design */}
-              <div 
-                className="mt-12 flex flex-col items-center group cursor-pointer" 
-                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-              >
-                <div className="relative w-56 h-56 flex items-center justify-center scale-90 md:scale-100 transition-transform duration-700 hover:scale-110">
-                  {/* UN Style Olive Branches & Globe Grid */}
-                  <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full text-primary opacity-30 group-hover:opacity-50 transition-opacity duration-700">
-                    {/* Globe Grid Lines */}
-                    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                    <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                    <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="50" y1="15" x2="50" y2="85" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="15" y1="50" x2="85" y2="50" stroke="currentColor" strokeWidth="0.5" />
-                    <path d="M25 25 L75 75 M25 75 L75 25" stroke="currentColor" strokeWidth="0.5" opacity="0.5" />
-                    
-                    {/* Olive Branches */}
-                    <path 
-                      d="M30 80 C20 70 15 55 15 40 C15 25 25 15 35 10" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2.5" 
-                      strokeLinecap="round" 
-                    />
-                    <path 
-                      d="M70 80 C80 70 85 55 85 40 C85 25 75 15 65 10" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2.5" 
-                      strokeLinecap="round" 
-                    />
-                    
-                    {/* Leaves along branches */}
-                    {[...Array(5)].map((_, i) => (
-                      <g key={i} opacity="0.8">
-                        <circle cx={18 + i*3} cy={30 + i*10} r="1.5" fill="currentColor" />
-                        <circle cx={82 - i*3} cy={30 + i*10} r="1.5" fill="currentColor" />
-                      </g>
-                    ))}
-                  </svg>
-
-                  {/* Rotating Orbit Ring */}
-                  <div className="absolute inset-4 border border-dashed border-white/5 rounded-full animate-[spin_30s_linear_infinite]" />
-
-                  {/* Central Branded Content */}
-                  <div className="flex flex-col items-center gap-1 z-10">
-                    <Globe size={32} className="text-primary mb-2 animate-pulse" />
-                    <span className="block text-sm font-serif font-bold tracking-[0.4em] text-white">
-                      IHSAN
-                    </span>
-                    <div className="w-12 h-[1px] bg-white/20 group-hover:w-16 group-hover:bg-primary transition-all duration-700" />
-                    <span className="text-[10px] font-bold tracking-[0.6em] text-white/40">
-                      MUN
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </ScrollReveal>
