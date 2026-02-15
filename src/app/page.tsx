@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -60,18 +61,29 @@ export default function Home() {
                 <Countdown />
               </div>
               
-              {/* Enhanced Animated Diplomatic Visual Element */}
-              <div className="mt-20 w-full max-w-md h-[2px] bg-white/5 relative overflow-hidden rounded-full mx-auto">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-primary to-transparent animate-diplomatic-scanner" />
-                {/* Secondary subtle glow pulse */}
-                <div className="absolute inset-0 w-full h-full bg-primary/20 blur-xl animate-pulse" />
+              {/* Diplomatic Pulse Indicator */}
+              <div className="mt-24 flex flex-col items-center gap-6">
+                <div className="relative w-16 h-16 flex items-center justify-center">
+                  {/* Outer spinning ring */}
+                  <div className="absolute inset-0 border border-white/10 rounded-full animate-[spin_10s_linear_infinite]" />
+                  {/* Middle ring */}
+                  <div className="absolute inset-2 border border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                  {/* Inner pulsing core */}
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_15px_rgba(var(--primary),0.5)]" />
+                  
+                  {/* Scroll line */}
+                  <div className="absolute top-full mt-4 w-[1px] h-12 bg-gradient-to-b from-primary via-primary/20 to-transparent" />
+                </div>
+                <span className="text-[9px] uppercase tracking-[0.5em] text-white/30 font-bold mt-8">
+                  Scroll to Explore
+                </span>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Section 1: Introduction (Softened Deep Purple Transition) */}
+      {/* Section 1: Introduction (Deep Purple Transition) */}
       <section className="py-40 section-light">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
@@ -168,7 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Call to Action (Softened Deep Purple Transition) */}
+      {/* Section 3: Call to Action (Deep Purple Transition) */}
       <section className="py-48 section-light text-center">
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
