@@ -53,7 +53,7 @@ export default function Home() {
           
           <ScrollReveal delay={600}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button asChild size="lg" className="bg-[#47251E] hover:bg-[#5a2f26] text-white rounded-full px-12 py-8 text-xl group shadow-2xl transition-all">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-12 py-8 text-xl group shadow-2xl transition-all">
                 <Link href="/registration">
                   Join the Dialogue <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
