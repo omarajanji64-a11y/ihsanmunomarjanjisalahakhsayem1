@@ -11,6 +11,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white pt-20">
       <Navbar />
       
+      {/* Hero Section */}
       <section className="py-24 bg-muted/10">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
@@ -24,6 +25,7 @@ export default function ContactPage() {
               </ScrollReveal>
 
               <ScrollReveal delay={200} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Location Card */}
                 <div className="flex flex-col items-center text-center gap-6 p-10 bg-white rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-2xl transition-shadow">
                   <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0">
                     <MapPin size={32} />
@@ -34,6 +36,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Email Card */}
                 <div className="flex flex-col items-center text-center gap-6 p-10 bg-white rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-2xl transition-shadow">
                   <div className="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center shrink-0">
                     <Mail size={32} />
@@ -45,6 +48,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Instagram Card */}
                 <div className="flex flex-col items-center text-center gap-6 p-10 bg-white rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-2xl transition-shadow">
                   <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0">
                     <Instagram size={32} />
@@ -55,12 +59,6 @@ export default function ContactPage() {
                     <p className="text-xs text-secondary font-bold mt-2 uppercase tracking-wider">Daily Updates</p>
                   </div>
                 </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={400} className="pt-8">
-                <p className="text-muted-foreground text-sm italic">
-                  Our secretariat typically responds within 24-48 business hours.
-                </p>
               </ScrollReveal>
             </div>
           </div>
