@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section - Cinematic Treatment */}
-      <section className="relative min-h-[95vh] flex flex-col items-center pt-40 md:pt-64 overflow-visible">
+      <section className="relative min-h-[95vh] flex flex-col items-center pt-48 md:pt-72 overflow-visible">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
@@ -78,15 +78,24 @@ export default function Home() {
                         className="fill-white"
                         stroke="none"
                       />
-                      {/* Text - Purple (Primary Color) - Precisely Centered */}
+                      {/* Stacked Text - Purple (Primary Color) - Precisely Centered */}
                       <text 
                         x="77.5" 
-                        y="16" 
+                        y="13" 
                         className="fill-primary font-bold" 
                         textAnchor="middle" 
-                        style={{ fontSize: '6px', letterSpacing: '0.1px', fontWeight: '900' }}
+                        style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
-                        IHSAN MUN
+                        IHSAN
+                      </text>
+                      <text 
+                        x="77.5" 
+                        y="19" 
+                        className="fill-primary font-bold" 
+                        textAnchor="middle" 
+                        style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
+                      >
+                        MUN
                       </text>
                     </g>
 
