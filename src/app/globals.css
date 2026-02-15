@@ -17,8 +17,9 @@
     --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
     --primary-foreground: 260 40% 98%;
     
-    --secondary: 272 35% 18%; /* #2D1A3D - Rich Purple instead of Off-white */
-    --secondary-foreground: 260 40% 98%;
+    /* Refined Light Purple - Diplomatic Lilac */
+    --secondary: 272 25% 95%; /* #F4F1F8 */
+    --secondary-foreground: 272 46% 15%; /* Deep Purple for contrast */
     
     --muted: 268 15% 15%;
     --muted-foreground: 268 15% 66%; /* #A89BB5 */
@@ -70,7 +71,13 @@
 }
 
 .section-light {
-  @apply bg-secondary text-secondary-foreground;
+  @apply bg-secondary text-secondary-foreground relative overflow-hidden;
+}
+
+.section-light::before {
+  content: "";
+  @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+  background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary)) 0%, transparent 70%);
 }
 
 .btn-premium {

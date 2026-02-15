@@ -60,11 +60,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 1: Introduction (Purple Background) */}
+      {/* Section 1: Introduction (Light Background) */}
       <section className="py-32 section-light">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
-            <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-white/10">
+            <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
               <Image
                 src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
                 alt="Committee Session"
@@ -82,7 +82,7 @@ export default function Home() {
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-lg text-white/80 leading-relaxed max-w-[600px]">
+                <p className="text-lg text-secondary-foreground/80 leading-relaxed max-w-[600px]">
                   Ihsan Schools Model United Nations is a transformative journey. 
                   We bring together young minds to tackle complex global challenges through 
                   diplomacy, critical thinking, and collaborative resolution building.
@@ -91,11 +91,11 @@ export default function Home() {
               <ScrollReveal delay={300} className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-4">
                 <div className="space-y-3">
                   <h4 className="font-serif font-bold text-xl">Global Research</h4>
-                  <p className="text-sm text-white/60">Debate real-world UN agenda items with academic precision.</p>
+                  <p className="text-sm text-secondary-foreground/60">Debate real-world UN agenda items with academic precision.</p>
                 </div>
                 <div className="space-y-3">
                   <h4 className="font-serif font-bold text-xl">Diplomatic Network</h4>
-                  <p className="text-sm text-white/60">Network with bright students from across the international region.</p>
+                  <p className="text-sm text-secondary-foreground/60">Network with bright students from across the international region.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -157,16 +157,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: Call to Action (Purple Background) */}
+      {/* Section 3: Call to Action (Light Background) */}
       <section className="py-40 section-light text-center">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
               Ready to <span className="text-primary">Shape the World?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-lg text-white/80 mb-16 leading-relaxed">
+            <p className="text-lg text-secondary-foreground/80 mb-16 leading-relaxed">
               Registration for the 2026 Ihsan Schools MUN is now open. 
               Join a community of students dedicated to international cooperation and leadership.
             </p>
