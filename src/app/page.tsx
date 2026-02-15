@@ -54,19 +54,6 @@ export default function Home() {
           <ScrollReveal delay={500}>
             <Countdown />
           </ScrollReveal>
-          
-          <ScrollReveal delay={600}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-12 py-8 text-xl group shadow-2xl transition-all">
-                <Link href="/registration">
-                  Join the Dialogue <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary/20 text-primary hover:bg-primary/5 rounded-full px-12 py-8 text-xl">
-                <Link href="/about">Our Vision</Link>
-              </Button>
-            </div>
-          </ScrollReveal>
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
@@ -203,7 +190,7 @@ export default function Home() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={400}>
-            <Button asChild size="lg" className="bg-primary hover:bg-[#6b3a99] text-white rounded-full px-16 py-10 text-2xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-16 py-10 text-2xl font-bold shadow-2xl transition-all hover:scale-105 active:scale-95">
               <Link href="/registration">Register as a Delegate</Link>
             </Button>
           </ScrollReveal>
