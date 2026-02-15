@@ -56,21 +56,29 @@ export function Countdown() {
         ))}
       </div>
 
-      {/* Diplomatic Pulse Animation */}
+      {/* Diplomatic Time Animation */}
       <div className="relative w-32 h-32 flex items-center justify-center opacity-40">
         <div className="absolute inset-0 border border-primary/20 rounded-full animate-[ping_3s_ease-in-out_infinite]" />
         <div className="absolute inset-4 border border-primary/30 rounded-full animate-[ping_4s_ease-in-out_infinite_1s]" />
         <div className="absolute inset-8 border border-primary/40 rounded-full animate-[ping_5s_ease-in-out_infinite_2s]" />
         
-        {/* Central Compass/Globe Motif */}
-        <svg viewBox="0 0 100 100" className="w-full h-full text-primary fill-none stroke-current stroke-1 animate-[spin_20s_linear_infinite]">
-          <circle cx="50" cy="50" r="48" strokeDasharray="4 4" className="opacity-30" />
-          <circle cx="50" cy="50" r="30" />
-          <path d="M50 2 v96 M2 50 h96" className="opacity-20" />
-          <circle cx="50" cy="50" r="10" className="fill-primary/20" />
+        {/* Symbolic Time Engine (Clock-like) */}
+        <svg viewBox="0 0 100 100" className="w-full h-full text-primary fill-none stroke-current stroke-1">
+          {/* Outer Clock Face with markers */}
+          <circle cx="50" cy="50" r="48" strokeWidth="0.5" className="opacity-20" />
+          <circle cx="50" cy="50" r="48" strokeDasharray="1 11.5" strokeWidth="4" className="opacity-50" />
           
-          {/* Scanning Line */}
-          <line x1="50" y1="50" x2="50" y2="2" className="stroke-2 opacity-60" />
+          {/* Subtle inner rotating ring */}
+          <circle cx="50" cy="50" r="35" className="opacity-10 animate-[spin_30s_linear_infinite]" style={{ transformOrigin: 'center' }} strokeDasharray="2 4" />
+          
+          {/* Sweeping Diplomatic Hand */}
+          <g className="animate-[spin_6s_linear_infinite]" style={{ transformOrigin: 'center' }}>
+            <line x1="50" y1="50" x2="50" y2="10" className="stroke-2 opacity-80" strokeLinecap="round" />
+            <circle cx="50" cy="10" r="2" className="fill-primary" />
+          </g>
+          
+          {/* Center Axis */}
+          <circle cx="50" cy="50" r="3" className="fill-primary" />
         </svg>
       </div>
     </div>
