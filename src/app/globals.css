@@ -92,3 +92,14 @@
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+@keyframes line-scroll {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.animate-line-scroll {
+  animation: line-scroll 2.5s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}

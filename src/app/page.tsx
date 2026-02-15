@@ -56,9 +56,13 @@ export default function Home() {
           </ScrollReveal>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-primary/20 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" />
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 group cursor-pointer"
+             onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+          <span className="text-[10px] tracking-[0.6em] text-primary font-bold uppercase transition-all group-hover:tracking-[0.8em] group-hover:text-white">
+            Explore
+          </span>
+          <div className="w-[1px] h-16 bg-white/10 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-primary animate-line-scroll" />
           </div>
         </div>
       </section>
