@@ -34,14 +34,14 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10 text-center">
           <ScrollReveal>
             <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight tracking-tighter text-secondary">
-              The Future of <br />
-              <span className="cinematic-text">Global Diplomacy</span>
+              Ihsan Schools <br />
+              <span className="cinematic-text">MUN 2026</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary bg-primary/10 rounded-full uppercase">
-              Ihsan Schools MUN 2026
+              The Future of Global Diplomacy
             </span>
           </ScrollReveal>
           
