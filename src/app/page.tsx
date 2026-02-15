@@ -71,7 +71,7 @@ export default function Home() {
                   <svg viewBox="0 0 120 80" className="w-28 h-20 md:w-40 md:h-28 fill-none stroke-white" strokeWidth="0.4">
                     {/* Realistic Waving Flag with Text */}
                     <line x1="60" y1="26" x2="60" y2="6" strokeWidth="0.8" className="stroke-white/60" />
-                    <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }}>
+                    <g className="animate-waving-flag" style={{ transformOrigin: '60px 10px' }} stroke="none">
                       {/* Flag Body with realistic curves */}
                       <path 
                         d="M60 6 C70 4.5, 80 9, 95 6.5 L95 22.5 C80 25, 70 20.5, 60 22 Z" 
