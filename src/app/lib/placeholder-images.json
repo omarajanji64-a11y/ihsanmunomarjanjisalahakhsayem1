@@ -1,52 +1,51 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-bg",
       "description": "United Nations General Assembly Hall",
-      "imageUrl": "https://images.unsplash.com/photo-1536181783029-1097aaf179de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1bml0ZWQlMjBuYXRpb25zfGVufDB8fHx8MTc3MDI3MzA1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "united nations"
     },
     {
       "id": "committee-unsc",
       "description": "United Nations Security Council",
-      "imageUrl": "https://images.unsplash.com/photo-1759368484049-cd486cbe5c08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZWN1cml0eSUyMGNvdW5jaWx8ZW58MHx8fHwxNzcwMjczMDU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "security council"
     },
     {
       "id": "committee-unhrc",
       "description": "Human Rights Council",
-      "imageUrl": "https://images.unsplash.com/photo-1616581051018-2edcf6678e55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxodW1hbiUyMHJpZ2h0c3xlbnwwfHx8fDE3NzAyNzMwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "human rights"
     },
     {
       "id": "committee-ecosoc",
       "description": "Economic and Social Council",
-      "imageUrl": "https://images.unsplash.com/photo-1694007812716-70f8525b6951?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z2xvYmFsJTIwZWNvbm9teXxlbnwwfHx8fDE3NzAyNzMwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "global economy"
     },
     {
       "id": "team-secgen",
       "description": "Secretary General Portrait",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzAyMzk4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "professional portrait"
     },
     {
       "id": "team-deputy",
       "description": "Deputy Secretary General",
-      "imageUrl": "https://images.unsplash.com/photo-1558222218-b7b54eede3f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDIyMDM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "business portrait"
     },
     {
       "id": "about-timeline",
       "description": "Ihsan Schools Campus",
-      "imageUrl": "https://images.unsplash.com/photo-1759834687385-fc3a66687fb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBzY2hvb2x8ZW58MHx8fHwxNzcwMjQwNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "modern school"
     },
     {
       "id": "secretariat-bg",
       "description": "Secretariat Meeting Scene",
-      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb25mZXJlbmNlJTIwcm9vbXxlbnwwfHx8fDE3NzAyNzY1MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "",
       "imageHint": "conference room"
     }
   ]

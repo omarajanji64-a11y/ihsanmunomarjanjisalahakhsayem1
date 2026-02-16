@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -21,14 +20,16 @@ export default function Home() {
       {/* Hero Section - Cinematic Treatment */}
       <section className="relative min-h-[95vh] flex flex-col items-center pt-36 md:pt-48 overflow-visible">
         <div className="absolute inset-0 z-0">
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover opacity-[0.25]"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
+          {heroImage.imageUrl && (
+            <Image
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              fill
+              className="object-cover opacity-[0.25]"
+              priority
+              data-ai-hint={heroImage.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
@@ -179,13 +180,15 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
             <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
-              <Image
-                src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
-                alt="Committee Session"
-                fill
-                className="object-cover"
-                data-ai-hint="un session"
-              />
+              {PlaceHolderImages.find(img => img.id === "committee-unsc")?.imageUrl && (
+                <Image
+                  src={PlaceHolderImages.find(img => img.id === "committee-unsc")!.imageUrl}
+                  alt="Committee Session"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="un session"
+                />
+              )}
             </ScrollReveal>
             
             <div className="space-y-8">
@@ -248,12 +251,14 @@ export default function Home() {
               <ScrollReveal key={i} delay={i * 150} className="h-full">
                 <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500 h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden shrink-0">
-                    <Image
-                      src={PlaceHolderImages.find(img => img.id === item.img)!.imageUrl}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                    />
+                    {PlaceHolderImages.find(img => img.id === item.img)?.imageUrl && (
+                      <Image
+                        src={PlaceHolderImages.find(img => img.id === item.img)!.imageUrl}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                      />
+                    )}
                   </div>
                   <div className="p-10 space-y-4 flex-1 flex flex-col">
                     <div className="flex-1">
