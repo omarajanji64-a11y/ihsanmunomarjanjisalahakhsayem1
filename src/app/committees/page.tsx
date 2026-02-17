@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -49,7 +50,7 @@ const committeeResources = [
 ];
 
 export default function CommitteesPage() {
-  const headerBg = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+  const headerBg = PlaceHolderImages.find(img => img.id === "hero-bg");
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -58,14 +59,16 @@ export default function CommitteesPage() {
       {/* Header with Background Image */}
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
-          <Image
-            src={headerBg.imageUrl}
-            alt="Committees Background"
-            fill
-            className="object-cover opacity-[0.2]"
-            priority
-            data-ai-hint={headerBg.imageHint}
-          />
+          {headerBg?.imageUrl && (
+            <Image
+              src={headerBg.imageUrl}
+              alt="Committees Background"
+              fill
+              className="object-cover opacity-[0.2]"
+              priority
+              data-ai-hint={headerBg.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         </div>
 
@@ -85,50 +88,55 @@ export default function CommitteesPage() {
       <section className="py-24 section-dark">
         <div className="container mx-auto px-6">
           <div className="space-y-24">
-            {committees.map((committee, i) => (
-              <ScrollReveal key={committee.id} delay={i * 100}>
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className={`relative h-[400px] rounded-3xl overflow-hidden shadow-xl ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                    <Image
-                      src={PlaceHolderImages.find(img => img.id === committee.img)!.imageUrl}
-                      alt={committee.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <Badge className="bg-primary/10 text-primary border-none text-xs font-bold px-3 py-1">
-                      {committee.level}
-                    </Badge>
-                    <h2 className="text-3xl font-bold">{committee.title}</h2>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {committee.description}
-                    </p>
+            {committees.map((committee, i) => {
+              const committeeImage = PlaceHolderImages.find(img => img.id === committee.img);
+              return (
+                <ScrollReveal key={committee.id} delay={i * 100}>
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+                    <div className={`relative h-[400px] rounded-3xl overflow-hidden shadow-xl ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                      {committeeImage?.imageUrl && (
+                        <Image
+                          src={committeeImage.imageUrl}
+                          alt={committee.title}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
+                    </div>
                     
-                    <div className="space-y-4">
-                      <h4 className="font-bold text-primary flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-primary" />
-                        Agenda Topics
-                      </h4>
-                      <ul className="space-y-3">
-                        {committee.topics.map((topic, idx) => (
-                          <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
-                            <span className="text-primary font-bold">Topic {idx + 1}:</span>
-                            <span className="text-foreground">{topic}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="space-y-6">
+                      <Badge className="bg-primary/10 text-primary border-none text-xs font-bold px-3 py-1">
+                        {committee.level}
+                      </Badge>
+                      <h2 className="text-3xl font-bold">{committee.title}</h2>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {committee.description}
+                      </p>
+                      
+                      <div className="space-y-4">
+                        <h4 className="font-bold text-primary flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-primary" />
+                          Agenda Topics
+                        </h4>
+                        <ul className="space-y-3">
+                          {committee.topics.map((topic, idx) => (
+                            <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
+                              <span className="text-primary font-bold">Topic {idx + 1}:</span>
+                              <span className="text-foreground">{topic}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Preparation Resources Section - Softened Transition */}
+      {/* Preparation Resources Section */}
       <section className="py-32 section-light">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">

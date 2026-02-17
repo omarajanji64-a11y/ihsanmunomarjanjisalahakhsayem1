@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -8,8 +9,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Target, Eye, ShieldCheck, History, Globe } from "lucide-react";
 
 export default function AboutPage() {
-  const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline")!;
-  const heroBg = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+  const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline");
+  const heroBg = PlaceHolderImages.find(img => img.id === "hero-bg");
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -18,14 +19,16 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
-          <Image
-            src={heroBg.imageUrl}
-            alt="About Background"
-            fill
-            className="object-cover opacity-[0.2]"
-            priority
-            data-ai-hint={heroBg.imageHint}
-          />
+          {heroBg?.imageUrl && (
+            <Image
+              src={heroBg.imageUrl}
+              alt="About Background"
+              fill
+              className="object-cover opacity-[0.2]"
+              priority
+              data-ai-hint={heroBg.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         </div>
 
@@ -84,18 +87,20 @@ export default function AboutPage() {
             </div>
 
             <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl rotate-1">
-              <Image
-                src={timelineImage.imageUrl}
-                alt="Ihsan Schools Campus"
-                fill
-                className="object-cover"
-              />
+              {timelineImage?.imageUrl && (
+                <Image
+                  src={timelineImage.imageUrl}
+                  alt="Ihsan Schools Campus"
+                  fill
+                  className="object-cover"
+                />
+              )}
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Philosophy - Softened Transition */}
+      {/* Philosophy */}
       <section className="py-32 section-light">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

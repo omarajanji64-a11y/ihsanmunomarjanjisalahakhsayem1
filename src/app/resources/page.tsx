@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -21,7 +22,7 @@ const resources = [
 ];
 
 export default function ResourcesPage() {
-  const headerBg = PlaceHolderImages.find(img => img.id === "hero-bg")!;
+  const headerBg = PlaceHolderImages.find(img => img.id === "hero-bg");
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -30,14 +31,16 @@ export default function ResourcesPage() {
       {/* Header with Background Image */}
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
-          <Image
-            src={headerBg.imageUrl}
-            alt="Resources Background"
-            fill
-            className="object-cover opacity-[0.2]"
-            priority
-            data-ai-hint={headerBg.imageHint}
-          />
+          {headerBg?.imageUrl && (
+            <Image
+              src={headerBg.imageUrl}
+              alt="Resources Background"
+              fill
+              className="object-cover opacity-[0.2]"
+              priority
+              data-ai-hint={headerBg.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         </div>
 
@@ -54,7 +57,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Resources Grid - Standardized Transition */}
+      {/* Resources Grid */}
       <section className="py-32 section-light">
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
