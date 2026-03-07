@@ -73,7 +73,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-[#A89BB5]">
-          <p>© {new Date().getFullYear()} IHSAN SCHOOLS MODEL UNITED NATIONS.</p>
+          <div className="space-y-2 text-center md:text-left">
+            <p>© {new Date().getFullYear()} IHSAN SCHOOLS MODEL UNITED NATIONS.</p>
+            <p className="opacity-60">Designed by Salah Akhsayem & Omar Ajanaji</p>
+          </div>
           <div className="flex gap-10">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
