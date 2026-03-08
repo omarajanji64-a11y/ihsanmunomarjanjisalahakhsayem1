@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { EditorProvider } from "@/components/editor/editor-provider";
 
 export const metadata: Metadata = {
   title: 'IHSAN MUN 2026',
@@ -19,7 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        {children}
+        <EditorProvider>{children}</EditorProvider>
       </body>
     </html>
   );

@@ -1,13 +1,13 @@
 
 "use client";
 
-import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Download, Shield, Book } from "lucide-react";
+import { EditableImage } from "@/components/editor/editable-image";
 
 const committees = [
   {
@@ -60,7 +60,8 @@ export default function CommitteesPage() {
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           {headerBg?.imageUrl && (
-            <Image
+            <EditableImage
+              imageId="hero-bg"
               src={headerBg.imageUrl}
               alt="Committees Background"
               fill
@@ -95,7 +96,8 @@ export default function CommitteesPage() {
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                     <div className={`relative h-[400px] rounded-3xl overflow-hidden shadow-xl ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                       {committeeImage?.imageUrl && (
-                        <Image
+                        <EditableImage
+                          imageId={committee.img}
                           src={committeeImage.imageUrl}
                           alt={committee.title}
                           fill

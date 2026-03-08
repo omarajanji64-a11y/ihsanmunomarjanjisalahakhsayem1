@@ -1,12 +1,12 @@
 
 "use client";
 
-import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { FileText, Download, PenTool } from "lucide-react";
+import { EditableImage } from "@/components/editor/editable-image";
 
 const resources = [
   {
@@ -32,7 +32,8 @@ export default function ResourcesPage() {
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           {headerBg?.imageUrl && (
-            <Image
+            <EditableImage
+              imageId="hero-bg"
               src={headerBg.imageUrl}
               alt="Resources Background"
               fill

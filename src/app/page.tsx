@@ -1,7 +1,6 @@
 
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -10,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Countdown } from "@/components/countdown";
+import { EditableImage } from "@/components/editor/editable-image";
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg");
@@ -25,7 +25,8 @@ export default function Home() {
       <section className="relative min-h-[95vh] flex flex-col items-center pt-36 md:pt-48 overflow-visible">
         <div className="absolute inset-0 z-0">
           {heroImage?.imageUrl && (
-            <Image
+            <EditableImage
+              imageId="hero-bg"
               src={heroImage.imageUrl}
               alt={heroImage.description}
               fill
@@ -159,7 +160,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
             <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
               {unscImage?.imageUrl && (
-                <Image
+                <EditableImage
+                  imageId="committee-unsc"
                   src={unscImage.imageUrl}
                   alt="Committee Session"
                   fill
@@ -208,7 +210,8 @@ export default function Home() {
                 <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500 h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden shrink-0">
                     {item.img?.imageUrl && (
-                      <Image
+                      <EditableImage
+                        imageId={item.img?.id ?? "hero-bg"}
                         src={item.img.imageUrl}
                         alt={item.title}
                         fill

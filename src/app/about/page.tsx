@@ -1,12 +1,12 @@
 
 "use client";
 
-import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Target, Eye, ShieldCheck, History, Globe } from "lucide-react";
+import { EditableImage } from "@/components/editor/editable-image";
 
 export default function AboutPage() {
   const timelineImage = PlaceHolderImages.find(img => img.id === "about-timeline");
@@ -20,7 +20,8 @@ export default function AboutPage() {
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           {heroBg?.imageUrl && (
-            <Image
+            <EditableImage
+              imageId="hero-bg"
               src={heroBg.imageUrl}
               alt="About Background"
               fill
@@ -88,7 +89,8 @@ export default function AboutPage() {
 
             <ScrollReveal className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl rotate-1">
               {timelineImage?.imageUrl && (
-                <Image
+                <EditableImage
+                  imageId="about-timeline"
                   src={timelineImage.imageUrl}
                   alt="Ihsan Schools Campus"
                   fill

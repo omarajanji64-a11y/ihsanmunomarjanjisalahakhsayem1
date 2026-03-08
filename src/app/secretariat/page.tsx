@@ -1,12 +1,12 @@
 
 "use client";
 
-import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Linkedin, Mail } from "lucide-react";
+import { EditableImage } from "@/components/editor/editable-image";
 
 const team = [
   {
@@ -46,7 +46,8 @@ export default function SecretariatPage() {
       <section className="relative py-32 text-center overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           {heroImage?.imageUrl && (
-            <Image
+            <EditableImage
+              imageId={heroImage?.id ?? "hero-bg"}
               src={heroImage.imageUrl}
               alt="Secretariat Background"
               fill
@@ -81,7 +82,8 @@ export default function SecretariatPage() {
                   <div className="bg-card border border-border rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/5 transition-all h-full flex flex-col">
                     <div className="relative h-[350px] overflow-hidden">
                       {memberImage?.imageUrl && (
-                        <Image
+                        <EditableImage
+                          imageId={member.img}
                           src={memberImage.imageUrl}
                           alt={member.name}
                           fill
