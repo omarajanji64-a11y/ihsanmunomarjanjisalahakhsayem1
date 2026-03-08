@@ -21,8 +21,9 @@ export async function GET() {
   try {
     const overrides = await readImageOverrides();
     return NextResponse.json({ overrides });
-  } catch {
-    return NextResponse.json({ error: "Unable to load image overrides." }, { status: 500 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unable to load image overrides.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
@@ -53,7 +54,8 @@ export async function POST(request: NextRequest) {
   try {
     const overrides = await setImageOverride(id, imageUrl);
     return NextResponse.json({ success: true, overrides });
-  } catch {
-    return NextResponse.json({ error: "Failed to persist image URL." }, { status: 500 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to persist image URL.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
