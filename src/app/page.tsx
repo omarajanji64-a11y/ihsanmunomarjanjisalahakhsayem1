@@ -146,7 +146,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="13" 
-                        className="fill-[#1E102B] font-bold" 
+                        className="fill-[#48252F] font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
@@ -155,7 +155,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="19" 
-                        className="fill-[#1E102B] font-bold" 
+                        className="fill-[#48252F] font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >

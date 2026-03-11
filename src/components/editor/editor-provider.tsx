@@ -187,7 +187,7 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
         <Button
           type="button"
           size="sm"
-          className={isEditorEnabled ? "bg-primary text-white" : "bg-[#1E102B]/90 text-white"}
+          className={isEditorEnabled ? "bg-primary text-white" : "bg-[#48252F]/90 text-white"}
           onClick={handleToggle}
         >
           Editor Mode {isEditorEnabled ? "On" : "Off"}
@@ -196,7 +196,7 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
 
       {isAuthModalOpen && (
         <div className="fixed inset-0 z-[130] flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-sm rounded-xl border border-white/15 bg-[#1E102B] p-5 text-white shadow-2xl">
+          <div className="w-full max-w-sm rounded-xl border border-white/15 bg-[#48252F] p-5 text-white shadow-2xl">
             <h3 className="text-base font-semibold">Admin Authentication</h3>
             <p className="mt-1 text-sm text-white/70">Enter admin password to enable Editor Mode.</p>
             <Input
@@ -229,7 +229,7 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
 
       {isEditorEnabled && activeImageId && (
         <div className="fixed inset-0 z-[130] flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-lg rounded-xl border border-white/15 bg-[#1E102B] p-5 text-white shadow-2xl">
+          <div className="w-full max-w-lg rounded-xl border border-white/15 bg-[#48252F] p-5 text-white shadow-2xl">
             <h3 className="text-base font-semibold">Edit Image URL</h3>
             <p className="mt-1 text-sm text-white/70">Image ID: {activeImageId}</p>
             <label className="mt-4 block text-xs font-medium uppercase tracking-wider text-white/60">
