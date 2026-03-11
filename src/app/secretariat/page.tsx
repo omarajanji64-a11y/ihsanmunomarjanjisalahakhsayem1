@@ -5,7 +5,6 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Linkedin, Mail } from "lucide-react";
 import { EditableImage } from "@/components/editor/editable-image";
 
 const team = [
@@ -96,16 +95,6 @@ export default function SecretariatPage() {
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div className="flex gap-4">
-                          <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-                            <Linkedin size={18} />
-                          </a>
-                          <a href="#" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-                            <Mail size={18} />
-                          </a>
-                        </div>
-                      </div>
                     </div>
                     <div className="p-8 flex-1 flex flex-col">
                       <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>

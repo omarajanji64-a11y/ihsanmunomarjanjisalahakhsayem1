@@ -45,56 +45,56 @@
     {
       "id": "committee-world-bank",
       "description": "World Bank Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?world-bank,finance,global",
+      "imageHint": "global finance"
     },
     {
       "id": "committee-hunsc",
       "description": "Historical United Nations Security Council",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?united-nations,security-council,meeting",
+      "imageHint": "security council"
     },
     {
       "id": "committee-unwomen",
       "description": "UN Women Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?women,conference,rights",
+      "imageHint": "women rights"
     },
     {
       "id": "committee-jcc-avengers",
       "description": "JCC Avengers Civil War",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?superhero,team,city",
+      "imageHint": "superhero team"
     },
     {
       "id": "committee-cabinet",
       "description": "Cabinet Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?government,cabinet,meeting",
+      "imageHint": "cabinet meeting"
     },
     {
       "id": "committee-disec",
       "description": "DISEC Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?disarmament,security,peace",
+      "imageHint": "disarmament"
     },
     {
       "id": "committee-specpol",
       "description": "SPECPOL Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?diplomacy,protest,peace",
+      "imageHint": "special political"
     },
     {
       "id": "committee-arab-league",
       "description": "Arab League Committee",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?arab,flags,conference",
+      "imageHint": "arab league"
     },
     {
       "id": "committee-jcc-castellammarese",
       "description": "JCC Castellammarese War",
-      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
-      "imageHint": "committee"
+      "imageUrl": "https://source.unsplash.com/1200x800/?mafia,1920s,crime",
+      "imageHint": "historical conflict"
     },
     {
       "id": "team-maizah-hassan",
