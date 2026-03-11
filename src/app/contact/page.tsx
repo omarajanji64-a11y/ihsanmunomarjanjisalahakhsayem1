@@ -68,29 +68,6 @@ export default function ContactPage() {
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={350}>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
-                  <div className="bg-card border border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl">
-                    <img
-                      src="https://res.cloudinary.com/dl1pjkqmv/image/upload/v1773265765/WhatsApp_Image_2026-03-12_at_00.48.03_gowxeu.jpg"
-                      alt="Ihsan Schools Atakent"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="bg-card border border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl">
-                    <iframe
-                      title="Ihsan Schools Atakent Location"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.887980162073!2d28.772239075132248!3d41.049578716882245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e4b14d9497%3A0x1d933957e7f163df!2sIhsan%20Okullar%C4%B1%20Atakent%20Kamp%C3%BCs%C3%BC%20(Ihsan%20Schools)!5e0!3m2!1sen!2str!4v1773265855242!5m2!1sen!2str"
-                      className="w-full h-[420px]"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </div>
