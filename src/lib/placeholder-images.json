@@ -69,31 +69,31 @@
     {
       "id": "committee-cabinet",
       "description": "Cabinet Committee",
-      "imageUrl": "https://source.unsplash.com/1200x800/?government,cabinet,meeting",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/fetch/f_auto,q_auto/https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FCabinet_Meeting_%2848302308327%29.jpg",
       "imageHint": "cabinet meeting"
     },
     {
       "id": "committee-disec",
       "description": "DISEC Committee",
-      "imageUrl": "https://source.unsplash.com/1200x800/?disarmament,security,peace",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/fetch/f_auto,q_auto/https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FOPCW_HQ_in_The_Hague%2C_Netherlands_2017.jpg",
       "imageHint": "disarmament"
     },
     {
       "id": "committee-specpol",
       "description": "SPECPOL Committee",
-      "imageUrl": "https://source.unsplash.com/1200x800/?diplomacy,protest,peace",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/fetch/f_auto,q_auto/https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FFlag_held_by_two_men_in_Cairo_protest_2011_Egyptian_Revolution.jpg",
       "imageHint": "special political"
     },
     {
       "id": "committee-arab-league",
       "description": "Arab League Committee",
-      "imageUrl": "https://source.unsplash.com/1200x800/?arab,flags,conference",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/fetch/f_auto,q_auto/https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FEU_and_Arab_League_meeting_in_Cairo%2C_2023.jpg",
       "imageHint": "arab league"
     },
     {
       "id": "committee-jcc-castellammarese",
       "description": "JCC Castellammarese War",
-      "imageUrl": "https://source.unsplash.com/1200x800/?mafia,1920s,crime",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/fetch/f_auto,q_auto/https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FSpecial%3AFilePath%2FCharles_Luciano.jpg",
       "imageHint": "historical conflict"
     },
     {
