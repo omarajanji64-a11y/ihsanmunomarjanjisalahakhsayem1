@@ -14,7 +14,7 @@
     --popover: 272 46% 11%;
     --popover-foreground: 260 40% 96%;
     
-    --primary: 272 43% 29%; /* #4C2A6A - Imperial Purple */
+    --primary: 343 32% 21%; /* #48252F */
     --primary-foreground: 260 40% 98%;
     
     /* Deepened Diplomatic Secondary for Premium Depth */
@@ -24,12 +24,12 @@
     --muted: 268 15% 15%;
     --muted-foreground: 268 15% 66%; /* #A89BB5 */
     
-    --accent: 272 43% 35%;
+    --accent: 343 32% 21%;
     --accent-foreground: 260 40% 98%;
     
     --border: 272 20% 18%;
     --input: 272 20% 18%;
-    --ring: 272 43% 29%;
+    --ring: 343 32% 21%;
     --radius: 1rem;
   }
 }
