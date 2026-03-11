@@ -4,32 +4,32 @@
 
 @layer base {
   :root {
-    /* Refined Diplomatic Palette - High Level Summit Aesthetic */
-    --background: 343 32% 21%; /* #48252F */
-    --foreground: 260 40% 96%; /* #F3EFFA - Off-white text */
-    
-    --card: 272 46% 14%;
-    --card-foreground: 260 40% 96%;
-    
-    --popover: 272 46% 11%;
-    --popover-foreground: 260 40% 96%;
-    
-    --primary: 343 32% 21%; /* #48252F */
-    --primary-foreground: 260 40% 98%;
-    
-    /* Deepened Diplomatic Secondary for Premium Depth */
-    --secondary: 272 43% 15%; /* Deeper Purple for even richer transitions */
-    --secondary-foreground: 260 40% 98%;
-    
-    --muted: 268 15% 15%;
-    --muted-foreground: 268 15% 66%; /* #A89BB5 */
-    
-    --accent: 343 32% 21%;
-    --accent-foreground: 260 40% 98%;
-    
-    --border: 272 20% 18%;
-    --input: 272 20% 18%;
-    --ring: 343 32% 21%;
+    /* Refined Diplomatic Palette - Smoother, Airier Contrast */
+    --background: 343 26% 18%; /* softened maroon */
+    --foreground: 260 55% 97%; /* brighter off-white */
+
+    --card: 272 38% 16%;
+    --card-foreground: 260 55% 97%;
+
+    --popover: 272 38% 13%;
+    --popover-foreground: 260 55% 97%;
+
+    --primary: 343 28% 22%;
+    --primary-foreground: 260 55% 99%;
+
+    /* Smoother secondary to reduce harsh shifts */
+    --secondary: 272 32% 19%;
+    --secondary-foreground: 260 55% 99%;
+
+    --muted: 268 14% 18%;
+    --muted-foreground: 268 22% 74%;
+
+    --accent: 343 28% 22%;
+    --accent-foreground: 260 55% 99%;
+
+    --border: 272 18% 22%;
+    --input: 272 18% 22%;
+    --ring: 343 28% 22%;
     --radius: 1rem;
   }
 }
@@ -40,6 +40,7 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-bold text-foreground tracking-tight;
@@ -64,8 +65,9 @@
   background: linear-gradient(
     to bottom,
     hsl(var(--background)) 0%,
-    hsl(var(--secondary)) 15%,
-    hsl(var(--secondary)) 85%,
+    hsl(var(--secondary)) 18%,
+    hsl(var(--card)) 50%,
+    hsl(var(--secondary)) 82%,
     hsl(var(--background)) 100%
   );
 }
