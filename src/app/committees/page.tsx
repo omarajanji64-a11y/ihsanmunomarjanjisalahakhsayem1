@@ -11,28 +11,76 @@ import { EditableImage } from "@/components/editor/editable-image";
 
 const committees = [
   {
-    id: "unsc",
-    title: "United Nations Security Council",
-    level: "Advanced",
-    topics: ["Stabilization of Middle Eastern Conflicts", "Future of Private Military Contractors"],
-    img: "committee-unsc",
-    description: "The primary organ responsible for maintenance of international peace and security. This committee will tackle fast-paced crises."
+    id: "world-bank",
+    title: "World Bank",
+    level: "Committee",
+    topics: ["Agenda to be announced"],
+    img: "committee-world-bank",
+    description: "Agenda to be announced."
   },
   {
-    id: "unhrc",
-    title: "United Nations Human Rights Council",
-    level: "Intermediate",
-    topics: ["Freedom of Information in the Digital Age", "Refugee Rights in the Mediterranean"],
-    img: "committee-unhrc",
-    description: "Focusing on the protection and promotion of human rights globally. A committee of deep ethical debate."
+    id: "h-unsc",
+    title: "H-UNSC",
+    level: "Committee",
+    topics: ["USA's invasion of Iraq (2003)"],
+    img: "committee-hunsc",
+    description: "Focused on USA's invasion of Iraq (2003)."
   },
   {
-    id: "ecosoc",
-    title: "Economic and Social Council",
-    level: "Beginner",
-    topics: ["Post-Pandemic Economic Recovery", "Sustainable Development Goals 2030"],
-    img: "committee-ecosoc",
-    description: "Coordinating the economic and social work of the UN. Ideal for those interested in policy and global growth."
+    id: "unwomen",
+    title: "UNWOMEN",
+    level: "Committee",
+    topics: ["Prevention of Human Trafficking and Sexual Exploitation of Women in conflict zones"],
+    img: "committee-unwomen",
+    description: "Focused on the prevention of human trafficking and sexual exploitation of women in conflict zones."
+  },
+  {
+    id: "jcc-avengers",
+    title: "JCC: Avengers Civil War",
+    level: "Committee",
+    topics: ["The Sokovia Accords"],
+    img: "committee-jcc-avengers",
+    description: "Focused on the Sokovia Accords."
+  },
+  {
+    id: "cabinet",
+    title: "CABINET",
+    level: "Committee",
+    topics: ["Agenda to be announced"],
+    img: "committee-cabinet",
+    description: "Agenda to be announced."
+  },
+  {
+    id: "disec",
+    title: "DISEC",
+    level: "Committee",
+    topics: ["Addressing the Proliferation and Use of Chemical Weapons and strengthening international efforts to eliminate them"],
+    img: "committee-disec",
+    description: "Focused on addressing the proliferation and use of chemical weapons and strengthening international efforts to eliminate them."
+  },
+  {
+    id: "specpol",
+    title: "SPECPOL",
+    level: "Committee",
+    topics: ["Aftermath of the Arab Spring"],
+    img: "committee-specpol",
+    description: "Focused on the aftermath of the Arab Spring."
+  },
+  {
+    id: "arab-league",
+    title: "Arab League",
+    level: "Committee",
+    topics: ["Addressing Foreign Influence in Arab States"],
+    img: "committee-arab-league",
+    description: "Focused on addressing foreign influence in Arab states."
+  },
+  {
+    id: "jcc-castellammarese",
+    title: "JCC: The Castellammarese War",
+    level: "Committee",
+    topics: ["The Castellammarese War"],
+    img: "committee-jcc-castellammarese",
+    description: "Focused on the Castellammarese War."
   }
 ];
 

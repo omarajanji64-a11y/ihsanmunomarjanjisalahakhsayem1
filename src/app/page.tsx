@@ -12,12 +12,58 @@ import { Countdown } from "@/components/countdown";
 import { EditableImage } from "@/components/editor/editable-image";
 import { useImageEditor } from "@/components/editor/editor-provider";
 
+const committeeHighlights = [
+  {
+    title: "World Bank",
+    desc: "Agenda to be announced.",
+    imageId: "committee-world-bank"
+  },
+  {
+    title: "H-UNSC",
+    desc: "USA's invasion of Iraq (2003).",
+    imageId: "committee-hunsc"
+  },
+  {
+    title: "UNWOMEN",
+    desc: "Prevention of Human Trafficking and Sexual Exploitation of Women in conflict zones.",
+    imageId: "committee-unwomen"
+  },
+  {
+    title: "JCC: Avengers Civil War",
+    desc: "The Sokovia Accords.",
+    imageId: "committee-jcc-avengers"
+  },
+  {
+    title: "CABINET",
+    desc: "Agenda to be announced.",
+    imageId: "committee-cabinet"
+  },
+  {
+    title: "DISEC",
+    desc: "Addressing the Proliferation and Use of Chemical Weapons and strengthening international efforts to eliminate them.",
+    imageId: "committee-disec"
+  },
+  {
+    title: "SPECPOL",
+    desc: "Aftermath of the Arab Spring.",
+    imageId: "committee-specpol"
+  },
+  {
+    title: "Arab League",
+    desc: "Addressing Foreign Influence in Arab States.",
+    imageId: "committee-arab-league"
+  },
+  {
+    title: "JCC: The Castellammarese War",
+    desc: "The Castellammarese War.",
+    imageId: "committee-jcc-castellammarese"
+  }
+];
+
 export default function Home() {
   const { isEditorEnabled, getImageUrl, openImageEditor } = useImageEditor();
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg");
-  const unscImage = PlaceHolderImages.find(img => img.id === "committee-unsc");
-  const unhrcImage = PlaceHolderImages.find(img => img.id === "committee-unhrc");
-  const ecosocImage = PlaceHolderImages.find(img => img.id === "committee-ecosoc");
+  const committeeImageMap = new Map(PlaceHolderImages.map((img) => [img.id, img]));
 
   return (
     <div className="min-h-screen bg-background">
@@ -215,21 +261,20 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
-            {[
-              { title: "Security Council", desc: "Crisis management and high-level international security mandates.", img: unscImage },
-              { title: "Human Rights Council", desc: "Upholding universal freedoms and legislative justice for all.", img: unhrcImage },
-              { title: "ECOSOC", desc: "Strategic economic stability and transformative social welfare.", img: ecosocImage },
-            ].map((item, i) => (
+            {committeeHighlights.map((item, i) => {
+              const image = committeeImageMap.get(item.imageId);
+              return (
               <ScrollReveal key={i} delay={i * 150} className="h-full">
                 <div className="bg-white/5 rounded-[1rem] overflow-hidden group border border-white/5 hover:border-white/10 transition-all duration-500 h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden shrink-0">
-                    {item.img?.imageUrl && (
+                    {image?.imageUrl && (
                       <EditableImage
-                        imageId={item.img?.id ?? "hero-bg"}
-                        src={item.img.imageUrl}
+                        imageId={item.imageId}
+                        src={image.imageUrl}
                         alt={item.title}
                         fill
                         className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        data-ai-hint={image.imageHint}
                       />
                     )}
                   </div>
@@ -242,7 +287,8 @@ export default function Home() {
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -263,7 +309,7 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal delay={400}>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-12 py-8 text-sm font-bold uppercase tracking-widest btn-premium">
-              <Link href="/registration">Register as a Delegate</Link>
+              <Link href="/registration">Apply Now</Link>
             </Button>
           </ScrollReveal>
         </div>

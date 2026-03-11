@@ -41,6 +41,90 @@
       "description": "Ihsan Schools Campus",
       "imageUrl": "https://images.unsplash.com/photo-1759834687385-fc3a66687fb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBzY2hvb2x8ZW58MHx8fHwxNzcwMjQwNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern school"
+    },
+    {
+      "id": "committee-world-bank",
+      "description": "World Bank Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-hunsc",
+      "description": "Historical United Nations Security Council",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-unwomen",
+      "description": "UN Women Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-jcc-avengers",
+      "description": "JCC Avengers Civil War",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-cabinet",
+      "description": "Cabinet Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-disec",
+      "description": "DISEC Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-specpol",
+      "description": "SPECPOL Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-arab-league",
+      "description": "Arab League Committee",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "committee-jcc-castellammarese",
+      "description": "JCC Castellammarese War",
+      "imageUrl": "https://placehold.co/1200x800/1e102b/1e102b.png?text=",
+      "imageHint": "committee"
+    },
+    {
+      "id": "team-maizah-hassan",
+      "description": "Maizah Hassan",
+      "imageUrl": "https://placehold.co/900x1200/1e102b/1e102b.png?text=",
+      "imageHint": "portrait"
+    },
+    {
+      "id": "team-nada-alghory",
+      "description": "Nada Alghory",
+      "imageUrl": "https://placehold.co/900x1200/1e102b/1e102b.png?text=",
+      "imageHint": "portrait"
+    },
+    {
+      "id": "team-haya-el-houssami",
+      "description": "Haya El Houssami",
+      "imageUrl": "https://placehold.co/900x1200/1e102b/1e102b.png?text=",
+      "imageHint": "portrait"
+    },
+    {
+      "id": "team-omar-soufi",
+      "description": "Omar Soufi",
+      "imageUrl": "https://placehold.co/900x1200/1e102b/1e102b.png?text=",
+      "imageHint": "portrait"
+    },
+    {
+      "id": "team-maria-arslan",
+      "description": "Maria Arslan",
+      "imageUrl": "https://placehold.co/900x1200/1e102b/1e102b.png?text=",
+      "imageHint": "portrait"
     }
   ]
 }

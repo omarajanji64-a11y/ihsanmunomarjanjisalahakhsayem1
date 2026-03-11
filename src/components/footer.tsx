@@ -48,7 +48,6 @@ export function Footer() {
             <ul className="space-y-4 text-[#A89BB5] text-xs uppercase tracking-widest">
               <li className="cursor-default">Rules of Procedure</li>
               <li className="cursor-default">Study Guides</li>
-              <li className="cursor-default">Position Papers</li>
               <li className="cursor-default">Delegate Handbook</li>
             </ul>
           </div>

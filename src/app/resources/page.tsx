@@ -5,15 +5,10 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { FileText, Download, PenTool } from "lucide-react";
+import { FileText, Download } from "lucide-react";
 import { EditableImage } from "@/components/editor/editable-image";
 
 const resources = [
-  {
-    title: "Position Paper Guide",
-    desc: "How to draft a winning position paper for your committee.",
-    icon: <PenTool className="text-primary" />
-  },
   {
     title: "Delegate Handbook",
     desc: "Everything you need to know about the logistics and schedule.",

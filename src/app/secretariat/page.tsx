@@ -10,28 +10,34 @@ import { EditableImage } from "@/components/editor/editable-image";
 
 const team = [
   {
-    name: "Omar Al-Faruq",
-    role: "Secretary-General",
-    bio: "Passionate about global politics and education, Omar leads the IHSAN MUN with a vision for true diplomatic impact.",
-    img: "team-secgen"
+    name: "Maizah Hassan",
+    role: "Secretary General",
+    bio: "Profile coming soon.",
+    img: "team-maizah-hassan"
   },
   {
-    name: "Leyla Demir",
-    role: "Deputy Secretary-General",
-    bio: "An experienced MUNer with a focus on human rights and academic excellence in committee preparation.",
-    img: "team-deputy"
+    name: "Nada Alghory",
+    role: "Secretary General",
+    bio: "Profile coming soon.",
+    img: "team-nada-alghory"
   },
   {
-    name: "Zaid Hassan",
-    role: "Under-Secretary General for Logistics",
-    bio: "Ensuring every detail of the conference runs smoothly for a seamless delegate experience.",
-    img: "team-secgen"
+    name: "Haya El Houssami",
+    role: "Director General",
+    bio: "Profile coming soon.",
+    img: "team-haya-el-houssami"
   },
   {
-    name: "Sara Mahmoud",
-    role: "Under-Secretary General for Finance",
-    bio: "Managing the resources to ensure the highest quality experience for all participants.",
-    img: "team-deputy"
+    name: "Omar Soufi",
+    role: "Deputy Secretary General",
+    bio: "Profile coming soon.",
+    img: "team-omar-soufi"
+  },
+  {
+    name: "Maria Arslan",
+    role: "Deputy Director General",
+    bio: "Profile coming soon.",
+    img: "team-maria-arslan"
   }
 ];
 
