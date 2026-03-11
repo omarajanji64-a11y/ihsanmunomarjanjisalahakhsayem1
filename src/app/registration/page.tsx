@@ -40,7 +40,7 @@ export default function RegistrationPage() {
     { label: "Late Delegate", price: "1500TL" },
     { label: "PR and IT and Logistics", price: "950TL" },
     { label: "Press and Admins", price: "1200TL" },
-    { label: "Chairs", price: "1100TL" },
+    { label: "Chair/Academic Assistant", price: "1100TL" },
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function RegistrationPage() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-muted-foreground">
-                Join the Ihsan Schools MUN 2026. Choose your path below to begin registration.
+                Join the Ihsan Schools MUN 2026. Pick your path below to get started.
               </p>
             </ScrollReveal>
           </div>
@@ -66,7 +66,7 @@ export default function RegistrationPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {[
                     { id: "delegate", name: "Early Delegate", icon: <User />, desc: "Apply for early registration via Google Forms." },
-                    { id: "chair", name: "Chair / DA", icon: <ShieldCheck />, desc: "Moderate committee sessions." },
+                    { id: "chair", name: "Chair / Academic Assistant", icon: <ShieldCheck />, desc: "Guide debates and support committee flow." },
                     { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." },
                     { id: "team", name: "Team", icon: <Briefcase />, desc: "Apply for the organizing team." }
                   ].map((item) => (

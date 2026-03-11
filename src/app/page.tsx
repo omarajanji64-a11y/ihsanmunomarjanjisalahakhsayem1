@@ -15,7 +15,7 @@ import { useImageEditor } from "@/components/editor/editor-provider";
 const committeeHighlights = [
   {
     title: "World Bank",
-    desc: "Agenda to be announced.",
+    desc: "Financing climate resilience and debt relief for developing economies.",
     imageId: "committee-world-bank"
   },
   {
@@ -35,7 +35,7 @@ const committeeHighlights = [
   },
   {
     title: "CABINET",
-    desc: "Agenda to be announced.",
+    desc: "Coordinating a national response to an energy and food security shock.",
     imageId: "committee-cabinet"
   },
   {
@@ -124,8 +124,8 @@ export default function Home() {
           <ScrollReveal delay={500} className="fade-only">
             <div className="flex flex-col items-center pt-8 md:pt-12">
               <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
-                Step into the shoes of global ambassadors. Debate world-shaping issues, 
-                form strategic alliances, and lead the conversation at Ihsan Schools MUN.
+                Step into the shoes of global ambassadors. Debate big issues,
+                build alliances, and enjoy the energy of Ihsan Schools MUN.
               </p>
               
               {/* Animated Realistic Architectural Branding */}
@@ -304,8 +304,8 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-lg text-secondary-foreground/80 mb-16 leading-relaxed">
-              Registration for the 2026 Ihsan Schools MUN is now open. 
-              Join a community of students dedicated to international cooperation and leadership.
+              Registration for the 2026 Ihsan Schools MUN is now open.
+              Join a community of students ready to collaborate, learn, and lead.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={400}>

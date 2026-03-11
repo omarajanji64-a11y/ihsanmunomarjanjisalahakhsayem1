@@ -61,7 +61,7 @@ export function Navbar() {
           ))}
           
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 font-bold text-xs uppercase tracking-widest btn-premium">
-            <LinkNext href="/registration">Register Now</LinkNext>
+            <LinkNext href="/registration">Apply Now</LinkNext>
           </Button>
         </div>
 
@@ -94,7 +94,7 @@ export function Navbar() {
           ))}
           <Button asChild className="bg-primary w-full py-7 text-sm font-bold uppercase tracking-widest rounded-full mt-2">
             <LinkNext href="/registration" onClick={() => setIsMenuOpen(false)}>
-              Register Now
+              Apply Now
             </LinkNext>
           </Button>
         </div>

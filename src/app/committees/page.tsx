@@ -14,9 +14,9 @@ const committees = [
     id: "world-bank",
     title: "World Bank",
     level: "Committee",
-    topics: ["Agenda to be announced"],
+    topics: ["Financing climate resilience and debt relief for developing economies"],
     img: "committee-world-bank",
-    description: "Agenda to be announced."
+    description: "Focused on financing climate resilience and debt relief for developing economies."
   },
   {
     id: "h-unsc",
@@ -46,9 +46,9 @@ const committees = [
     id: "cabinet",
     title: "CABINET",
     level: "Committee",
-    topics: ["Agenda to be announced"],
+    topics: ["Coordinating a national response to an energy and food security shock"],
     img: "committee-cabinet",
-    description: "Agenda to be announced."
+    description: "Focused on coordinating a national response to an energy and food security shock."
   },
   {
     id: "disec",
