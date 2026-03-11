@@ -51,7 +51,7 @@ export default function RegistrationPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-primary">Journey</span></h1>
+              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-primary-foreground">Journey</span></h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-muted-foreground">

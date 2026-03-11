@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="space-y-16 text-center">
               <ScrollReveal>
-                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-primary">IHSAN MUN</span></h1>
+                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-primary-foreground">IHSAN MUN</span></h1>
                 <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
                   Have questions about the conference? Our team is here to help you 
                   start your diplomatic journey. Reach out to us through any of the channels below.

@@ -256,7 +256,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-24 space-y-6">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-primary italic">Every Interest</span></h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-primary-foreground italic">Every Interest</span></h2>
               <div className="w-16 h-[1px] bg-white/20 mx-auto mt-8" />
             </ScrollReveal>
           </div>
