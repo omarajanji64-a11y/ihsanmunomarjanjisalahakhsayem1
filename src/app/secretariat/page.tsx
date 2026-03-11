@@ -11,31 +11,31 @@ const team = [
   {
     name: "Maizah Hassan",
     role: "Secretary General",
-    bio: "Profile coming soon.",
+    bio: "",
     img: "team-maizah-hassan"
   },
   {
     name: "Nada Alghory",
     role: "Secretary General",
-    bio: "Profile coming soon.",
+    bio: "",
     img: "team-nada-alghory"
   },
   {
     name: "Haya El Houssami",
     role: "Director General",
-    bio: "Profile coming soon.",
+    bio: "",
     img: "team-haya-el-houssami"
   },
   {
     name: "Omar Soufi",
     role: "Deputy Secretary General",
-    bio: "Profile coming soon.",
+    bio: "",
     img: "team-omar-soufi"
   },
   {
     name: "Maria Arslan",
     role: "Deputy Director General",
-    bio: "Profile coming soon.",
+    bio: "",
     img: "team-maria-arslan"
   }
 ];
@@ -99,7 +99,9 @@ export default function SecretariatPage() {
                     <div className="p-8 flex-1 flex flex-col">
                       <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
                       <p className="text-primary font-bold text-sm mb-4">{member.role}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+                      {member.bio && (
+                        <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+                      )}
                     </div>
                   </div>
                 </ScrollReveal>

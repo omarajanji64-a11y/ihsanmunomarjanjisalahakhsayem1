@@ -33,6 +33,15 @@ export default function RegistrationPage() {
       return;
     }
   };
+  
+  const pricing = [
+    { label: "Early Delegate", price: "1300TL" },
+    { label: "Delegate", price: "1400TL" },
+    { label: "Late Delegate", price: "1500TL" },
+    { label: "PR and IT and Logistics", price: "950TL" },
+    { label: "Press and Admins", price: "1200TL" },
+    { label: "Chairs", price: "1100TL" },
+  ];
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -53,27 +62,46 @@ export default function RegistrationPage() {
 
           <ScrollReveal>
             {step === 1 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { id: "delegate", name: "Early Delegate", icon: <User />, desc: "Apply for early registration via Google Forms." },
-                  { id: "chair", name: "Chair / DA", icon: <ShieldCheck />, desc: "Moderate committee sessions." },
-                  { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." },
-                  { id: "team", name: "Team", icon: <Briefcase />, desc: "Apply for the organizing team." }
-                ].map((item) => (
-                  <Card 
-                    key={item.id}
-                    className={`cursor-pointer transition-all border-2 hover:border-primary group bg-card ${role === item.id ? 'border-primary bg-primary/5' : 'border-border'}`}
-                    onClick={() => handleRoleSelection(item.id)}
-                  >
-                    <CardContent className="p-8 text-center space-y-4">
-                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transition-colors ${role === item.id ? 'bg-primary text-white' : 'bg-secondary text-primary group-hover:bg-primary/10 group-hover:text-primary'}`}>
-                        {item.icon}
-                      </div>
-                      <h3 className="font-bold text-xl">{item.name}</h3>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div className="space-y-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                    { id: "delegate", name: "Early Delegate", icon: <User />, desc: "Apply for early registration via Google Forms." },
+                    { id: "chair", name: "Chair / DA", icon: <ShieldCheck />, desc: "Moderate committee sessions." },
+                    { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." },
+                    { id: "team", name: "Team", icon: <Briefcase />, desc: "Apply for the organizing team." }
+                  ].map((item) => (
+                    <Card 
+                      key={item.id}
+                      className={`cursor-pointer transition-all border-2 hover:border-primary group bg-card ${role === item.id ? 'border-primary bg-primary/5' : 'border-border'}`}
+                      onClick={() => handleRoleSelection(item.id)}
+                    >
+                      <CardContent className="p-8 text-center space-y-4">
+                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transition-colors ${role === item.id ? 'bg-primary text-white' : 'bg-secondary text-primary group-hover:bg-primary/10 group-hover:text-primary'}`}>
+                          {item.icon}
+                        </div>
+                        <h3 className="font-bold text-xl">{item.name}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <h2 className="text-3xl font-bold">Delegate Pricing</h2>
+                    <p className="text-muted-foreground mt-2">All prices listed in Turkish Lira (TL).</p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {pricing.map((item) => (
+                      <Card key={item.label} className="bg-card border border-border">
+                        <CardContent className="p-6 flex items-center justify-between">
+                          <div className="font-semibold">{item.label}</div>
+                          <div className="text-primary font-bold">{item.price}</div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
 
