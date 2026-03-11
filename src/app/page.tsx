@@ -64,6 +64,7 @@ export default function Home() {
   const { isEditorEnabled, getImageUrl, openImageEditor } = useImageEditor();
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg");
   const committeeImageMap = new Map(PlaceHolderImages.map((img) => [img.id, img]));
+  const introImage = committeeImageMap.get("committee-world-bank") ?? heroImage;
 
   return (
     <div className="min-h-screen bg-background">
@@ -219,14 +220,14 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-6xl mx-auto">
             <ScrollReveal className="relative h-[550px] rounded-[1rem] overflow-hidden shadow-2xl border border-primary/10">
-              {unscImage?.imageUrl && (
+              {introImage?.imageUrl && (
                 <EditableImage
-                  imageId="committee-unsc"
-                  src={unscImage.imageUrl}
+                  imageId={introImage.id}
+                  src={introImage.imageUrl}
                   alt="Committee Session"
                   fill
                   className="object-cover"
-                  data-ai-hint="un session"
+                  data-ai-hint={introImage.imageHint}
                 />
               )}
             </ScrollReveal>
