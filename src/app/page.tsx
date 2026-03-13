@@ -45,7 +45,7 @@ const committeeHighlights = [
   },
   {
     title: "SPECPOL",
-    desc: "Aftermath of the Arab Spring.",
+    desc: "Regulating Private Military Companies and Mercenaries in Modern Conflicts.",
     imageId: "committee-specpol"
   },
   {

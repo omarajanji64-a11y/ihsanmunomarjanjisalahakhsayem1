@@ -62,9 +62,9 @@ const committees = [
     id: "specpol",
     title: "SPECPOL",
     level: "Committee",
-    topics: ["Aftermath of the Arab Spring"],
+    topics: ["Regulating Private Military Companies and Mercenaries in Modern Conflicts"],
     img: "committee-specpol",
-    description: "Focused on the aftermath of the Arab Spring."
+    description: "Focused on regulating private military companies and mercenaries in modern conflicts."
   },
   {
     id: "arab-league",
