@@ -39,9 +39,9 @@
     },
     {
       "id": "about-timeline",
-      "description": "Ihsan Schools Campus",
-      "imageUrl": "",
-      "imageHint": "modern school"
+      "description": "Ihsan Schools Venue",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/upload/v1773265765/WhatsApp_Image_2026-03-12_at_00.48.03_gowxeu.jpg",
+      "imageHint": "venue"
     },
     {
       "id": "secretariat-bg",

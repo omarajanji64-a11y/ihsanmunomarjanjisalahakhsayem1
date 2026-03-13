@@ -38,9 +38,9 @@
     },
     {
       "id": "about-timeline",
-      "description": "Ihsan Schools Campus",
-      "imageUrl": "https://images.unsplash.com/photo-1759834687385-fc3a66687fb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBzY2hvb2x8ZW58MHx8fHwxNzcwMjQwNzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern school"
+      "description": "Ihsan Schools Venue",
+      "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/upload/v1773265765/WhatsApp_Image_2026-03-12_at_00.48.03_gowxeu.jpg",
+      "imageHint": "venue"
     },
     {
       "id": "committee-world-bank",

@@ -30,7 +30,7 @@ export default function ContactPage() {
                     <MapPin size={32} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl mb-2">Our Campus</h4>
+                    <h4 className="font-bold text-xl mb-2">Our Venue</h4>
                     <p className="text-muted-foreground">Ihsan Schools Atakent<br />Istanbul, Turkey</p>
                   </div>
                 </div>

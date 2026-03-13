@@ -17,7 +17,7 @@ export default function CampusPage() {
                 Ihsan Schools <span className="text-primary-foreground">Atakent</span>
               </h1>
               <p className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
-                Explore the campus and find us on the map.
+                Explore the venue and find us on the map.
               </p>
             </ScrollReveal>
           </div>

@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="space-y-6 text-xs tracking-wide">
               <li className="flex gap-4 text-[#A89BB5]">
                 <MapPin size={16} className="text-primary shrink-0" />
-                <span>Ihsan Schools Campus,<br />Istanbul, Turkey</span>
+                <span>Ihsan Schools Venue,<br />Istanbul, Turkey</span>
               </li>
               <li className="flex gap-4 text-[#A89BB5]">
                 <Mail size={16} className="text-primary shrink-0" />

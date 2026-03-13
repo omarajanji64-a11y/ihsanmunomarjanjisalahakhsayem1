@@ -92,7 +92,7 @@ export default function AboutPage() {
                 <EditableImage
                   imageId="about-timeline"
                   src={timelineImage.imageUrl}
-                  alt="Ihsan Schools Campus"
+                  alt="Ihsan Schools Venue"
                   fill
                   className="object-cover"
                 />
