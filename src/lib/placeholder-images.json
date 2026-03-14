@@ -62,15 +62,9 @@
     },
     {
       "id": "committee-jcc-avengers",
-      "description": "JCC Avengers Civil War",
+      "description": "Avengers Civil War",
       "imageUrl": "https://res.cloudinary.com/dl1pjkqmv/image/upload/v1773237520/54592506283_a630a1caf1_b_mal58v.jpg",
       "imageHint": "superhero team"
-    },
-    {
-      "id": "committee-cabinet",
-      "description": "Cabinet Committee",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabinet_Meeting_%2848302308327%29.jpg",
-      "imageHint": "cabinet meeting"
     },
     {
       "id": "committee-disec",

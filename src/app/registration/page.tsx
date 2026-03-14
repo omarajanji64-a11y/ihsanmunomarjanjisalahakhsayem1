@@ -21,7 +21,7 @@ export default function RegistrationPage() {
       return;
     }
     if (id === "team") {
-      window.location.href = "https://forms.gle/nvU2roK1YHKx7xGu6";
+      window.location.href = "https://forms.gle/oY6NGBmL4J7bKcAe8";
       return;
     }
     if (id === "staff") {
@@ -36,10 +36,8 @@ export default function RegistrationPage() {
   
   const pricing = [
     { label: "Early Delegate", price: "1300TL" },
-    { label: "Delegate", price: "1400TL" },
-    { label: "Late Delegate", price: "1500TL" },
-    { label: "PR and IT and Logistics", price: "950TL" },
-    { label: "Press and Admins", price: "1200TL" },
+    { label: "PR, IT, Media and Logistics", price: "950TL" },
+    { label: "Press and Admins", price: "1000TL" },
     { label: "Chair/Academic Assistant", price: "1100TL" },
   ];
 

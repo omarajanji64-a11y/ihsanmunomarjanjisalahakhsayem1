@@ -29,14 +29,9 @@ const committeeHighlights = [
     imageId: "committee-unwomen"
   },
   {
-    title: "JCC: Avengers Civil War",
+    title: "Avengers Civil War",
     desc: "The Sokovia Accords.",
     imageId: "committee-jcc-avengers"
-  },
-  {
-    title: "CABINET",
-    desc: "Coordinating a national response to an energy and food security shock.",
-    imageId: "committee-cabinet"
   },
   {
     title: "DISEC",

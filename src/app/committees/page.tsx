@@ -36,19 +36,11 @@ const committees = [
   },
   {
     id: "jcc-avengers",
-    title: "JCC: Avengers Civil War",
+    title: "Avengers Civil War",
     level: "Committee",
     topics: ["The Sokovia Accords"],
     img: "committee-jcc-avengers",
     description: "Focused on the Sokovia Accords."
-  },
-  {
-    id: "cabinet",
-    title: "CABINET",
-    level: "Committee",
-    topics: ["Coordinating a national response to an energy and food security shock"],
-    img: "committee-cabinet",
-    description: "Focused on coordinating a national response to an energy and food security shock."
   },
   {
     id: "disec",
