@@ -5,6 +5,9 @@ import { EditorProvider } from "@/components/editor/editor-provider";
 export const metadata: Metadata = {
   title: 'IHSAN MUN 2026',
   description: 'Step into the shoes of global ambassadors at Ihsan Schools MUN.',
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
