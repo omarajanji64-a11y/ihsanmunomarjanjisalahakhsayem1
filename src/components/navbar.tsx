@@ -87,7 +87,7 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className={cn(
                 "text-lg font-serif font-bold tracking-tight",
-                pathname === link.href ? "text-primary" : "text-white"
+                pathname === link.href ? "text-white" : "text-white/85"
               )}
             >
               {link.name}

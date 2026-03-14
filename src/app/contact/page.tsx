@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="space-y-16 text-center">
               <ScrollReveal>
-                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-primary-foreground">IHSAN MUN</span></h1>
+                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-white">IHSAN MUN</span></h1>
                 <p className="text-xl text-foreground/85 mt-6 max-w-2xl mx-auto">
                   Have questions about the conference? Our team is here to help you 
                   start your diplomatic journey. Reach out to us through any of the channels below.
@@ -46,7 +46,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-2">Email Us</h4>
                     <p className="text-foreground/80">mun@ihsanschools.org</p>
-                    <p className="text-xs text-primary font-bold mt-2 uppercase tracking-wider">Fast Response</p>
+                    <p className="text-xs text-white mt-2 uppercase tracking-wider">Fast Response</p>
                   </div>
                 </a>
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-2">Follow Us</h4>
                     <p className="text-foreground/80">@ihsanmodelun</p>
-                    <p className="text-xs text-primary font-bold mt-2 uppercase tracking-wider">Daily Updates</p>
+                    <p className="text-xs text-white mt-2 uppercase tracking-wider">Daily Updates</p>
                   </div>
                 </a>
               </ScrollReveal>

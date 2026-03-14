@@ -49,7 +49,7 @@ export default function RegistrationPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-primary-foreground">Journey</span></h1>
+              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-white">Journey</span></h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-foreground/85">
@@ -94,7 +94,7 @@ export default function RegistrationPage() {
                       <Card key={item.label} className="bg-card border border-border">
                         <CardContent className="p-6 flex items-center justify-between">
                           <div className="font-semibold">{item.label}</div>
-                          <div className="text-primary font-bold">{item.price}</div>
+                          <div className="text-white font-bold">{item.price}</div>
                         </CardContent>
                       </Card>
                     ))}
@@ -113,7 +113,7 @@ export default function RegistrationPage() {
                   Thank you for your application to IHSAN MUN 2026. 
                   Please check your email for further instructions.
                 </p>
-                <Button asChild variant="outline" className="rounded-full px-10 py-6 text-lg border-primary text-primary hover:bg-primary/10">
+                <Button asChild variant="outline" className="rounded-full px-10 py-6 text-lg border-white/30 text-white hover:bg-white/10">
                   <a href="/">Return Home</a>
                 </Button>
               </div>

@@ -35,7 +35,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-primary-foreground">Purpose</span></h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-white">Purpose</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
@@ -52,13 +52,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <ScrollReveal>
-                <div className="flex items-center gap-4 text-primary font-bold tracking-widest uppercase text-sm">
+                <div className="flex items-center gap-4 text-white/90 font-bold tracking-widest uppercase text-sm">
                   <span className="w-12 h-[2px] bg-primary" />
                   The Mission
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <h2 className="text-4xl font-bold">To Cultivate <span className="text-primary-foreground">Enlightened</span> Leaders.</h2>
+                <h2 className="text-4xl font-bold">To Cultivate <span className="text-white">Enlightened</span> Leaders.</h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <p className="text-lg text-foreground/80 leading-relaxed">

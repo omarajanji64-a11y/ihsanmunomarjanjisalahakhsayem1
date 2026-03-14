@@ -66,7 +66,7 @@ export default function SecretariatPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-primary-foreground">Secretariat</span></h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-white">Secretariat</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
@@ -98,7 +98,7 @@ export default function SecretariatPage() {
                     </div>
                     <div className="p-8 flex-1 flex flex-col">
                       <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
-                      <p className="text-primary font-bold text-sm mb-4">{member.role}</p>
+                      <p className="text-foreground/88 font-bold text-sm mb-4">{member.role}</p>
                       {member.bio && (
                         <p className="text-foreground/80 text-sm leading-relaxed">{member.bio}</p>
                       )}

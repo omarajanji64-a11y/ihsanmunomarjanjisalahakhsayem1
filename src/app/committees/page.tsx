@@ -147,7 +147,7 @@ export default function CommitteesPage() {
                     </div>
                     
                     <div className="space-y-6">
-                      <Badge className="bg-primary/10 text-primary border-none text-xs font-bold px-3 py-1">
+                      <Badge className="bg-white/10 text-white border-none text-xs font-bold px-3 py-1">
                         {committee.level}
                       </Badge>
                       <h2 className="text-3xl font-bold">{committee.title}</h2>
@@ -156,14 +156,14 @@ export default function CommitteesPage() {
                       </p>
                       
                       <div className="space-y-4">
-                        <h4 className="font-bold text-primary flex items-center gap-2">
+                        <h4 className="font-bold text-white flex items-center gap-2">
                           <span className="w-2 h-2 rounded-full bg-primary" />
                           Agenda Topics
                         </h4>
                         <ul className="space-y-3">
                           {committee.topics.map((topic, idx) => (
                             <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
-                              <span className="text-primary font-bold">Topic {idx + 1}:</span>
+                              <span className="text-white font-bold">Topic {idx + 1}:</span>
                               <span className="text-foreground">{topic}</span>
                             </li>
                           ))}
@@ -183,7 +183,7 @@ export default function CommitteesPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-primary">Essentials</span></h2>
+              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-white">Essentials</span></h2>
               <p className="text-foreground/80 max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>

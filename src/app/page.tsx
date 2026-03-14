@@ -141,7 +141,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="13" 
-                        className="fill-primary font-bold" 
+                        className="fill-background font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
@@ -150,7 +150,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="19" 
-                        className="fill-primary font-bold" 
+                        className="fill-background font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
@@ -231,7 +231,7 @@ export default function Home() {
               <ScrollReveal>
                 <div className="w-12 h-[2px] bg-primary mb-6" />
                 <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                  Where Leadership Meets <span className="text-primary italic">Global Perspective.</span>
+                  Where Leadership Meets <span className="text-white italic">Global Perspective.</span>
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
@@ -251,7 +251,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-24 space-y-6">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-primary-foreground italic">Every Interest</span></h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-white italic">Every Interest</span></h2>
               <div className="w-16 h-[1px] bg-white/20 mx-auto mt-8" />
             </ScrollReveal>
           </div>
@@ -277,7 +277,7 @@ export default function Home() {
                   <div className="p-10 space-y-4 flex-1 flex flex-col">
                     <h3 className="text-xl font-serif font-bold">{item.title}</h3>
                     <p className="text-white/80 text-sm leading-relaxed mt-4 flex-1">{item.desc}</p>
-                    <Link href="/committees" className="text-primary text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-6">
+                    <Link href="/committees" className="text-white text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-6">
                       View Agenda <ArrowRight size={12} />
                     </Link>
                   </div>
@@ -294,7 +294,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
-              Ready to <span className="text-primary">Shape the World?</span>
+              Ready to <span className="text-white">Shape the World?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>
