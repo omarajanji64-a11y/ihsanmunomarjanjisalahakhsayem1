@@ -1,6 +1,3 @@
-
-"use client";
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -27,6 +24,7 @@ export default function AboutPage() {
               fill
               className="object-cover opacity-[0.2]"
               priority
+              sizes="100vw"
               data-ai-hint={heroBg.imageHint}
             />
           )}
@@ -95,6 +93,7 @@ export default function AboutPage() {
                   alt="Ihsan Schools Venue"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 42rem, 100vw"
                 />
               )}
             </ScrollReveal>

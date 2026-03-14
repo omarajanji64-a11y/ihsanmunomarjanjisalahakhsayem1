@@ -1,6 +1,3 @@
-
-"use client";
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -107,6 +104,7 @@ export default function CommitteesPage() {
               fill
               className="object-cover opacity-[0.2]"
               priority
+              sizes="100vw"
               data-ai-hint={headerBg.imageHint}
             />
           )}
@@ -142,6 +140,7 @@ export default function CommitteesPage() {
                           alt={committee.title}
                           fill
                           className="object-cover"
+                          sizes="(min-width: 1024px) 40rem, 100vw"
                         />
                       )}
                     </div>

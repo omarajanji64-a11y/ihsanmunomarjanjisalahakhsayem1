@@ -11,6 +11,8 @@ type ImageEditPayload = {
   currentUrl: string;
 };
 
+const OVERRIDES_STORAGE_KEY = "editor-image-overrides";
+
 type ImageEditorContextValue = {
   isEditorEnabled: boolean;
   getImageUrl: (id: string, fallbackUrl: string) => string;
@@ -43,34 +45,60 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
 
+  const syncOverrides = (nextOverrides: ImageOverrideMap) => {
+    setOverrides(nextOverrides);
+    if (typeof window !== "undefined") {
+      window.sessionStorage.setItem(OVERRIDES_STORAGE_KEY, JSON.stringify(nextOverrides));
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const cachedOverrides = window.sessionStorage.getItem(OVERRIDES_STORAGE_KEY);
+    if (cachedOverrides) {
+      try {
+        setOverrides(JSON.parse(cachedOverrides) as ImageOverrideMap);
+      } catch {
+        window.sessionStorage.removeItem(OVERRIDES_STORAGE_KEY);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     let isMounted = true;
 
-    const loadEditorState = async () => {
-      const [sessionResponse, imagesResponse] = await Promise.all([
-        fetch("/api/editor/session", { cache: "no-store" }).catch(() => null),
-        fetch("/api/editor/images", { cache: "no-store" }).catch(() => null),
-      ]);
-
-      if (!isMounted) {
+    const loadOverrides = async () => {
+      const imagesResponse = await fetch("/api/editor/images", { cache: "no-store" }).catch(() => null);
+      if (!isMounted || !imagesResponse?.ok) {
         return;
       }
 
-      if (sessionResponse?.ok) {
-        const sessionPayload = (await sessionResponse.json()) as { authenticated?: boolean };
-        setIsAdmin(Boolean(sessionPayload.authenticated));
-      }
-
-      if (imagesResponse?.ok) {
-        const imagePayload = (await imagesResponse.json()) as { overrides?: ImageOverrideMap };
-        setOverrides(imagePayload.overrides ?? {});
+      const imagePayload = (await imagesResponse.json()) as { overrides?: ImageOverrideMap };
+      if (isMounted) {
+        syncOverrides(imagePayload.overrides ?? {});
       }
     };
 
-    void loadEditorState();
+    const startLoading = () => {
+      void loadOverrides();
+    };
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(startLoading, { timeout: 1200 });
+      return () => {
+        isMounted = false;
+        window.cancelIdleCallback(idleId);
+      };
+    }
+
+    const timeoutId = window.setTimeout(startLoading, 250);
 
     return () => {
       isMounted = false;
+      window.clearTimeout(timeoutId);
     };
   }, []);
 
@@ -96,8 +124,18 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
     setSaveError(null);
   };
 
-  const handleToggle = () => {
+  const handleToggle = async () => {
     if (!isAdmin) {
+      const sessionResponse = await fetch("/api/editor/session", { cache: "no-store" }).catch(() => null);
+      if (sessionResponse?.ok) {
+        const sessionPayload = (await sessionResponse.json()) as { authenticated?: boolean };
+        if (sessionPayload.authenticated) {
+          setIsAdmin(true);
+          setEditorMode(true);
+          return;
+        }
+      }
+
       setIsAuthModalOpen(true);
       return;
     }
@@ -161,7 +199,7 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      setOverrides(payload?.overrides ?? {});
+      syncOverrides(payload?.overrides ?? {});
       closeImageEditor();
     } finally {
       setIsSaving(false);

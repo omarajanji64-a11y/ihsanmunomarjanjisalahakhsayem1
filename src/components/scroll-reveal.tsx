@@ -4,6 +4,36 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
+const revealCallbacks = new WeakMap<Element, () => void>();
+let sharedObserver: IntersectionObserver | null = null;
+
+function getSharedObserver() {
+  if (sharedObserver || typeof window === "undefined" || !("IntersectionObserver" in window)) {
+    return sharedObserver;
+  }
+
+  sharedObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) {
+          continue;
+        }
+
+        const callback = revealCallbacks.get(entry.target);
+        callback?.();
+        revealCallbacks.delete(entry.target);
+        sharedObserver?.unobserve(entry.target);
+      }
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  return sharedObserver;
+}
+
 interface ScrollRevealProps {
   children: React.ReactNode;
   className?: string;
@@ -15,24 +45,32 @@ export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealPro
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
+    const node = ref.current;
+    if (!node) {
+      return;
     }
 
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = getSharedObserver();
+    if (!observer) {
+      setIsVisible(true);
+      return;
+    }
+
+    revealCallbacks.set(node, () => setIsVisible(true));
+    observer.observe(node);
+
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      revealCallbacks.delete(node);
+      observer.unobserve(node);
     };
   }, []);
 
@@ -44,7 +82,7 @@ export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealPro
         isVisible && "active",
         className
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={isVisible ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>

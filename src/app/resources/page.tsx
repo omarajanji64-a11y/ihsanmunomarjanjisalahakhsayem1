@@ -1,6 +1,3 @@
-
-"use client";
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -34,6 +31,7 @@ export default function ResourcesPage() {
               fill
               className="object-cover opacity-[0.2]"
               priority
+              sizes="100vw"
               data-ai-hint={headerBg.imageHint}
             />
           )}

@@ -1,5 +1,4 @@
-"use client";
-
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -25,11 +24,13 @@ export default function CampusPage() {
           <ScrollReveal delay={150}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
               <div className="bg-card border border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl">
-                <img
+                <Image
                   src="https://res.cloudinary.com/dl1pjkqmv/image/upload/v1773265765/WhatsApp_Image_2026-03-12_at_00.48.03_gowxeu.jpg"
                   alt="Ihsan Schools Atakent"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  width={1600}
+                  height={1200}
+                  className="h-full w-full object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
               </div>
               <div className="bg-card border border-border/50 rounded-[2.5rem] overflow-hidden shadow-xl">

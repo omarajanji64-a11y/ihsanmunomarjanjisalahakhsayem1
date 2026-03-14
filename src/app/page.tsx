@@ -1,6 +1,3 @@
-
-"use client";
-
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -10,7 +7,6 @@ import { ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Countdown } from "@/components/countdown";
 import { EditableImage } from "@/components/editor/editable-image";
-import { useImageEditor } from "@/components/editor/editor-provider";
 
 const committeeHighlights = [
   {
@@ -56,7 +52,6 @@ const committeeHighlights = [
 ];
 
 export default function Home() {
-  const { isEditorEnabled, getImageUrl, openImageEditor } = useImageEditor();
   const heroImage = PlaceHolderImages.find(img => img.id === "hero-bg");
   const committeeImageMap = new Map(PlaceHolderImages.map((img) => [img.id, img]));
   const introImage = committeeImageMap.get("committee-world-bank") ?? heroImage;
@@ -67,17 +62,7 @@ export default function Home() {
       
       {/* Hero Section - Cinematic Treatment */}
       <section
-        className={`relative min-h-[95vh] flex flex-col items-center pt-36 md:pt-48 overflow-visible ${isEditorEnabled ? "cursor-pointer" : ""}`}
-        onClick={() => {
-          if (!isEditorEnabled || !heroImage?.imageUrl) {
-            return;
-          }
-
-          openImageEditor({
-            id: "hero-bg",
-            currentUrl: getImageUrl("hero-bg", heroImage.imageUrl),
-          });
-        }}
+        className="relative min-h-[95vh] flex flex-col items-center pt-36 md:pt-48 overflow-visible"
       >
         <div className="absolute inset-0 z-0">
           {heroImage?.imageUrl && (
@@ -88,6 +73,7 @@ export default function Home() {
               fill
               className="object-cover opacity-[0.25]"
               priority
+              sizes="100vw"
               data-ai-hint={heroImage.imageHint}
             />
           )}
@@ -222,6 +208,7 @@ export default function Home() {
                   alt="Committee Session"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 44rem, 100vw"
                   data-ai-hint={introImage.imageHint}
                 />
               )}
@@ -270,6 +257,7 @@ export default function Home() {
                         alt={item.title}
                         fill
                         className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        sizes="(min-width: 1280px) 24rem, (min-width: 768px) 33vw, 100vw"
                         data-ai-hint={image.imageHint}
                       />
                     )}

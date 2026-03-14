@@ -1,6 +1,3 @@
-
-"use client";
-
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -58,6 +55,7 @@ export default function SecretariatPage() {
               fill
               className="object-cover opacity-[0.2]"
               priority
+              sizes="100vw"
               data-ai-hint={heroImage.imageHint}
             />
           )}
@@ -93,6 +91,7 @@ export default function SecretariatPage() {
                           alt={member.name}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(min-width: 1024px) 22rem, (min-width: 768px) 50vw, 100vw"
                         />
                       )}
                     </div>

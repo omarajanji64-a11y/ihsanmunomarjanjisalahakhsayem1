@@ -1,6 +1,19 @@
 import type { Metadata } from 'next';
+import { Cinzel, Inter } from "next/font/google";
 import './globals.css';
 import { EditorProvider } from "@/components/editor/editor-provider";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-cinzel",
+});
 
 export const metadata: Metadata = {
   title: 'IHSAN MUN 2026',
@@ -17,12 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+      <body className={`${inter.variable} ${cinzel.variable} font-body antialiased`}>
         <EditorProvider>{children}</EditorProvider>
       </body>
     </html>

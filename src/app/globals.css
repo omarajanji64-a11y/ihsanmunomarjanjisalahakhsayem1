@@ -35,7 +35,7 @@
 
 @layer base {
   * {
-    @apply border-border transition-colors duration-300;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
@@ -44,7 +44,7 @@
       radial-gradient(circle at 12% 18%, hsla(var(--primary), 0.24) 0%, transparent 28%),
       radial-gradient(circle at 86% 10%, hsla(var(--accent), 0.14) 0%, transparent 22%),
       radial-gradient(circle at 50% 100%, hsla(var(--secondary), 0.22) 0%, transparent 34%);
-    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-bold text-foreground tracking-tight;
@@ -170,7 +170,9 @@
 .scroll-reveal {
   opacity: 0;
   transform: translateY(15px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .scroll-reveal.active {
@@ -216,4 +218,58 @@
 
 .animate-entry-traveler {
   animation: entry-traveler 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image:
+      radial-gradient(circle at 16% 12%, hsla(var(--primary), 0.16) 0%, transparent 24%),
+      radial-gradient(circle at 84% 10%, hsla(var(--accent), 0.08) 0%, transparent 18%);
+  }
+
+  .glass-card,
+  .surface-panel {
+    backdrop-filter: blur(10px) saturate(115%);
+  }
+
+  .section-dark::after,
+  .section-light::after,
+  .site-footer::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 18% 14%, hsla(var(--primary), 0.14) 0%, transparent 24%),
+      radial-gradient(circle at 82% 12%, hsla(var(--accent), 0.06) 0%, transparent 18%);
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.active,
+  .fade-only {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .section-dark::after,
+  .section-light::after,
+  .site-footer::before {
+    display: none;
+  }
 }
