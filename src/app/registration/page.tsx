@@ -49,7 +49,7 @@ export default function RegistrationPage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-white">Journey</span></h1>
+              <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-accent">Journey</span></h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-foreground/85">
@@ -70,11 +70,11 @@ export default function RegistrationPage() {
                   ].map((item) => (
                     <Card 
                       key={item.id}
-                      className={`cursor-pointer transition-all border-2 hover:border-primary group bg-card ${role === item.id ? 'border-primary bg-primary/5' : 'border-border'}`}
+                      className={`surface-panel cursor-pointer transition-all border-2 group hover:-translate-y-1 ${role === item.id ? 'border-accent bg-primary/10' : 'border-border'}`}
                       onClick={() => handleRoleSelection(item.id)}
                     >
                       <CardContent className="p-8 text-center space-y-4">
-                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transition-colors ${role === item.id ? 'bg-primary text-white' : 'bg-secondary text-primary group-hover:bg-primary/10 group-hover:text-primary'}`}>
+                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transition-colors ${role === item.id ? 'bg-accent text-accent-foreground' : 'bg-secondary text-accent group-hover:bg-accent/15 group-hover:text-accent'}`}>
                           {item.icon}
                         </div>
                         <h3 className="font-bold text-xl">{item.name}</h3>
@@ -91,10 +91,10 @@ export default function RegistrationPage() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {pricing.map((item) => (
-                      <Card key={item.label} className="bg-card border border-border">
+                      <Card key={item.label} className="surface-panel border border-border">
                         <CardContent className="p-6 flex items-center justify-between">
                           <div className="font-semibold">{item.label}</div>
-                          <div className="text-white font-bold">{item.price}</div>
+                          <div className="text-accent font-bold">{item.price}</div>
                         </CardContent>
                       </Card>
                     ))}
@@ -105,7 +105,7 @@ export default function RegistrationPage() {
 
             {step === 3 && (
               <div className="max-w-3xl mx-auto text-center py-20 animate-in fade-in zoom-in-90 duration-700">
-                <div className="w-24 h-24 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner shadow-primary/20">
+                <div className="w-24 h-24 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner shadow-black/20">
                   <CheckCircle2 size={48} />
                 </div>
                 <h2 className="text-4xl font-bold mb-4">Registration Received!</h2>

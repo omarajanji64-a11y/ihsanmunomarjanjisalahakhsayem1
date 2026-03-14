@@ -4,31 +4,31 @@
 
 @layer base {
   :root {
-    /* Unified Diplomatic Palette - consistent burgundy tones */
-    --background: 343 30% 16%;
-    --foreground: 345 32% 95%;
+    /* Refined diplomatic palette with warmer highlights */
+    --background: 348 31% 13%;
+    --foreground: 22 32% 94%;
 
-    --card: 343 27% 19%;
-    --card-foreground: 345 32% 95%;
+    --card: 347 25% 17%;
+    --card-foreground: 22 32% 94%;
 
-    --popover: 343 27% 18%;
-    --popover-foreground: 345 32% 95%;
+    --popover: 347 25% 15%;
+    --popover-foreground: 22 32% 94%;
 
-    --primary: 343 36% 30%;
-    --primary-foreground: 345 36% 97%;
+    --primary: 350 45% 41%;
+    --primary-foreground: 24 35% 97%;
 
-    --secondary: 343 24% 21%;
-    --secondary-foreground: 345 32% 95%;
+    --secondary: 346 20% 20%;
+    --secondary-foreground: 22 28% 92%;
 
-    --muted: 343 18% 23%;
-    --muted-foreground: 345 24% 86%;
+    --muted: 347 16% 24%;
+    --muted-foreground: 24 18% 81%;
 
-    --accent: 343 34% 28%;
-    --accent-foreground: 345 36% 97%;
+    --accent: 22 54% 68%;
+    --accent-foreground: 348 26% 12%;
 
-    --border: 343 18% 27%;
-    --input: 343 18% 27%;
-    --ring: 343 36% 30%;
+    --border: 347 17% 27%;
+    --input: 347 17% 27%;
+    --ring: 22 54% 68%;
     --radius: 1rem;
   }
 }
@@ -40,46 +40,131 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
     text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(circle at 12% 18%, hsla(var(--primary), 0.24) 0%, transparent 28%),
+      radial-gradient(circle at 86% 10%, hsla(var(--accent), 0.14) 0%, transparent 22%),
+      radial-gradient(circle at 50% 100%, hsla(var(--secondary), 0.22) 0%, transparent 34%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-bold text-foreground tracking-tight;
   }
 }
 
+::selection {
+  background: hsla(var(--accent), 0.35);
+  color: hsl(var(--foreground));
+}
+
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, hsla(var(--foreground), 0.07) 0%, hsla(var(--card), 0.92) 18%, hsla(var(--card), 0.85) 100%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid hsla(var(--border), 0.95);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 24px 64px -36px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.surface-panel {
+  background:
+    linear-gradient(180deg, hsla(var(--foreground), 0.05) 0%, hsla(var(--card), 0.96) 16%, hsla(var(--card), 0.88) 100%);
+  border: 1px solid hsla(var(--border), 0.9);
+  box-shadow:
+    0 22px 58px -34px rgba(0, 0, 0, 0.86),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px) saturate(130%);
+}
+
+.surface-panel:hover {
+  border-color: hsla(var(--accent), 0.38);
+  box-shadow:
+    0 28px 72px -36px rgba(0, 0, 0, 0.9),
+    0 0 0 1px hsla(var(--accent), 0.08);
 }
 
 .section-dark {
-  @apply bg-background text-foreground relative;
+  @apply text-foreground relative;
+  background:
+    linear-gradient(180deg, hsla(var(--background), 0.98) 0%, hsl(var(--background)) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.section-dark::before {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background:
+    radial-gradient(circle at 18% 22%, hsla(var(--primary), 0.12) 0%, transparent 28%),
+    radial-gradient(circle at 82% 18%, hsla(var(--accent), 0.08) 0%, transparent 24%);
+}
+
+.section-dark::after {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
 }
 
 /* Professional Softened Alternate Section */
 .section-light {
   @apply text-secondary-foreground relative;
-  /* Keep transitions within the same burgundy family across sections */
   background: linear-gradient(
     to bottom,
     hsl(var(--background)) 0%,
-    hsl(var(--secondary)) 22%,
-    hsl(var(--card)) 50%,
-    hsl(var(--secondary)) 78%,
+    hsl(var(--secondary)) 20%,
+    hsl(var(--card)) 52%,
+    hsl(var(--secondary)) 80%,
     hsl(var(--background)) 100%
   );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
 }
 
-/* Subtle architectural depth effect */
 .section-light::before {
   content: "";
   @apply absolute inset-0 pointer-events-none;
-  background-image: radial-gradient(circle at 50% 50%, hsla(var(--primary), 0.1) 0%, transparent 70%);
+  background:
+    radial-gradient(circle at 50% 32%, hsla(var(--accent), 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 20% 78%, hsla(var(--primary), 0.08) 0%, transparent 32%);
+}
+
+.section-light::after {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 54%, hsl(348 34% 11%) 100%);
+}
+
+.site-footer::before {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background:
+    radial-gradient(circle at 18% 16%, hsla(var(--accent), 0.08) 0%, transparent 26%),
+    radial-gradient(circle at 84% 22%, hsla(var(--primary), 0.12) 0%, transparent 24%);
 }
 
 .btn-premium {
-  @apply shadow-lg transform transition-all duration-300 hover:-translate-y-[2px] active:scale-95;
+  @apply transform transition-all duration-300 hover:-translate-y-[2px] active:scale-95;
+  box-shadow:
+    0 18px 36px -18px hsla(var(--primary), 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .scroll-reveal {

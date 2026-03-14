@@ -80,12 +80,12 @@ const committeeResources = [
   {
     title: "Rules of Procedure",
     desc: "The definitive guide to parliamentary procedure for our conference.",
-    icon: <Shield className="text-primary" />
+    icon: <Shield className="text-accent" />
   },
   {
     title: "Study Guides",
     desc: "Detailed background research for each committee topic.",
-    icon: <Book className="text-primary" />
+    icon: <Book className="text-accent" />
   }
 ];
 
@@ -147,7 +147,7 @@ export default function CommitteesPage() {
                     </div>
                     
                     <div className="space-y-6">
-                      <Badge className="bg-white/10 text-white border-none text-xs font-bold px-3 py-1">
+                      <Badge className="bg-accent/15 text-accent border-none text-xs font-bold px-3 py-1">
                         {committee.level}
                       </Badge>
                       <h2 className="text-3xl font-bold">{committee.title}</h2>
@@ -156,14 +156,14 @@ export default function CommitteesPage() {
                       </p>
                       
                       <div className="space-y-4">
-                        <h4 className="font-bold text-white flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-primary" />
+                        <h4 className="font-bold text-accent flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-accent" />
                           Agenda Topics
                         </h4>
                         <ul className="space-y-3">
                           {committee.topics.map((topic, idx) => (
                             <li key={idx} className="flex gap-3 text-sm p-4 bg-secondary/20 rounded-xl border border-border/50">
-                              <span className="text-white font-bold">Topic {idx + 1}:</span>
+                              <span className="text-accent font-bold">Topic {idx + 1}:</span>
                               <span className="text-foreground">{topic}</span>
                             </li>
                           ))}
@@ -183,16 +183,16 @@ export default function CommitteesPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-white">Essentials</span></h2>
+              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-accent">Essentials</span></h2>
               <p className="text-foreground/80 max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {committeeResources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
-                <div className="h-full p-8 bg-card border border-border rounded-3xl flex items-center justify-between group hover:border-primary transition-all">
+                <div className="surface-panel h-full p-8 rounded-3xl flex items-center justify-between group transition-all hover:-translate-y-1">
                   <div className="flex gap-6 items-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       {res.icon}
                     </div>
                     <div>

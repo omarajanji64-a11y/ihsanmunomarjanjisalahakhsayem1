@@ -48,12 +48,12 @@ export function Countdown() {
       {units.map((unit, idx) => (
         <div 
           key={idx} 
-          className="glass-card flex flex-col items-center px-2 py-4 md:px-8 md:py-6 border border-white/10"
+          className="glass-card flex flex-col items-center px-2 py-4 md:px-8 md:py-6"
         >
           <div className="text-2xl md:text-5xl font-bold text-white mb-1 tabular-nums tracking-tighter">
             {String(unit.value).padStart(2, '0')}
           </div>
-          <div className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] text-white/80 font-medium">
+          <div className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] text-accent font-medium">
             {unit.label}
           </div>
         </div>

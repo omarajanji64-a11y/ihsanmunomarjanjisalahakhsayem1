@@ -35,7 +35,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-white">Purpose</span></h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-accent">Purpose</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
@@ -52,13 +52,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <ScrollReveal>
-                <div className="flex items-center gap-4 text-white/90 font-bold tracking-widest uppercase text-sm">
-                  <span className="w-12 h-[2px] bg-primary" />
+                <div className="flex items-center gap-4 text-accent font-bold tracking-widest uppercase text-sm">
+                  <span className="w-12 h-[2px] bg-accent" />
                   The Mission
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <h2 className="text-4xl font-bold">To Cultivate <span className="text-white">Enlightened</span> Leaders.</h2>
+                <h2 className="text-4xl font-bold">To Cultivate <span className="text-accent">Enlightened</span> Leaders.</h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <p className="text-lg text-foreground/80 leading-relaxed">
@@ -71,14 +71,14 @@ export default function AboutPage() {
               
               <ScrollReveal delay={400} className="space-y-6">
                 <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
-                  <Target className="text-primary shrink-0" size={32} />
+                  <Target className="text-accent shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg text-foreground">Goal-Oriented Debate</h4>
                     <p className="text-sm text-foreground/80">Focusing on practical resolutions that could actually change the world.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
-                  <Eye className="text-primary shrink-0" size={32} />
+                  <Eye className="text-accent shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg text-foreground">Visionary Thinking</h4>
                     <p className="text-sm text-foreground/80">Looking at the long-term impact of diplomatic decisions on society.</p>
@@ -107,17 +107,17 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <ScrollReveal className="text-center space-y-4">
-              <ShieldCheck className="mx-auto text-primary" size={48} />
+              <ShieldCheck className="mx-auto text-accent" size={48} />
               <h3 className="text-2xl font-bold">Integrity</h3>
               <p className="text-foreground/80">Upholding the highest standards of honesty and ethics in every negotiation.</p>
             </ScrollReveal>
             <ScrollReveal delay={200} className="text-center space-y-4">
-              <History className="mx-auto text-primary" size={48} />
+              <History className="mx-auto text-accent" size={48} />
               <h3 className="text-2xl font-bold">Legacy</h3>
               <p className="text-foreground/80">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
             </ScrollReveal>
             <ScrollReveal delay={400} className="text-center space-y-4">
-              <Globe className="mx-auto text-primary" size={48} />
+              <Globe className="mx-auto text-accent" size={48} />
               <h3 className="text-2xl font-bold">Inclusion</h3>
               <p className="text-foreground/80">Embracing diverse perspectives to reach truly global solutions.</p>
             </ScrollReveal>

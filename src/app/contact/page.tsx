@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="space-y-16 text-center">
               <ScrollReveal>
-                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-white">IHSAN MUN</span></h1>
+                <h1 className="text-5xl md:text-7xl font-bold">Connect With <span className="text-accent">IHSAN MUN</span></h1>
                 <p className="text-xl text-foreground/85 mt-6 max-w-2xl mx-auto">
                   Have questions about the conference? Our team is here to help you 
                   start your diplomatic journey. Reach out to us through any of the channels below.
@@ -25,8 +25,8 @@ export default function ContactPage() {
 
               <ScrollReveal delay={200} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Location Card */}
-                <div className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all">
-                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                <div className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all hover:-translate-y-1">
+                  <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
                     <MapPin size={32} />
                   </div>
                   <div>
@@ -38,15 +38,15 @@ export default function ContactPage() {
                 {/* Email Card */}
                 <a 
                   href="mailto:mun@ihsanschools.org"
-                  className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all group"
+                  className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all group hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Mail size={32} />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">Email Us</h4>
                     <p className="text-foreground/80">mun@ihsanschools.org</p>
-                    <p className="text-xs text-white mt-2 uppercase tracking-wider">Fast Response</p>
+                    <p className="text-xs text-accent mt-2 uppercase tracking-wider">Fast Response</p>
                   </div>
                 </a>
 
@@ -55,15 +55,15 @@ export default function ContactPage() {
                   href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center text-center gap-6 p-10 bg-card rounded-[2.5rem] shadow-xl border border-border/50 hover:shadow-primary/5 hover:border-primary/50 transition-all group"
+                  className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all group hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Instagram size={32} />
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">Follow Us</h4>
                     <p className="text-foreground/80">@ihsanmodelun</p>
-                    <p className="text-xs text-white mt-2 uppercase tracking-wider">Daily Updates</p>
+                    <p className="text-xs text-accent mt-2 uppercase tracking-wider">Daily Updates</p>
                   </div>
                 </a>
               </ScrollReveal>

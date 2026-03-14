@@ -5,7 +5,7 @@ import { Instagram, Mail, MapPin, Globe } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-primary border-t border-white/5 pt-24 pb-12">
+    <footer className="site-footer border-t border-white/5 pt-24 pb-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="space-y-8">
@@ -56,15 +56,15 @@ export function Footer() {
             <h4 className="font-serif font-bold text-white mb-8 text-sm uppercase tracking-widest">Contact</h4>
             <ul className="space-y-6 text-xs tracking-wide">
               <li className="flex gap-4 text-foreground/82">
-                <MapPin size={16} className="text-primary shrink-0" />
+                <MapPin size={16} className="text-accent shrink-0" />
                 <span>Ihsan Schools Venue,<br />Istanbul, Turkey</span>
               </li>
               <li className="flex gap-4 text-foreground/82">
-                <Mail size={16} className="text-primary shrink-0" />
+                <Mail size={16} className="text-accent shrink-0" />
                 <span>mun@ihsanschools.org</span>
               </li>
               <li className="flex gap-4 text-foreground/82">
-                <Globe size={16} className="text-primary shrink-0" />
+                <Globe size={16} className="text-accent shrink-0" />
                 <span>ihsanschools.com</span>
               </li>
             </ul>
