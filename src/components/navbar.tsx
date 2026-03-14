@@ -40,7 +40,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <LinkNext href="/" className="flex items-center gap-2 group">
           <span className="font-serif font-bold text-2xl tracking-tighter text-white">
-            IHSAN <span className="text-white/60">MUN</span>
+            IHSAN <span className="text-white/75">MUN</span>
           </span>
         </LinkNext>
 
@@ -54,7 +54,7 @@ export function Navbar() {
                 "text-xs font-medium uppercase tracking-widest transition-all duration-300 hover:text-white relative py-1",
                 pathname === link.href 
                   ? "text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white" 
-                  : "text-white/60"
+                  : "text-white/75"
               )}
             >
               {link.name}

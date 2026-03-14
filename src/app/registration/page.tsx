@@ -52,7 +52,7 @@ export default function RegistrationPage() {
               <h1 className="text-5xl font-bold mb-6">Begin Your <span className="text-primary-foreground">Journey</span></h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-foreground/85">
                 Join the Ihsan Schools MUN 2026. Pick your path below to get started.
               </p>
             </ScrollReveal>
@@ -78,7 +78,7 @@ export default function RegistrationPage() {
                           {item.icon}
                         </div>
                         <h3 className="font-bold text-xl">{item.name}</h3>
-                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        <p className="text-sm text-foreground/78">{item.desc}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -87,7 +87,7 @@ export default function RegistrationPage() {
                 <div className="space-y-6">
                   <div className="text-center">
                     <h2 className="text-3xl font-bold">Delegate Pricing</h2>
-                    <p className="text-muted-foreground mt-2">All prices listed in Turkish Lira (TL).</p>
+                    <p className="text-foreground/78 mt-2">All prices listed in Turkish Lira (TL).</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {pricing.map((item) => (
@@ -109,7 +109,7 @@ export default function RegistrationPage() {
                   <CheckCircle2 size={48} />
                 </div>
                 <h2 className="text-4xl font-bold mb-4">Registration Received!</h2>
-                <p className="text-xl text-muted-foreground mb-10">
+                <p className="text-xl text-foreground/80 mb-10">
                   Thank you for your application to IHSAN MUN 2026. 
                   Please check your email for further instructions.
                 </p>

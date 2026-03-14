@@ -45,7 +45,7 @@ export default function ResourcesPage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">Preparation <span className="text-primary-foreground">Center</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
               Everything you need to excel in your committee. Download our guides and 
               start your research today.
             </p>
@@ -66,7 +66,7 @@ export default function ResourcesPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-foreground">{res.title}</h3>
-                      <p className="text-sm text-muted-foreground">{res.desc}</p>
+                      <p className="text-sm text-foreground/80">{res.desc}</p>
                     </div>
                   </div>
                   <button className="p-4 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg">

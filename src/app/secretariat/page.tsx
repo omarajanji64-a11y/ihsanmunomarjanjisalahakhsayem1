@@ -69,7 +69,7 @@ export default function SecretariatPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-primary-foreground">Secretariat</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
               Meet the dedicated team from Ihsan Schools working behind the scenes 
               to bring you a world-class conference.
             </p>
@@ -100,7 +100,7 @@ export default function SecretariatPage() {
                       <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
                       <p className="text-primary font-bold text-sm mb-4">{member.role}</p>
                       {member.bio && (
-                        <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+                        <p className="text-foreground/80 text-sm leading-relaxed">{member.bio}</p>
                       )}
                     </div>
                   </div>

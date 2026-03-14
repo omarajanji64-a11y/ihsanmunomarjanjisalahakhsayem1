@@ -118,7 +118,7 @@ export default function CommitteesPage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">Committees</h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <p className="text-xl text-white/85 max-w-2xl mx-auto">
               Our committees are designed to challenge delegates of all experience levels. 
               Find your place in the global forum.
             </p>
@@ -151,7 +151,7 @@ export default function CommitteesPage() {
                         {committee.level}
                       </Badge>
                       <h2 className="text-3xl font-bold">{committee.title}</h2>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-foreground/80 leading-relaxed">
                         {committee.description}
                       </p>
                       
@@ -184,7 +184,7 @@ export default function CommitteesPage() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-primary">Essentials</span></h2>
-              <p className="text-muted-foreground max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
+              <p className="text-foreground/80 max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
@@ -197,7 +197,7 @@ export default function CommitteesPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-foreground">{res.title}</h3>
-                      <p className="text-sm text-muted-foreground">{res.desc}</p>
+                      <p className="text-sm text-foreground/80">{res.desc}</p>
                     </div>
                   </div>
                   <button className="p-4 rounded-full bg-primary text-white hover:opacity-90 transition-colors shrink-0">

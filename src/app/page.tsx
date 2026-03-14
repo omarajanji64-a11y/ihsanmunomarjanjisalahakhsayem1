@@ -105,7 +105,7 @@ export default function Home() {
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
-                MUN <span className="text-[0.85em] opacity-40 italic font-light tracking-normal">'26</span>
+                MUN <span className="text-[0.85em] opacity-65 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
@@ -124,7 +124,7 @@ export default function Home() {
               </p>
               
               {/* Animated Realistic Architectural Branding */}
-              <div className="mt-12 md:mt-20 flex flex-col items-center gap-8 opacity-50 animate-in fade-in zoom-in duration-1000 group">
+              <div className="mt-12 md:mt-20 flex flex-col items-center gap-8 opacity-80 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
                     <div className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 animate-diplomatic-scanner" />
@@ -197,10 +197,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col items-center gap-2 text-center px-4">
-                  <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/70">
+                  <span className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-medium text-white/85">
                     Official Summit Platform
                   </span>
-                  <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-light text-white/40">
+                  <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-light text-white/65">
                     Ihsan Schools
                   </span>
                 </div>
@@ -235,7 +235,7 @@ export default function Home() {
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-lg text-secondary-foreground/80 leading-relaxed max-w-[600px]">
+                <p className="text-lg text-secondary-foreground/90 leading-relaxed max-w-[600px]">
                   Ihsan Schools Model United Nations is a transformative journey. 
                   We bring together young minds to tackle complex global challenges through 
                   diplomacy, critical thinking, and collaborative resolution building.
@@ -276,7 +276,7 @@ export default function Home() {
                   </div>
                   <div className="p-10 space-y-4 flex-1 flex flex-col">
                     <h3 className="text-xl font-serif font-bold">{item.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed mt-4 flex-1">{item.desc}</p>
+                    <p className="text-white/80 text-sm leading-relaxed mt-4 flex-1">{item.desc}</p>
                     <Link href="/committees" className="text-primary text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-[0.2em] pt-6">
                       View Agenda <ArrowRight size={12} />
                     </Link>
@@ -298,7 +298,7 @@ export default function Home() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-lg text-secondary-foreground/80 mb-16 leading-relaxed">
+            <p className="text-lg text-secondary-foreground/90 mb-16 leading-relaxed">
               Registration for the 2026 Ihsan Schools MUN is now open.
               Join a community of students ready to collaborate, learn, and lead.
             </p>

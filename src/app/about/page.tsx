@@ -38,7 +38,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-primary-foreground">Purpose</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
               Driven by the legacy of Ihsan Schools, our MUN club is built on the pillars 
               of excellence, empathy, and global citizenship.
             </p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold">To Cultivate <span className="text-primary-foreground">Enlightened</span> Leaders.</h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-foreground/80 leading-relaxed">
                   Model United Nations at Ihsan Schools isn't just a simulation—it's a training ground. 
                   We aim to bridge the gap between academic theory and real-world implementation, 
                   encouraging students to see beyond their own borders and understand the interconnectedness 
@@ -74,14 +74,14 @@ export default function AboutPage() {
                   <Target className="text-primary shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg text-foreground">Goal-Oriented Debate</h4>
-                    <p className="text-sm text-muted-foreground">Focusing on practical resolutions that could actually change the world.</p>
+                    <p className="text-sm text-foreground/80">Focusing on practical resolutions that could actually change the world.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 p-6 bg-secondary/30 rounded-2xl border border-white/5">
                   <Eye className="text-primary shrink-0" size={32} />
                   <div>
                     <h4 className="font-bold text-lg text-foreground">Visionary Thinking</h4>
-                    <p className="text-sm text-muted-foreground">Looking at the long-term impact of diplomatic decisions on society.</p>
+                    <p className="text-sm text-foreground/80">Looking at the long-term impact of diplomatic decisions on society.</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -109,17 +109,17 @@ export default function AboutPage() {
             <ScrollReveal className="text-center space-y-4">
               <ShieldCheck className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Integrity</h3>
-              <p className="text-muted-foreground">Upholding the highest standards of honesty and ethics in every negotiation.</p>
+              <p className="text-foreground/80">Upholding the highest standards of honesty and ethics in every negotiation.</p>
             </ScrollReveal>
             <ScrollReveal delay={200} className="text-center space-y-4">
               <History className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Legacy</h3>
-              <p className="text-muted-foreground">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
+              <p className="text-foreground/80">Building upon the foundation of Ihsan Schools to leave a lasting impact.</p>
             </ScrollReveal>
             <ScrollReveal delay={400} className="text-center space-y-4">
               <Globe className="mx-auto text-primary" size={48} />
               <h3 className="text-2xl font-bold">Inclusion</h3>
-              <p className="text-muted-foreground">Embracing diverse perspectives to reach truly global solutions.</p>
+              <p className="text-foreground/80">Embracing diverse perspectives to reach truly global solutions.</p>
             </ScrollReveal>
           </div>
         </div>
