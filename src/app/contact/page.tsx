@@ -23,7 +23,7 @@ export default function ContactPage() {
 
               <ScrollReveal delay={200} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Location Card */}
-                <div className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all hover:-translate-y-1">
+                <div className="surface-panel flex flex-col items-center gap-6 rounded-[2.5rem] p-10 text-center transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1">
                   <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0">
                     <MapPin size={32} />
                   </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                 {/* Email Card */}
                 <a 
                   href="mailto:mun@ihsanschools.org"
-                  className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all group hover:-translate-y-1"
+                  className="surface-panel group flex flex-col items-center gap-6 rounded-[2.5rem] p-10 text-center transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
                 >
                   <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Mail size={32} />
@@ -53,7 +53,7 @@ export default function ContactPage() {
                   href="https://www.instagram.com/ihsanmodelun?igsh=bWU3YXN0MG5paXJt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="surface-panel flex flex-col items-center text-center gap-6 p-10 rounded-[2.5rem] transition-all group hover:-translate-y-1"
+                  className="surface-panel group flex flex-col items-center gap-6 rounded-[2.5rem] p-10 text-center transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
                 >
                   <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Instagram size={32} />

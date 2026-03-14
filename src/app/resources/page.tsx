@@ -57,7 +57,7 @@ export default function ResourcesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {resources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
-                <div className="h-full p-8 border border-border rounded-3xl flex items-center justify-between group hover:border-primary hover:bg-primary/5 transition-all bg-card shadow-sm">
+                <div className="group flex h-full items-center justify-between rounded-3xl border border-border bg-card p-8 shadow-sm transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-primary hover:bg-primary/5">
                   <div className="flex gap-6 items-center">
                     <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                       {res.icon}

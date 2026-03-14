@@ -13,6 +13,12 @@ type ImageEditPayload = {
 
 const OVERRIDES_STORAGE_KEY = "editor-image-overrides";
 
+function persistOverrides(nextOverrides: ImageOverrideMap) {
+  if (typeof window !== "undefined") {
+    window.sessionStorage.setItem(OVERRIDES_STORAGE_KEY, JSON.stringify(nextOverrides));
+  }
+}
+
 type ImageEditorContextValue = {
   isEditorEnabled: boolean;
   getImageUrl: (id: string, fallbackUrl: string) => string;
@@ -45,13 +51,6 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
 
-  const syncOverrides = (nextOverrides: ImageOverrideMap) => {
-    setOverrides(nextOverrides);
-    if (typeof window !== "undefined") {
-      window.sessionStorage.setItem(OVERRIDES_STORAGE_KEY, JSON.stringify(nextOverrides));
-    }
-  };
-
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
@@ -78,7 +77,9 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
 
       const imagePayload = (await imagesResponse.json()) as { overrides?: ImageOverrideMap };
       if (isMounted) {
-        syncOverrides(imagePayload.overrides ?? {});
+        const nextOverrides = imagePayload.overrides ?? {};
+        setOverrides(nextOverrides);
+        persistOverrides(nextOverrides);
       }
     };
 
@@ -199,7 +200,9 @@ export function EditorProvider({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      syncOverrides(payload?.overrides ?? {});
+      const nextOverrides = payload?.overrides ?? {};
+      setOverrides(nextOverrides);
+      persistOverrides(nextOverrides);
       closeImageEditor();
     } finally {
       setIsSaving(false);

@@ -1,39 +1,41 @@
-"use client";
-
-import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, User, Users, ShieldCheck, Briefcase } from "lucide-react";
+import { User, Users, ShieldCheck, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function RegistrationPage() {
-  const [step, setStep] = useState(1);
-  const [role, setRole] = useState<string | null>(null);
+const registrationPaths = [
+  {
+    id: "delegate",
+    name: "Early Delegate",
+    icon: <User />,
+    desc: "Apply for early registration via Google Forms.",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScgbJ3cXVHr02AWIlgjbs1Rt7tFd0zVip9rl5YahKIgbYcafg/viewform?pli=1",
+  },
+  {
+    id: "chair",
+    name: "Chair / Academic Assistant",
+    icon: <ShieldCheck />,
+    desc: "Guide debates and support committee flow.",
+    href: "https://forms.gle/UPjTiJB5UXAuD8mK6",
+  },
+  {
+    id: "staff",
+    name: "Admin / Press",
+    icon: <Users />,
+    desc: "Support the conference logistics.",
+    href: "https://forms.gle/QNeT9wvBfTYda81P7",
+  },
+  {
+    id: "team",
+    name: "Team",
+    icon: <Briefcase />,
+    desc: "Apply for the organizing team.",
+    href: "https://forms.gle/oY6NGBmL4J7bKcAe8",
+  },
+];
 
-  const handleRoleSelection = (id: string) => {
-    setRole(id);
-    
-    // Redirect logic for all roles
-    if (id === "delegate") {
-      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScgbJ3cXVHr02AWIlgjbs1Rt7tFd0zVip9rl5YahKIgbYcafg/viewform?pli=1";
-      return;
-    }
-    if (id === "team") {
-      window.location.href = "https://forms.gle/oY6NGBmL4J7bKcAe8";
-      return;
-    }
-    if (id === "staff") {
-      window.location.href = "https://forms.gle/QNeT9wvBfTYda81P7";
-      return;
-    }
-    if (id === "chair") {
-      window.location.href = "https://forms.gle/UPjTiJB5UXAuD8mK6";
-      return;
-    }
-  };
-  
+export default function RegistrationPage() {
   const pricing = [
     { label: "Early Delegate", price: "1300TL" },
     { label: "PR, IT, Media and Logistics", price: "950TL" },
@@ -59,65 +61,40 @@ export default function RegistrationPage() {
           </div>
 
           <ScrollReveal>
-            {step === 1 && (
-              <div className="space-y-16">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {[
-                    { id: "delegate", name: "Early Delegate", icon: <User />, desc: "Apply for early registration via Google Forms." },
-                    { id: "chair", name: "Chair / Academic Assistant", icon: <ShieldCheck />, desc: "Guide debates and support committee flow." },
-                    { id: "staff", name: "Admin / Press", icon: <Users />, desc: "Support the conference logistics." },
-                    { id: "team", name: "Team", icon: <Briefcase />, desc: "Apply for the organizing team." }
-                  ].map((item) => (
-                    <Card 
-                      key={item.id}
-                      className={`surface-panel cursor-pointer transition-all border-2 group hover:-translate-y-1 ${role === item.id ? 'border-accent bg-primary/10' : 'border-border'}`}
-                      onClick={() => handleRoleSelection(item.id)}
-                    >
+            <div className="space-y-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {registrationPaths.map((item) => (
+                  <a key={item.id} href={item.href} className="block h-full">
+                    <Card className="surface-panel group h-full border-2 border-border transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-accent hover:bg-primary/10">
                       <CardContent className="p-8 text-center space-y-4">
-                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto transition-colors ${role === item.id ? 'bg-accent text-accent-foreground' : 'bg-secondary text-accent group-hover:bg-accent/15 group-hover:text-accent'}`}>
+                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-secondary text-accent transition-colors group-hover:bg-accent/15 group-hover:text-accent">
                           {item.icon}
                         </div>
                         <h3 className="font-bold text-xl">{item.name}</h3>
                         <p className="text-sm text-foreground/78">{item.desc}</p>
                       </CardContent>
                     </Card>
+                  </a>
+                ))}
+              </div>
+
+              <div className="space-y-6">
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold">Delegate Pricing</h2>
+                  <p className="text-foreground/78 mt-2">All prices listed in Turkish Lira (TL).</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {pricing.map((item) => (
+                    <Card key={item.label} className="surface-panel border border-border">
+                      <CardContent className="p-6 flex items-center justify-between">
+                        <div className="font-semibold">{item.label}</div>
+                        <div className="text-accent font-bold">{item.price}</div>
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
-
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <h2 className="text-3xl font-bold">Delegate Pricing</h2>
-                    <p className="text-foreground/78 mt-2">All prices listed in Turkish Lira (TL).</p>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {pricing.map((item) => (
-                      <Card key={item.label} className="surface-panel border border-border">
-                        <CardContent className="p-6 flex items-center justify-between">
-                          <div className="font-semibold">{item.label}</div>
-                          <div className="text-accent font-bold">{item.price}</div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
               </div>
-            )}
-
-            {step === 3 && (
-              <div className="max-w-3xl mx-auto text-center py-20 animate-in fade-in zoom-in-90 duration-700">
-                <div className="w-24 h-24 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner shadow-black/20">
-                  <CheckCircle2 size={48} />
-                </div>
-                <h2 className="text-4xl font-bold mb-4">Registration Received!</h2>
-                <p className="text-xl text-foreground/80 mb-10">
-                  Thank you for your application to IHSAN MUN 2026. 
-                  Please check your email for further instructions.
-                </p>
-                <Button asChild variant="outline" className="rounded-full px-10 py-6 text-lg border-white/30 text-white hover:bg-white/10">
-                  <a href="/">Return Home</a>
-                </Button>
-              </div>
-            )}
+            </div>
           </ScrollReveal>
         </div>
       </section>

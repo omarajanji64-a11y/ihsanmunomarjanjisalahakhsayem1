@@ -58,29 +58,28 @@
 
 .glass-card {
   background:
-    linear-gradient(180deg, hsla(var(--foreground), 0.07) 0%, hsla(var(--card), 0.92) 18%, hsla(var(--card), 0.85) 100%);
-  backdrop-filter: blur(16px) saturate(140%);
+    linear-gradient(180deg, hsla(var(--foreground), 0.06) 0%, hsla(var(--card), 0.96) 18%, hsla(var(--card), 0.92) 100%);
   border: 1px solid hsla(var(--border), 0.95);
   border-radius: 1.25rem;
   box-shadow:
-    0 24px 64px -36px rgba(0, 0, 0, 0.9),
+    0 20px 52px -34px rgba(0, 0, 0, 0.86),
     inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 .surface-panel {
   background:
-    linear-gradient(180deg, hsla(var(--foreground), 0.05) 0%, hsla(var(--card), 0.96) 16%, hsla(var(--card), 0.88) 100%);
+    linear-gradient(180deg, hsla(var(--foreground), 0.04) 0%, hsla(var(--card), 0.98) 14%, hsla(var(--card), 0.93) 100%);
   border: 1px solid hsla(var(--border), 0.9);
   box-shadow:
-    0 22px 58px -34px rgba(0, 0, 0, 0.86),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px) saturate(130%);
+    0 16px 40px -28px rgba(0, 0, 0, 0.82),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  contain: paint;
 }
 
 .surface-panel:hover {
   border-color: hsla(var(--accent), 0.38);
   box-shadow:
-    0 28px 72px -36px rgba(0, 0, 0, 0.9),
+    0 22px 56px -34px rgba(0, 0, 0, 0.88),
     0 0 0 1px hsla(var(--accent), 0.08);
 }
 
@@ -88,6 +87,8 @@
   @apply text-foreground relative;
   background:
     linear-gradient(180deg, hsla(var(--background), 0.98) 0%, hsl(var(--background)) 100%);
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.035),
     inset 0 -1px 0 rgba(255, 255, 255, 0.03);
@@ -122,6 +123,8 @@
     hsl(var(--secondary)) 80%,
     hsl(var(--background)) 100%
   );
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.04),
     inset 0 -1px 0 rgba(255, 255, 255, 0.03);
@@ -161,7 +164,7 @@
 }
 
 .btn-premium {
-  @apply transform transition-all duration-300 hover:-translate-y-[2px] active:scale-95;
+  @apply transform transition-[transform,box-shadow] duration-300 hover:-translate-y-[2px] active:scale-95;
   box-shadow:
     0 18px 36px -18px hsla(var(--primary), 0.85),
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
@@ -170,6 +173,7 @@
 .scroll-reveal {
   opacity: 0;
   transform: translateY(15px);
+  will-change: transform, opacity;
   transition:
     opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
@@ -178,6 +182,7 @@
 .scroll-reveal.active {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 .fade-only {
@@ -186,14 +191,14 @@
 }
 
 @keyframes diplomatic-scanner {
-  0% { left: -100%; opacity: 0; }
-  50% { left: 0%; opacity: 0.5; }
-  100% { left: 100%; opacity: 0; }
+  0% { transform: translate3d(-180%, 0, 0) skewX(-12deg); opacity: 0; }
+  50% { transform: translate3d(0%, 0, 0) skewX(-12deg); opacity: 0.35; }
+  100% { transform: translate3d(180%, 0, 0) skewX(-12deg); opacity: 0; }
 }
 
-/* Faster scanner for more activity */
 .animate-diplomatic-scanner {
-  animation: diplomatic-scanner 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
+  animation: diplomatic-scanner 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes waving-flag {
@@ -204,9 +209,9 @@
   100% { transform: skewY(0deg) rotate(0deg); }
 }
 
-/* Intensified and faster wave animation */
 .animate-waving-flag {
-  animation: waving-flag 2.5s ease-in-out infinite;
+  will-change: transform;
+  animation: waving-flag 3.8s ease-in-out infinite;
 }
 
 @keyframes entry-traveler {
@@ -227,15 +232,15 @@
       radial-gradient(circle at 84% 10%, hsla(var(--accent), 0.08) 0%, transparent 18%);
   }
 
-  .glass-card,
-  .surface-panel {
-    backdrop-filter: blur(10px) saturate(115%);
-  }
-
   .section-dark::after,
   .section-light::after,
   .site-footer::before {
     display: none;
+  }
+
+  .animate-diplomatic-scanner,
+  .animate-waving-flag {
+    animation: none;
   }
 }
 

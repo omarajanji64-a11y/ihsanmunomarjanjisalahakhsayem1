@@ -82,7 +82,7 @@ export default function SecretariatPage() {
               const memberImage = PlaceHolderImages.find(img => img.id === member.img);
               return (
                 <ScrollReveal key={i} delay={i * 100}>
-                  <div className="bg-card border border-border rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/5 transition-all h-full flex flex-col">
+                  <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/5">
                     <div className="relative h-[350px] overflow-hidden">
                       {memberImage?.imageUrl && (
                         <EditableImage

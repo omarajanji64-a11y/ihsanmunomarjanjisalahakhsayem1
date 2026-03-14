@@ -23,18 +23,37 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    let frameId = 0;
+
+    const updateScrolled = () => {
+      const nextScrolled = window.scrollY > 20;
+      setScrolled((previous) => (previous === nextScrolled ? previous : nextScrolled));
+      frameId = 0;
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const handleScroll = () => {
+      if (frameId !== 0) {
+        return;
+      }
+
+      frameId = window.requestAnimationFrame(updateScrolled);
+    };
+
+    updateScrolled();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
   }, []);
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-20 flex items-center",
+      "fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-[background-color,border-color,box-shadow] duration-300",
       scrolled 
-        ? "bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-[0_22px_52px_-30px_rgba(0,0,0,0.9)]" 
+        ? "bg-background/92 border-b border-white/10 shadow-[0_20px_46px_-30px_rgba(0,0,0,0.88)]" 
         : "bg-transparent"
     )}>
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -51,7 +70,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-xs font-medium uppercase tracking-widest transition-all duration-300 hover:text-white relative py-1",
+                "relative py-1 text-xs font-medium uppercase tracking-widest transition-colors duration-200 hover:text-white",
                 pathname === link.href 
                   ? "text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white" 
                   : "text-white/75"
@@ -79,7 +98,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-card/95 backdrop-blur-xl border-b border-white/10 p-8 flex flex-col gap-6 animate-in slide-in-from-top duration-300 shadow-[0_22px_52px_-30px_rgba(0,0,0,0.9)]">
+        <div className="absolute top-20 left-0 right-0 bg-card/98 border-b border-white/10 p-8 flex flex-col gap-6 animate-in slide-in-from-top duration-300 shadow-[0_22px_52px_-30px_rgba(0,0,0,0.9)]">
           {navLinks.map((link) => (
             <LinkNext
               key={link.href}

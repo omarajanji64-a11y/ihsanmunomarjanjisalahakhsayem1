@@ -189,7 +189,7 @@ export default function CommitteesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {committeeResources.map((res, i) => (
               <ScrollReveal key={i} delay={i * 100} className="h-full">
-                <div className="surface-panel h-full p-8 rounded-3xl flex items-center justify-between group transition-all hover:-translate-y-1">
+                <div className="surface-panel group flex h-full items-center justify-between rounded-3xl p-8 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1">
                   <div className="flex gap-6 items-center">
                     <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       {res.icon}

@@ -112,8 +112,8 @@ export default function Home() {
               {/* Animated Realistic Architectural Branding */}
               <div className="mt-12 md:mt-20 flex flex-col items-center gap-8 opacity-80 animate-in fade-in zoom-in duration-1000 group">
                 <div className="relative">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
-                    <div className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 animate-diplomatic-scanner" />
+                  <div className="absolute inset-0 hidden overflow-hidden rounded-lg pointer-events-none md:block">
+                    <div className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-diplomatic-scanner" />
                   </div>
 
                   <svg viewBox="0 0 120 80" className="w-28 h-20 md:w-40 md:h-28 fill-none stroke-white" strokeWidth="0.4">
@@ -156,7 +156,7 @@ export default function Home() {
                       {x: 20, y: 48}, {x: 28, y: 48}, {x: 36, y: 48},
                       {x: 20, y: 58}, {x: 28, y: 58}, {x: 36, y: 58}
                     ].map((w, i) => (
-                      <g key={`lw-${i}`} className="animate-pulse" style={{ animationDelay: `${i * 0.2}s` }}>
+                      <g key={`lw-${i}`} className="opacity-80">
                         <rect x={w.x} y={w.y} width="4" height="6" className="fill-white/20" />
                       </g>
                     ))}
@@ -166,7 +166,7 @@ export default function Home() {
                       {x: 80, y: 48}, {x: 88, y: 48}, {x: 96, y: 48},
                       {x: 80, y: 58}, {x: 88, y: 58}, {x: 96, y: 58}
                     ].map((w, i) => (
-                      <g key={`rw-${i}`} className="animate-pulse" style={{ animationDelay: `${i * 0.2 + 0.5}s` }}>
+                      <g key={`rw-${i}`} className="opacity-80">
                         <rect x={w.x} y={w.y} width="4" height="6" className="fill-white/20" />
                       </g>
                     ))}
@@ -248,7 +248,7 @@ export default function Home() {
               const image = committeeImageMap.get(item.imageId);
               return (
               <ScrollReveal key={i} delay={i * 150} className="h-full">
-                <div className="surface-panel rounded-[1.4rem] overflow-hidden group transition-all duration-500 h-full flex flex-col hover:-translate-y-1">
+                <div className="surface-panel group flex h-full flex-col overflow-hidden rounded-[1.4rem] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1">
                   <div className="relative h-64 overflow-hidden shrink-0">
                     {image?.imageUrl && (
                       <EditableImage
@@ -265,7 +265,7 @@ export default function Home() {
                   <div className="p-10 space-y-4 flex-1 flex flex-col">
                     <h3 className="text-xl font-serif font-bold">{item.title}</h3>
                     <p className="text-white/80 text-sm leading-relaxed mt-4 flex-1">{item.desc}</p>
-                    <Link href="/committees" className="text-accent text-[10px] font-bold inline-flex items-center gap-2 hover:gap-3 hover:text-white transition-all uppercase tracking-[0.2em] pt-6">
+                    <Link href="/committees" className="inline-flex items-center gap-2 pt-6 text-[10px] font-bold uppercase tracking-[0.2em] text-accent transition-[color,transform] duration-200 hover:translate-x-1 hover:text-white">
                       View Agenda <ArrowRight size={12} />
                     </Link>
                   </div>
