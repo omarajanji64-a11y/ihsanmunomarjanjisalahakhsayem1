@@ -40,7 +40,7 @@ export default function ResourcesPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">Preparation <span className="text-accent">Center</span></h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">Preparation <span className="text-brand-gradient">Center</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">

@@ -64,7 +64,7 @@ export default function SecretariatPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-accent">Secretariat</span></h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">The <span className="text-brand-gradient">Secretariat</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">

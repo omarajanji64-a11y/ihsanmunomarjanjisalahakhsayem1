@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-8">
             <Link href="/" className="flex items-center gap-2">
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
-                IHSAN <span className="text-white/65">MUN</span>
+                IHSAN <span className="text-brand-gradient">MUN</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-foreground/82">

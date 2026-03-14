@@ -4,31 +4,31 @@
 
 @layer base {
   :root {
-    /* Refined diplomatic palette with warmer highlights */
-    --background: 348 31% 13%;
-    --foreground: 22 32% 94%;
+    /* Diplomatic palette with richer burgundy depth and warm metallic highlights */
+    --background: 348 33% 12%;
+    --foreground: 30 34% 95%;
 
-    --card: 347 25% 17%;
-    --card-foreground: 22 32% 94%;
+    --card: 348 26% 16%;
+    --card-foreground: 30 34% 95%;
 
-    --popover: 347 25% 15%;
-    --popover-foreground: 22 32% 94%;
+    --popover: 348 25% 14%;
+    --popover-foreground: 30 34% 95%;
 
-    --primary: 350 45% 41%;
-    --primary-foreground: 24 35% 97%;
+    --primary: 349 49% 39%;
+    --primary-foreground: 28 42% 97%;
 
-    --secondary: 346 20% 20%;
-    --secondary-foreground: 22 28% 92%;
+    --secondary: 347 20% 19%;
+    --secondary-foreground: 29 27% 92%;
 
-    --muted: 347 16% 24%;
-    --muted-foreground: 24 18% 81%;
+    --muted: 347 16% 23%;
+    --muted-foreground: 30 17% 82%;
 
-    --accent: 22 54% 68%;
-    --accent-foreground: 348 26% 12%;
+    --accent: 34 67% 72%;
+    --accent-foreground: 348 27% 12%;
 
-    --border: 347 17% 27%;
-    --input: 347 17% 27%;
-    --ring: 22 54% 68%;
+    --border: 348 16% 25%;
+    --input: 348 16% 25%;
+    --ring: 34 67% 72%;
     --radius: 1rem;
   }
 }
@@ -41,9 +41,10 @@
     @apply bg-background text-foreground font-body antialiased;
     text-rendering: optimizeLegibility;
     background-image:
-      radial-gradient(circle at 12% 18%, hsla(var(--primary), 0.24) 0%, transparent 28%),
-      radial-gradient(circle at 86% 10%, hsla(var(--accent), 0.14) 0%, transparent 22%),
-      radial-gradient(circle at 50% 100%, hsla(var(--secondary), 0.22) 0%, transparent 34%);
+      radial-gradient(circle at 12% 18%, hsla(var(--primary), 0.28) 0%, transparent 28%),
+      radial-gradient(circle at 86% 10%, hsla(var(--accent), 0.18) 0%, transparent 22%),
+      radial-gradient(circle at 50% 100%, hsla(var(--secondary), 0.24) 0%, transparent 34%),
+      linear-gradient(180deg, hsl(348 34% 13%) 0%, hsl(349 37% 10%) 100%);
     background-repeat: no-repeat;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -67,6 +68,9 @@
 }
 
 .surface-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background:
     linear-gradient(180deg, hsla(var(--foreground), 0.04) 0%, hsla(var(--card), 0.98) 14%, hsla(var(--card), 0.93) 100%);
   border: 1px solid hsla(var(--border), 0.9);
@@ -76,11 +80,44 @@
   contain: paint;
 }
 
+.surface-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsla(var(--accent), 0.14) 14%,
+    hsla(var(--accent), 0.52) 50%,
+    hsla(var(--accent), 0.14) 86%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
 .surface-panel:hover {
   border-color: hsla(var(--accent), 0.38);
   box-shadow:
     0 22px 56px -34px rgba(0, 0, 0, 0.88),
     0 0 0 1px hsla(var(--accent), 0.08);
+}
+
+.text-brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    hsl(var(--accent)) 0%,
+    hsl(var(--foreground)) 38%,
+    hsl(var(--accent)) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accent-rule {
+  background: linear-gradient(90deg, hsl(var(--accent)) 0%, hsla(var(--accent), 0.12) 100%);
+  box-shadow: 0 0 20px hsla(var(--accent), 0.18);
 }
 
 .section-dark {
@@ -152,7 +189,7 @@
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 54%, hsl(348 34% 11%) 100%);
+    linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 54%, hsl(349 37% 10%) 100%);
 }
 
 .site-footer::before {

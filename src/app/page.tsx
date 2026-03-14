@@ -216,9 +216,9 @@ export default function Home() {
             
             <div className="space-y-8">
               <ScrollReveal>
-                <div className="w-12 h-[2px] bg-accent mb-6" />
+                <div className="accent-rule mb-6 h-[2px] w-12" />
                 <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                  Where Leadership Meets <span className="text-accent italic">Global Perspective.</span>
+                  Where Leadership Meets <span className="text-brand-gradient italic">Global Perspective.</span>
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={200}>
@@ -238,7 +238,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-24 space-y-6">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-accent italic">Every Interest</span></h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight">A Stage for <span className="text-brand-gradient italic">Every Interest</span></h2>
               <div className="w-16 h-[1px] bg-white/20 mx-auto mt-8" />
             </ScrollReveal>
           </div>
@@ -282,7 +282,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight">
-              Ready to <span className="text-accent">Shape the World?</span>
+              Ready to <span className="text-brand-gradient">Shape the World?</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={200}>

@@ -13,7 +13,7 @@ export default function CampusPage() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <h1 className="text-5xl md:text-7xl font-bold">
-                Ihsan Schools <span className="text-accent">Atakent</span>
+                Ihsan Schools <span className="text-brand-gradient">Atakent</span>
               </h1>
               <p className="text-xl text-foreground/85 mt-6 max-w-3xl mx-auto">
                 Explore the venue and find us on the map.

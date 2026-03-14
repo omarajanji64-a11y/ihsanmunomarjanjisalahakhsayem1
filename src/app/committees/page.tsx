@@ -182,7 +182,7 @@ export default function CommitteesPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-accent">Essentials</span></h2>
+              <h2 className="text-4xl font-bold mb-4">Preparation <span className="text-brand-gradient">Essentials</span></h2>
               <p className="text-foreground/80 max-xl mx-auto">Download these core documents to prepare for your committee sessions.</p>
             </ScrollReveal>
           </div>

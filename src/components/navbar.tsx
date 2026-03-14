@@ -59,7 +59,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <LinkNext href="/" className="flex items-center gap-2 group">
           <span className="font-serif font-bold text-2xl tracking-tighter text-white">
-            IHSAN <span className="text-white/75">MUN</span>
+            IHSAN <span className="text-brand-gradient">MUN</span>
           </span>
         </LinkNext>
 
@@ -72,7 +72,7 @@ export function Navbar() {
               className={cn(
                 "relative py-1 text-xs font-medium uppercase tracking-widest transition-colors duration-200 hover:text-white",
                 pathname === link.href 
-                  ? "text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white" 
+                  ? "text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-accent" 
                   : "text-white/75"
               )}
             >

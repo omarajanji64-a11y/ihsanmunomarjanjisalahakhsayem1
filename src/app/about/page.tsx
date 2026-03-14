@@ -33,7 +33,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-accent">Purpose</span></h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">Our <span className="text-brand-gradient">Purpose</span></h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <h2 className="text-4xl font-bold">To Cultivate <span className="text-accent">Enlightened</span> Leaders.</h2>
+                <h2 className="text-4xl font-bold">To Cultivate <span className="text-brand-gradient">Enlightened</span> Leaders.</h2>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <p className="text-lg text-foreground/80 leading-relaxed">
