@@ -105,7 +105,7 @@ export default function Home() {
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl font-bold mb-8 md:mb-12 leading-[0.85] tracking-tight text-white uppercase flex flex-col items-center">
               <span>IHSAN</span>
               <span className="flex items-baseline gap-4">
-                MUN <span className="text-[0.85em] opacity-65 italic font-light tracking-normal">'26</span>
+                MUN <span className="text-[1.05em] opacity-65 italic font-light tracking-normal">'26</span>
               </span>
             </h1>
           </ScrollReveal>
