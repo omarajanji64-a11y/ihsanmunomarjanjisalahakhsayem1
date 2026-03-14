@@ -34,7 +34,7 @@ export function Navbar() {
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-20 flex items-center",
       scrolled 
-        ? "bg-[#48252F]/95 backdrop-blur-md border-b border-white/5 shadow-xl" 
+        ? "bg-primary/95 backdrop-blur-md border-b border-white/5 shadow-xl" 
         : "bg-transparent"
     )}>
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -79,7 +79,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-[#48252F] border-b border-white/10 p-8 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
+        <div className="absolute top-20 left-0 right-0 bg-primary border-b border-white/10 p-8 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
           {navLinks.map((link) => (
             <LinkNext
               key={link.href}

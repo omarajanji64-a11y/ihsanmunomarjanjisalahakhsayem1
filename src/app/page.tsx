@@ -96,7 +96,7 @@ export default function Home() {
 
         <div className="container mx-auto px-6 relative z-10 text-center pb-28">
           <ScrollReveal className="fade-only mt-0">
-            <h2 className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-[#EDEAF3] mb-4 md:mb-6 uppercase">
+            <h2 className="text-[10px] md:text-xs font-medium tracking-[0.4em] text-foreground/90 mb-4 md:mb-6 uppercase">
               The Future of Global Diplomacy
             </h2>
           </ScrollReveal>
@@ -118,7 +118,7 @@ export default function Home() {
 
           <ScrollReveal delay={500} className="fade-only">
             <div className="flex flex-col items-center pt-8 md:pt-12">
-              <p className="max-w-[650px] mx-auto text-base md:text-lg text-[#EDEAF3] mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
+              <p className="max-w-[650px] mx-auto text-base md:text-lg text-foreground/90 mb-8 md:mb-12 leading-[1.6] font-normal opacity-90 px-4">
                 Step into the shoes of global ambassadors. Debate big issues,
                 build alliances, and enjoy the energy of Ihsan Schools MUN.
               </p>
@@ -141,7 +141,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="13" 
-                        className="fill-[#48252F] font-bold" 
+                        className="fill-primary font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
@@ -150,7 +150,7 @@ export default function Home() {
                       <text 
                         x="77.5" 
                         y="19" 
-                        className="fill-[#48252F] font-bold" 
+                        className="fill-primary font-bold" 
                         textAnchor="middle" 
                         style={{ fontSize: '5px', letterSpacing: '0.1px', fontWeight: '900' }}
                       >
