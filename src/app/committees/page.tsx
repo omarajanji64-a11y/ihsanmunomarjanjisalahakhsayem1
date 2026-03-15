@@ -11,9 +11,9 @@ const committees = [
     id: "world-bank",
     title: "World Bank",
     level: "Committee",
-    topics: ["Financing climate resilience and debt relief for developing economies"],
+    topics: ["Mitigating Structural Aid Dependency in Developing Economies //  Ilaf Bayazid"],
     img: "committee-world-bank",
-    description: "Focused on financing climate resilience and debt relief for developing economies."
+    description: "Focused on mitigating structural aid dependency in developing economies."
   },
   {
     id: "h-unsc",
