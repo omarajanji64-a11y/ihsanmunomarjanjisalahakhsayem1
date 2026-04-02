@@ -7,10 +7,10 @@ import { Card, CardContent } from "@/components/ui/card";
 const registrationPaths = [
   {
     id: "delegate",
-    name: "Early Delegate",
+    name: "Delegate",
     icon: <User />,
-    desc: "Apply for early registration via Google Forms.",
-    href: "https://forms.gle/9u8DcgL86Nn9Kvqu7",
+    desc: "Apply for registration via Google Forms.",
+    href: "https://forms.gle/oYcavQEn1sfpCRQ49",
   },
   {
     id: "chair",
@@ -37,7 +37,7 @@ const registrationPaths = [
 
 export default function RegistrationPage() {
   const pricing = [
-    { label: "Early Delegate", price: "1300TL" },
+    { label: "Delegate", price: "1400TL" },
     { label: "PR, IT, Media and Logistics", price: "950TL" },
     { label: "Press and Admins", price: "1000TL" },
     { label: "Chair/Academic Assistant", price: "1100TL" },
