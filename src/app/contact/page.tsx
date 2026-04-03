@@ -35,7 +35,7 @@ export default function ContactPage() {
 
                 {/* Email Card */}
                 <a 
-                  href="mailto:mun@ihsanschools.org"
+                  href="mailto:ihsanmunpr@gmail.com"
                   className="surface-panel group flex flex-col items-center gap-6 rounded-[2.5rem] p-10 text-center transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1"
                 >
                   <div className="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
@@ -43,7 +43,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">Email Us</h4>
-                    <p className="text-foreground/80">mun@ihsanschools.org</p>
+                    <p className="text-foreground/80">ihsanmunpr@gmail.com</p>
                     <p className="text-xs text-accent mt-2 uppercase tracking-wider">Fast Response</p>
                   </div>
                 </a>

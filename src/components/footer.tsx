@@ -18,22 +18,22 @@ export function Footer() {
               Empowering the next generation of global leaders through diplomacy,
               debate, and critical thinking at Ihsan Schools.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/ihsanmodelun"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 transition-colors hover:text-white"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="mailto:mun@ihsanschools.org"
-                className="text-white/70 transition-colors hover:text-white"
-              >
-                <Mail size={18} />
-              </a>
-            </div>
+	            <div className="flex gap-4">
+	              <a
+	                href="https://www.instagram.com/ihsanmodelun"
+	                target="_blank"
+	                rel="noopener noreferrer"
+	                className="text-white/70 transition-colors hover:text-white"
+	              >
+	                <Instagram size={18} />
+	              </a>
+	              <a
+	                href="mailto:ihsanmunpr@gmail.com"
+	                className="text-white/70 transition-colors hover:text-white"
+	              >
+	                <Mail size={18} />
+	              </a>
+	            </div>
           </div>
 
           <div>
@@ -57,18 +57,18 @@ export function Footer() {
 
           <div>
             <h4 className="mb-8 font-serif text-sm font-bold uppercase tracking-widest text-white">Contact</h4>
-            <ul className="space-y-6 text-xs tracking-wide">
-              <li className="flex gap-4 text-foreground/82">
-                <MapPin size={16} className="shrink-0 text-accent" />
-                <span>Ihsan Schools Venue,<br />Istanbul, Turkey</span>
-              </li>
-              <li className="flex gap-4 text-foreground/82">
-                <Mail size={16} className="shrink-0 text-accent" />
-                <span>mun@ihsanschools.org</span>
-              </li>
-              <li className="flex gap-4 text-foreground/82">
-                <Globe size={16} className="shrink-0 text-accent" />
-                <span>ihsanschools.com</span>
+	            <ul className="space-y-6 text-xs tracking-wide">
+	              <li className="flex gap-4 text-foreground/82">
+	                <MapPin size={16} className="shrink-0 text-accent" />
+	                <span>Ihsan Schools Venue,<br />Istanbul, Turkey</span>
+	              </li>
+	              <li className="flex gap-4 text-foreground/82">
+	                <Mail size={16} className="shrink-0 text-accent" />
+	                <span>ihsanmunpr@gmail.com</span>
+	              </li>
+	              <li className="flex gap-4 text-foreground/82">
+	                <Globe size={16} className="shrink-0 text-accent" />
+	                <span>ihsanschools.com</span>
               </li>
             </ul>
           </div>

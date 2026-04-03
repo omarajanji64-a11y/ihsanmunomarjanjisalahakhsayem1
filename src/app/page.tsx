@@ -11,7 +11,7 @@ import { EditableImage } from "@/components/editor/editable-image";
 const committeeHighlights = [
   {
     title: "World Bank",
-    desc: "Financing climate resilience and debt relief for developing economies.",
+    desc: "Mitigating Structural Aid Dependency in Developing Economies //  Ilaf Bayazid",
     imageId: "committee-world-bank"
   },
   {
