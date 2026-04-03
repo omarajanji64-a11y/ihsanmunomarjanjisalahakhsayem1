@@ -10,7 +10,7 @@ const registrationPaths = [
     name: "Early Delegate",
     icon: <User />,
     desc: "Apply for early registration via Google Forms.",
-    href: "https://forms.gle/9u8DcgL86Nn9Kvqu7",
+    href: "https://forms.gle/BGRvMFe91976tVSf6",
   },
   {
     id: "chair",
