@@ -5,6 +5,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Download, Shield, Book } from "lucide-react";
 import { EditableImage } from "@/components/editor/editable-image";
+import Link from "next/link";
 
 const committees = [
   {
@@ -82,7 +83,8 @@ const committeeResources = [
   {
     title: "Rules of Procedure",
     desc: "The definitive guide to parliamentary procedure for our conference.",
-    icon: <Shield className="text-accent" />
+    icon: <Shield className="text-accent" />,
+    href: "/rules-of-procedure"
   },
   {
     title: "Study Guides",
@@ -224,13 +226,13 @@ export default function CommitteesPage() {
                     </div>
                   </div>
                   {res.href ? (
-                    <a
+                    <Link
                       href={res.href}
                       className="p-4 rounded-full bg-primary text-white hover:opacity-90 transition-colors shrink-0"
                       aria-label={`Open ${res.title}`}
                     >
                       <Download size={20} />
-                    </a>
+                    </Link>
                   ) : (
                     <button
                       type="button"

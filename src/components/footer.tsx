@@ -49,9 +49,9 @@ export function Footer() {
           <div>
             <h4 className="mb-8 font-serif text-sm font-bold uppercase tracking-widest text-white">Documents</h4>
             <ul className="space-y-4 text-xs uppercase tracking-widest text-foreground/82">
-              <li className="cursor-default">Rules of Procedure</li>
-              <li className="cursor-default">Study Guides</li>
-              <li className="cursor-default">Delegate Handbook</li>
+              <li><Link href="/rules-of-procedure" className="transition-colors hover:text-white">Rules of Procedure</Link></li>
+              <li><Link href="/committees#committee-study-guides" className="transition-colors hover:text-white">Study Guides</Link></li>
+              <li className="cursor-default opacity-70">Delegate Handbook</li>
             </ul>
           </div>
 

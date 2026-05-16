@@ -2,10 +2,25 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { FileText, Download } from "lucide-react";
+import { FileText, Download, LibraryBig } from "lucide-react";
 import { EditableImage } from "@/components/editor/editable-image";
+import Link from "next/link";
+import { rulesOfProcedureFiles } from "@/lib/resource-files";
 
 const resources = [
+  {
+    title: "Rules of Procedure Hub",
+    desc: "Open the full rules page for conference procedure documents.",
+    icon: <LibraryBig className="text-accent" />,
+    href: "/rules-of-procedure"
+  },
+  ...rulesOfProcedureFiles.map((file) => ({
+    title: file.title,
+    desc: file.description,
+    icon: <FileText className="text-accent" />,
+    href: file.href,
+    downloadName: file.downloadName
+  })),
   {
     title: "Delegate Handbook",
     desc: "Everything you need to know about the logistics and schedule.",
@@ -67,9 +82,35 @@ export default function ResourcesPage() {
                       <p className="text-sm text-foreground/80">{res.desc}</p>
                     </div>
                   </div>
-                  <button className="p-4 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg">
-                    <Download size={20} />
-                  </button>
+                  {res.href ? (
+                    res.downloadName ? (
+                      <a
+                        href={res.href}
+                        download={res.downloadName}
+                        className="p-4 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg"
+                        aria-label={`Download ${res.title}`}
+                      >
+                        <Download size={20} />
+                      </a>
+                    ) : (
+                      <Link
+                        href={res.href}
+                        className="p-4 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg"
+                        aria-label={`Open ${res.title}`}
+                      >
+                        <Download size={20} />
+                      </Link>
+                    )
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="p-4 rounded-full bg-primary/60 text-white/70 transition-colors shadow-lg disabled:cursor-not-allowed"
+                      aria-label={`${res.title} coming soon`}
+                    >
+                      <Download size={20} />
+                    </button>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
