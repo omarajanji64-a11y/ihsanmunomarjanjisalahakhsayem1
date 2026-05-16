@@ -20,12 +20,7 @@ const resources = [
     icon: <FileText className="text-accent" />,
     href: file.href,
     downloadName: file.downloadName
-  })),
-  {
-    title: "Delegate Handbook",
-    desc: "Everything you need to know about the logistics and schedule.",
-    icon: <FileText className="text-accent" />
-  }
+  }))
 ];
 
 export default function ResourcesPage() {
