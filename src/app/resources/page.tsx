@@ -16,7 +16,7 @@ const resources = [
   },
   ...rulesOfProcedureFiles.map((file) => ({
     title: file.title,
-    desc: file.description,
+    desc: "description" in file ? file.description : undefined,
     icon: <FileText className="text-accent" />,
     href: file.href,
     downloadName: file.downloadName
@@ -79,7 +79,9 @@ export default function ResourcesPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-foreground">{res.title}</h3>
-                      <p className="text-sm text-foreground/80">{res.desc}</p>
+                      {res.desc ? (
+                        <p className="text-sm text-foreground/80">{res.desc}</p>
+                      ) : null}
                     </div>
                   </div>
                   {res.href ? (

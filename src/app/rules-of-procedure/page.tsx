@@ -66,7 +66,9 @@ export default function RulesOfProcedurePage() {
                     </div>
                     <div>
                       <h2 className="text-2xl font-bold text-foreground">{file.title}</h2>
-                      <p className="mt-3 text-sm leading-relaxed text-foreground/80">{file.description}</p>
+                      {"description" in file && file.description ? (
+                        <p className="mt-3 text-sm leading-relaxed text-foreground/80">{file.description}</p>
+                      ) : null}
                     </div>
                   </div>
 
