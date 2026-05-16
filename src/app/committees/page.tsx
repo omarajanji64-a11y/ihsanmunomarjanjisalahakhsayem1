@@ -13,7 +13,8 @@ const committees = [
     level: "Committee",
     topics: ["Mitigating Structural Aid Dependency in Developing Economies //  Ilaf Bayazid"],
     img: "committee-world-bank",
-    description: "Focused on mitigating structural aid dependency in developing economies."
+    description: "Focused on mitigating structural aid dependency in developing economies.",
+    studyGuideUrl: "https://www.canva.com/design/DAHJw4S-NGI/FZE-8bikfM7BrIYp9ZqhCg/edit"
   },
   {
     id: "h-unsc",
@@ -21,7 +22,8 @@ const committees = [
     level: "Committee",
     topics: ["USA's invasion of Iraq (2003)"],
     img: "committee-hunsc",
-    description: "Focused on USA's invasion of Iraq (2003)."
+    description: "Focused on USA's invasion of Iraq (2003).",
+    studyGuideUrl: "https://www.canva.com/design/DAHJ0M2kfD4/2rliNp2FOyFdgebGytO8YA/edit"
   },
   {
     id: "unwomen",
@@ -29,7 +31,8 @@ const committees = [
     level: "Committee",
     topics: ["Prevention of Human Trafficking and Sexual Exploitation of Women in conflict zones"],
     img: "committee-unwomen",
-    description: "Focused on the prevention of human trafficking and sexual exploitation of women in conflict zones."
+    description: "Focused on the prevention of human trafficking and sexual exploitation of women in conflict zones.",
+    studyGuideUrl: "https://canva.link/03romlo2s9i3t13"
   },
   {
     id: "jcc-avengers",
@@ -45,7 +48,8 @@ const committees = [
     level: "Committee",
     topics: ["Addressing the Proliferation and Use of Chemical Weapons and strengthening international efforts to eliminate them"],
     img: "committee-disec",
-    description: "Focused on addressing the proliferation and use of chemical weapons and strengthening international efforts to eliminate them."
+    description: "Focused on addressing the proliferation and use of chemical weapons and strengthening international efforts to eliminate them.",
+    studyGuideUrl: "https://www.canva.com/design/DAHJw8PTJ5s/tJTHLyzLuh4krdPg3U5nCA/edit"
   },
   {
     id: "specpol",
@@ -53,7 +57,8 @@ const committees = [
     level: "Committee",
     topics: ["Regulating Private Military Companies and Mercenaries in Modern Conflicts"],
     img: "committee-specpol",
-    description: "Focused on regulating private military companies and mercenaries in modern conflicts."
+    description: "Focused on regulating private military companies and mercenaries in modern conflicts.",
+    studyGuideUrl: "https://www.canva.com/design/DAHJ08DTAHc/Lf9KNHZ4_oEvnmURX04Aqg/edit"
   },
   {
     id: "arab-league",
@@ -82,7 +87,8 @@ const committeeResources = [
   {
     title: "Study Guides",
     desc: "Detailed background research for each committee topic.",
-    icon: <Book className="text-accent" />
+    icon: <Book className="text-accent" />,
+    href: "#committee-study-guides"
   }
 ];
 
@@ -124,7 +130,7 @@ export default function CommitteesPage() {
         </div>
       </section>
 
-      <section className="py-24 section-dark">
+      <section id="committee-study-guides" className="py-24 section-dark">
         <div className="container mx-auto px-6">
           <div className="space-y-24">
             {committees.map((committee, i) => {
@@ -168,6 +174,24 @@ export default function CommitteesPage() {
                           ))}
                         </ul>
                       </div>
+
+                      {committee.studyGuideUrl && (
+                        <div className="space-y-4">
+                          <h4 className="font-bold text-accent flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-accent" />
+                            Study Guide
+                          </h4>
+                          <a
+                            href={committee.studyGuideUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 rounded-2xl bg-primary px-6 py-3 text-sm font-bold text-white transition-[transform,opacity] duration-200 hover:-translate-y-0.5 hover:opacity-90"
+                          >
+                            <Download size={18} />
+                            View Study Guide
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </ScrollReveal>
@@ -199,9 +223,24 @@ export default function CommitteesPage() {
                       <p className="text-sm text-foreground/80">{res.desc}</p>
                     </div>
                   </div>
-                  <button className="p-4 rounded-full bg-primary text-white hover:opacity-90 transition-colors shrink-0">
-                    <Download size={20} />
-                  </button>
+                  {res.href ? (
+                    <a
+                      href={res.href}
+                      className="p-4 rounded-full bg-primary text-white hover:opacity-90 transition-colors shrink-0"
+                      aria-label={`Open ${res.title}`}
+                    >
+                      <Download size={20} />
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="p-4 rounded-full bg-primary/60 text-white/70 transition-colors shrink-0 disabled:cursor-not-allowed"
+                      aria-label={`${res.title} coming soon`}
+                    >
+                      <Download size={20} />
+                    </button>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
