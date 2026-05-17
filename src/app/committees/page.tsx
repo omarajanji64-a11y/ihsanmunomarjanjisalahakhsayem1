@@ -74,7 +74,9 @@ const committees = [
     level: "Committee",
     topics: ["Addressing Foreign Influence in Arab States"],
     img: "committee-arab-league",
-    description: "Focused on addressing foreign influence in Arab states."
+    description: "Focused on addressing foreign influence in Arab states.",
+    studyGuideHref: "/study-guides/arab-league-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-Arab-League-Study-Guide.pdf",
   },
   {
     id: "jcc-castellammarese",
