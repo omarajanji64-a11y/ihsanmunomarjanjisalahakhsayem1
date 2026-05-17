@@ -44,7 +44,9 @@ const committees = [
     level: "Committee",
     topics: ["The Sokovia Accords"],
     img: "committee-jcc-avengers",
-    description: "Focused on the Sokovia Accords."
+    description: "Focused on the Sokovia Accords.",
+    studyGuideHref: "/study-guides/jcc-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-JCC-Study-Guide.pdf",
   },
   {
     id: "disec",
@@ -80,7 +82,9 @@ const committees = [
     level: "Committee",
     topics: ["The Castellammarese War"],
     img: "committee-jcc-castellammarese",
-    description: "Focused on the Castellammarese War."
+    description: "Focused on the Castellammarese War.",
+    studyGuideHref: "/study-guides/jcc-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-JCC-Study-Guide.pdf",
   }
 ];
 
