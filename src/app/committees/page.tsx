@@ -15,7 +15,8 @@ const committees = [
     topics: ["Mitigating Structural Aid Dependency in Developing Economies //  Ilaf Bayazid"],
     img: "committee-world-bank",
     description: "Focused on mitigating structural aid dependency in developing economies.",
-    studyGuideUrl: "https://www.canva.com/design/DAHJw4S-NGI/FZE-8bikfM7BrIYp9ZqhCg/edit"
+    studyGuideHref: "/study-guides/world-bank-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-World-Bank-Study-Guide.pdf",
   },
   {
     id: "h-unsc",
@@ -24,7 +25,8 @@ const committees = [
     topics: ["USA's invasion of Iraq (2003)"],
     img: "committee-hunsc",
     description: "Focused on USA's invasion of Iraq (2003).",
-    studyGuideUrl: "https://www.canva.com/design/DAHJ0M2kfD4/2rliNp2FOyFdgebGytO8YA/edit"
+    studyGuideHref: "/study-guides/h-unsc-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-H-UNSC-Study-Guide.pdf",
   },
   {
     id: "unwomen",
@@ -33,7 +35,8 @@ const committees = [
     topics: ["Prevention of Human Trafficking and Sexual Exploitation of Women in conflict zones"],
     img: "committee-unwomen",
     description: "Focused on the prevention of human trafficking and sexual exploitation of women in conflict zones.",
-    studyGuideUrl: "https://canva.link/03romlo2s9i3t13"
+    studyGuideHref: "/study-guides/unwomen-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-UNWOMEN-Study-Guide.pdf",
   },
   {
     id: "jcc-avengers",
@@ -50,7 +53,8 @@ const committees = [
     topics: ["Addressing the Proliferation and Use of Chemical Weapons and strengthening international efforts to eliminate them"],
     img: "committee-disec",
     description: "Focused on addressing the proliferation and use of chemical weapons and strengthening international efforts to eliminate them.",
-    studyGuideUrl: "https://www.canva.com/design/DAHJw8PTJ5s/tJTHLyzLuh4krdPg3U5nCA/edit"
+    studyGuideHref: "/study-guides/disec-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-DISEC-Study-Guide.pdf",
   },
   {
     id: "specpol",
@@ -59,7 +63,8 @@ const committees = [
     topics: ["Regulating Private Military Companies and Mercenaries in Modern Conflicts"],
     img: "committee-specpol",
     description: "Focused on regulating private military companies and mercenaries in modern conflicts.",
-    studyGuideUrl: "https://www.canva.com/design/DAHJ08DTAHc/Lf9KNHZ4_oEvnmURX04Aqg/edit"
+    studyGuideHref: "/study-guides/specpol-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-SPECPOL-Study-Guide.pdf",
   },
   {
     id: "arab-league",
@@ -177,20 +182,19 @@ export default function CommitteesPage() {
                         </ul>
                       </div>
 
-                      {committee.studyGuideUrl && (
+                      {committee.studyGuideHref && committee.studyGuideDownloadName && (
                         <div className="space-y-4">
                           <h4 className="font-bold text-accent flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-accent" />
                             Study Guide
                           </h4>
                           <a
-                            href={committee.studyGuideUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={committee.studyGuideHref}
+                            download={committee.studyGuideDownloadName}
                             className="inline-flex items-center gap-3 rounded-2xl bg-primary px-6 py-3 text-sm font-bold text-white transition-[transform,opacity] duration-200 hover:-translate-y-0.5 hover:opacity-90"
                           >
                             <Download size={18} />
-                            View Study Guide
+                            Download PDF
                           </a>
                         </div>
                       )}
