@@ -40,6 +40,7 @@ export function Footer() {
             <h4 className="mb-8 font-serif text-sm font-bold uppercase tracking-widest text-white">Navigation</h4>
             <ul className="space-y-4 text-xs uppercase tracking-widest">
               <li><Link href="/about" className="text-foreground/82 transition-colors hover:text-white">About Us</Link></li>
+              <li><Link href="/schedule" className="text-foreground/82 transition-colors hover:text-white">Schedule</Link></li>
               <li><Link href="/committees" className="text-foreground/82 transition-colors hover:text-white">Committees</Link></li>
               <li><Link href="/registration" className="text-foreground/82 transition-colors hover:text-white">Registration</Link></li>
               <li><Link href="/resources" className="text-foreground/82 transition-colors hover:text-white">Resources</Link></li>
