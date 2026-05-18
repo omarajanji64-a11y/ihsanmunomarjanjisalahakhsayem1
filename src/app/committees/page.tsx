@@ -45,8 +45,8 @@ const committees = [
     topics: ["The Sokovia Accords"],
     img: "committee-jcc-avengers",
     description: "Focused on the Sokovia Accords.",
-    studyGuideHref: "/study-guides/jcc-study-guide.pdf",
-    studyGuideDownloadName: "IHSAN-MUN-JCC-Study-Guide.pdf",
+    studyGuideHref: "/study-guides/avengers-study-guide.pdf",
+    studyGuideDownloadName: "IHSAN-MUN-Avengers-Study-Guide.pdf",
   },
   {
     id: "disec",
